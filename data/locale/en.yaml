@@ -1,0 +1,4 @@
+CLI_DESCRIPTION: DCS Launcher tool.
+CLI_EPILOG: This is a free tool. If you have paid for it, you have been robbed.
+CLI_OPTION_DEBUG_DESCRIPTION: Enables debug mode.
+CLI_OPTION_RUN_DESCRIPTION: Starts DCS according to the specified profile without displaying the GUI.

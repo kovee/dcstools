@@ -1,0 +1,881 @@
+// ============================================================================
+//                       ---=== DCS:World Tools ===---
+//                  Copyright (C) 2021-2022, Attila Kovacs
+// ============================================================================
+//
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to
+// deal in the Software without restriction, including without limitation the
+// rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+// sell copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+// IN THE SOFTWARE.
+//
+// ============================================================================
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//  THIS IS A GENERATED FILE. ALL MODIFICATIONS WILL BE OVERWRITTEN BY THE
+//                     DCS LAUNCHER UPON NEXT LAUNCH
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+// ============================================================================
+//  CONSTANTS
+// ============================================================================
+
+// ***** GLOBAL CONSTANTS *****************************************************
+define      YES                     1       // Represents a true boolean value
+define      NO                      0       // Represents a false boolean value
+
+define      DCS_MODE_FLAT           0       // Standard game mode
+define      DCS_MODE_VR             1       // VR game mode
+
+define      RUDDER_TFLIGHT          0       // Represents the standard
+                                            // Thrustmaster T.Flight Rudders
+define      RUDDER_PENDULUM         1       // Represents the Thrustmaster
+                                            // Pendulum Pedals
+
+define      VR_HEADSET_PSVR         0       // Represents the Playstation VR
+define      VR_HEADSET_VIVE         1       // Represents the HTC Vive VR
+define      VR_HEADSET_OCCULUS      2       // Represents the Occulus VR
+define      VR_HEADSET_GENERIC      3       // Represents a generic VR headset
+
+define      LED_INTENSITY_1         85      // Intensity level 1 - lowest
+define      LED_INTENSITY_2         123     // Intensity level 2
+define      LED_INTENSITY_3         171     // Intensity level 3
+define      LED_INTENSITY_4         214     // Intensity level 4
+define      LED_INTENSITY_5         255     // Intensity level 5 - highest
+
+define      THROTTLE_PRESET_SINGLE  1       // Represents a single throttle
+                                            // axis (merges the engine throttle
+                                            // control on twin-engine aircraft)
+define      THROTTLE_PRESET_DUAL    2       // Represents dual throttle axes
+                                            // (allows individual control of
+                                            // two engines)
+
+define      JOYSTICK_GRIP_A10       1       // Represents the default A-10 grip
+define      JOYSTICK_GRIP_FA18      2       // Represents the F/A-18C grip
+define      JOYSTICK_GRIP_COUGAR    3       // Represents the grip of the
+                                            // Thrustmaster H.O.T.A.S. Cougar
+
+define      PULSE_TIME              100     // PULSE+Delay time in milliseconds
+define      DELAY_TIME              150     // D() delay time in milliseconds
+
+// ***** DCS PLANES ***********************************************************
+
+define      DCS_PLANE_A10A          1       // A-10A Warthog
+define      DCS_PLANE_A10C          2       // A-10C Warthog
+define      DCS_PLANE_A4E           3       // A-4E Skyhawk
+define      DCS_PLANE_AJS37         4       // AJS 37 Viggen
+define      DCS_PLANE_AV8B          5       // AV-8B Night Attack V/STOL
+define      DCS_PLANE_BF109         6       // Bf 109 K-4 Kurfürst
+define      DCS_PLANE_C101          7       // C-101 Aviojet
+define      DCS_PLANE_CE            8       // Christen Eagle II
+define      DCS_PLANE_F4E           9       // F-4E Phantom II
+define      DCS_PLANE_F4U           10      // F4U-4 Corsair
+define      DCS_PLANE_F5E           11      // F-5E Tiger II
+define      DCS_PLANE_F8J           12      // F-8J Crusader
+define      DCS_PLANE_F14B          13      // F-14B Tomcat
+define      DCS_PLANE_F15C          14      // F-15C Eagle
+define      DCS_PLANE_F15E          15      // F-15E Strike Eagle
+define      DCS_PLANE_F16CM         16      // F-16CM Fighting Falcon/Viper
+define      DCS_PLANE_F86F          17      // F-86F Sabre
+define      DCS_PLANE_FA18C         18      // F/A-18C Hornet
+define      DCS_PLANE_FW190A        19      // Fw 190 A-8 Anton
+define      DCS_PLANE_FW190D        20      // Fw 190 D-9 Dora
+define      DCS_PLANE_HAWK          21      // Hawk T.1A
+define      DCS_PLANE_I16           22      // I-16
+define      DCS_PLANE_JF17          23      // JF-17 Thunder
+define      DCS_PLANE_KA50          24      // Ka-50 Black Shark 2
+define      DCS_PLANE_L39           25      // L-39 Albatros
+define      DCS_PLANE_MB339         26      // MB.339
+define      DCS_PLANE_MI8MTV2       27      // Mi-8MTV2 Magnificent Eight
+define      DCS_PLANE_MIG15         28      // MiG-15bis
+define      DCS_PLANE_MIG19         29      // MiG-19P Farmer
+define      DCS_PLANE_MIG21         30      // Mig-21bis
+define      DCS_PLANE_MIG23MLA      31      // Mig-23 MLA Flogger
+define      DCS_PLANE_MIG29         32      // MiG-29
+define      DCS_PLANE_MOSQUITO      33      // Mosquito FB VI
+define      DCS_PLANE_M2000C        34      // Mirage M-2000C
+define      DCS_PLANE_P51D          35      // P-51D Mustang
+define      DCS_PLANE_SA342         36      // SA342 Gazelle
+define 		DCS_PLANE_J11A			37		// J-11A
+define      DCS_PLANE_SPITFIRE      38      // Spitfire LF Mk IX
+define      DCS_PLANE_SU25          39      // Su-25
+define      DCS_PLANE_SU27          40      // Su-27
+define      DCS_PLANE_SU33          41      // Su-33
+define      DCS_PLANE_UH1H          42      // UH-1H Huey
+define      DCS_PLANE_YAK52         43      // Yak-52
+
+// ***** USB KEY DEFINITIONS **************************************************
+
+define USB_A                USB[0x04]           // A
+define USB_B                USB[0x05]           // B
+define USB_C                USB[0x06]           // C
+define USB_D                USB[0x07]           // D
+define USB_E                USB[0x08]           // E
+define USB_F                USB[0x09]           // F
+define USB_G                USB[0x0A]           // G
+define USB_H                USB[0x0B]           // H
+define USB_I                USB[0x0C]           // I
+define USB_J                USB[0x0D]           // J
+define USB_K                USB[0x0E]           // K
+define USB_L                USB[0x0F]           // L
+define USB_M                USB[0x10]           // M
+define USB_N                USB[0x11]           // N
+define USB_O                USB[0x12]           // O
+define USB_P                USB[0x13]           // P
+define USB_Q                USB[0x14]           // Q
+define USB_R                USB[0x15]           // R
+define USB_S                USB[0x16]           // S
+define USB_T                USB[0x17]           // T
+define USB_U                USB[0x18]           // U
+define USB_V                USB[0x19]           // V
+define USB_W                USB[0x1A]           // W
+define USB_X                USB[0x1B]           // X
+define USB_Y                USB[0x1C]           // Y
+define USB_Z                USB[0x1D]           // Z
+
+define USB_1                USB[0x1E]           // 1
+define USB_2                USB[0x1F]           // 2
+define USB_3                USB[0x20]           // 3
+define USB_4                USB[0x21]           // 4
+define USB_5                USB[0x22]           // 5
+define USB_6                USB[0x23]           // 6
+define USB_7                USB[0x24]           // 7
+define USB_8                USB[0x25]           // 8
+define USB_9                USB[0x26]           // 9
+define USB_0                USB[0x27]           // 0
+
+define USB_ENTER            USB[0x28]           // ENTER
+define USB_ESCAPE           USB[0x29]           // ESCAPE
+define USB_BACKSPACE        USB[0x2A]           // BACKSPACE
+define USB_TAB              USB[0x2B]           // TAB
+define USB_SPACE            USB[0x2C]           // SPACE
+define USB_MINUS            USB[0x2D]           // - or _
+define USB_EQUAL            USB[0x2E]           // = or +
+define USB_OPENBRACKET      USB[0x2F]           // { or [
+define USB_CLOSEBRACKET     USB[0x30]           // } or ]
+define USB_BACKSLASH        USB[0x31]           // \ or |
+define USB_EUROPE1          USB[0x32]           // Non-US # or _
+define USB_SEMICOLON        USB[0x33]           // ; or :
+define USB_QUOTE            USB[0x34]           // ' or "
+define USB_TILDE            USB[0x35]           // ` or ~
+define USB_COMMA            USB[0x36]           // , or <
+define USB_PERIOD           USB[0x37]           // . or >
+define USB_SLASH            USB[0x38]           // / or ?
+define USB_CAPSLOCK         USB[0x39]           // CAPS LOCK
+
+define USB_F1               USB[0x3A]           // F1
+define USB_F2               USB[0x3B]           // F2
+define USB_F3               USB[0x3C]           // F3
+define USB_F4               USB[0x3D]           // F4
+define USB_F5               USB[0x3E]           // F5
+define USB_F6               USB[0x3F]           // F6
+define USB_F7               USB[0x40]           // F7
+define USB_F8               USB[0x41]           // F8
+define USB_F9               USB[0x42]           // F9
+define USB_F10              USB[0x43]           // F10
+define USB_F11              USB[0x44]           // F11
+define USB_F12              USB[0x45]           // F12
+
+define USB_PRINTSCREEN      USB[0x46]           // PRINT SCREEN
+define USB_SCROLLLOCK       USB[0x47]           // SCROLL LOCK
+define USB_PAUSE            USB[0x48]           // PAUSE
+define USB_INSERT           USB[0x49]           // INSERT
+define USB_HOME             USB[0x4A]           // HOME
+define USB_PAGEUP           USB[0x4B]           // PAGE UP
+define USB_DELETE           USB[0x4C]           // DELETE
+define USB_END              USB[0x4D]           // END
+define USB_PAGEDOWN         USB[0x4E]           // PAGE DOWN
+
+define USB_RIGHTARROW       USB[0x4F]           // RIGHT ARROW
+define USB_LEFTARROW        USB[0x50]           // LEFT ARROW
+define USB_DOWNARROW        USB[0x51]           // DOWN ARROW
+define USB_UPARROW          USB[0x52]           // UP ARROW
+
+define USB_NUMPAD_NUMLOCK   USB[0x53]           // NUMPAD NUM LOCK
+define USB_NUMPAD_SLASH     USB[0x54]           // NUMPAD /
+define USB_NUMPAD_ASTERISK  USB[0x55]           // NUMPAD *
+define USB_NUMPAD_HYPHEN    USB[0x56]           // NUMPAD -
+define USB_NUMPAD_PLUS      USB[0x57]           // NUMPAD +
+define USB_NUMPAD_ENTER     USB[0x58]           // NUMPAD ENTER
+define USB_NUMPAD_1         USB[0x59]           // NUMPAD 1 or END
+define USB_NUMPAD_2         USB[0x5A]           // NUMPAD 2 or DOWN ARROW
+define USB_NUMPAD_3         USB[0x5B]           // NUMPAD 3 or PAGE DOWN
+define USB_NUMPAD_4         USB[0x5C]           // NUMPAD 4 or LEFT ARROW
+define USB_NUMPAD_5         USB[0x5D]           // NUMPAD 5
+define USB_NUMPAD_6         USB[0x5E]           // NUMPAD 6 or RIGHT ARROW
+define USB_NUMPAD_7         USB[0x5F]           // NUMPAD 7 or HOME
+define USB_NUMPAD_8         USB[0x60]           // NUMPAD 8 or UP ARROW
+define USB_NUMPAD_9         USB[0x61]           // NUMPAD 9 or PAGE UP
+define USB_NUMPAD_0         USB[0x62]           // NUMPAD 0 or INSERT
+define USB_NUMPAD_PERIOD    USB[0x63]           // NUMPAD . or DELETE
+
+define USB_EUROPE2          USB[0x64]           // Non-US \ or |
+define USB_APPLICATION      USB[0x65]           // Application
+define USB_POWER            USB[0x66]           // Power
+
+define USB_NUMPAD_EQUAL     USB[0x67]           // NUMPAD =
+
+define USB_F13              USB[0x68]           // F13
+define USB_F14              USB[0x69]           // F14
+define USB_F15              USB[0x6A]           // F15
+define USB_F16              USB[0x6B]           // F16
+define USB_F17              USB[0x6C]           // F17
+define USB_F18              USB[0x6D]           // F18
+define USB_F19              USB[0x6E]           // F19
+define USB_F20              USB[0x6F]           // F20
+define USB_F21              USB[0x70]           // F21
+define USB_F22              USB[0x71]           // F22
+define USB_F23              USB[0x72]           // F23
+define USB_F24              USB[0x73]           // F24
+
+define USB_EXECUTE          USB[0x74]           // EXECUTE
+define USB_HELP             USB[0x75]           // HELP
+define USB_MENU             USB[0x76]           // MENU
+define USB_SELECT           USB[0x77]           // SELECT
+define USB_STOP             USB[0x78]           // STOP
+define USB_AGAIN            USB[0x79]           // AGAIN
+define USB_UNDO             USB[0x7A]           // UNDO
+define USB_CUT              USB[0x7B]           // CUT
+define USB_COPY             USB[0x7C]           // COPY
+define USB_PASTE            USB[0x7D]           // PASTE
+define USB_FIND             USB[0x7E]           // FIND
+define USB_MUTE             USB[0x7F]           // MUTE
+define USB_VOLUMEUP         USB[0x80]           // VOLUME UP
+define USB_VOLUMEDOWN       USB[0x81]           // VOLUME DOWN
+#
+define USB_LEFTCONTROL      USB[0xE0]           // LEFT CONTROL
+define USB_LEFTSHIFT        USB[0xE1]           // LEFT SHIFT
+define USB_LEFTALT          USB[0xE2]           // LEFT ALT
+define USB_LEFTGUI          USB[0xE3]           // LEFT GUI / LEFT WINDOWS
+define USB_RIGHTCONTROL     USB[0xE4]           // RIGHT CONTROL
+define USB_RIGHTSHIFT       USB[0xE5]           // RIGHT SHIFT
+define USB_RIGHTALT         USB[0xE6]           // RIGHT ALT
+define USB_RIGHTGUI         USB[0xE7]           // RIGHT GUI / RIGHT WINDOWS
+
+// ============================================================================
+//  CONFIGURATION
+// ============================================================================
+
+// ***** SCRIPT CONFIGURATION *************************************************
+
+// Enable verbose logging
+define  VERBOSE_LOGGING         $VerboseLogging
+
+// ***** GAME CONFIGURATION ***************************************************
+
+// Game start mode: whether or not DCS:World will be running  in VR mode or not
+define  DCS_MODE                $DCSMode
+
+// Set the in-game plane
+define  DCS_PLANE               $DCSPlane
+
+// ***** VR CONFIGURATION *****************************************************
+
+// Headset type used in VR game mode
+define  VR_HEADSET_TYPE         $DCSVRHeadsetType
+
+// ***** KEYBOARD CONFIGURATION ***********************************************
+
+// Default keyboard layout
+define  KEYBOARD_LAYOUT         $KeyboardLayout
+
+// ***** JOYSTICK CONFIGURATION ***********************************************
+
+// Sets the X and Y axis deadzones of the joystick
+define  JOYSTICK_DEADZONE       $JoystickDeadzone
+
+// Sets the X and Y axis curves of the joystick
+define  JOYSTICK_CURVE          $JoystickCurve
+
+// Sets the joystick grip type used on the Warthog body
+define  JOYSTICK_GRIP           $JoystickGrip
+
+// ***** THROTTLE CONFIGURATION ***********************************************
+
+// Sets the deadzone of the throttle
+define  THROTTLE_DEADZONE       $ThrottleDeadzone
+
+// Sets the curve of the throttle
+define  THROTTLE_CURVE          $ThrottleCurve
+
+// Sets whether one or two throttle axes are going to be mapped
+define  THROTTLE_PRESET         $ThrottlePreset
+
+// ***** RUDDER CONFIGURATION *************************************************
+
+// Enable Thrustnaster rudder controller
+define  USE_RUDDER              $UseRudder
+
+// The type of rudder that should be configured
+define  RUDDER_TYPE             $RudderType
+
+// Sets the main Z-axis deadzone on the rudder
+define  RUDDER_DEADZONE         $RudderDeadzone
+
+// Sets the main Z-axis curve on the rudder
+define  RUDDER_CURVE            $RudderCurve
+
+// Sets the deadzon of the toe brake on the rudder
+define  TOEBRAKE_DEADZONE       $ToebrakeDeadzone
+
+// ***** MFD CONFIGURATION ****************************************************
+
+// Enable Thrustmaster MFD controllers
+define  USE_MFD                 $UseMFD
+
+// ***** LED CONFIGURATION ****************************************************
+
+// Enable the status LEDs on the Warthog throttle
+define  USE_STATUS_LEDS         $UseStatusLEDs
+
+// Enable LED backlighting on the Warthog throttle
+define  ENABLE_LED_BACKLIGHT    $EnableLEDBacklight
+
+// The intensity of the LEDs
+define  LED_INTENSITY_LEVEL     $LEDIntensity
+
+// Enable load animation upon throttle init
+define  ENABLE_LOAD_BAR         $LEDLoadBar
+
+// Enable realistic backlight (throttle backlight follows ingame setting)
+define  ENABLE_REAL_BACKLIGHT   $EnableRealBacklight
+
+// ***** TOOLS CONFIGURATION **************************************************
+
+// Whether or not TrackIR is used
+define  USE_TRACKIR             $UseTrackIR
+
+// Whether or not VoiceAttack is used
+define  USE_VOICEATTACK         $UseVoiceAttack
+
+// Whether or not SRS radio is used
+define  USE_SRS_RADIO           $UseSRSRadio
+
+// Whether or not TrackView is used
+define  USE_TRACKVIEW           $UseTrackView
+
+
+// ============================================================================
+//  UTILITY FUNCTIONS
+// ============================================================================
+
+int msg(alias logmessage)
+{
+    //  Writes a log messge to the T.A.R.G.E.T. window if verbose logging is
+    //  enabled.
+    //
+    //  Args:
+    //      logmessage:         The message to display.
+
+    if (VERBOSE_LOGGING == YES)
+    {
+        printf("[DCS-Warthog] >> %s\xa", &logmessage);
+    }
+}
+
+int show_mapping(alias button, alias primary, alias primary_long, alias secondary, alias secondary_long)
+{
+    // Writes the mappings for a given button to the console.
+    //
+    // Args:
+    //      button:             The button that is displayed
+    //      primary:            Primary mapping for short press
+    //      primary_long:       Primary mapping for long press
+    //      secondary:          Secondary mapping for short press
+    //      secondary_long:     Secondary mapping for long press
+
+    if (VERBOSE_LOGGING == YES)
+    {
+        printf("[DCS-Warthog] >>    >> %s <<\xa", &button);
+        printf("                        --->> PRIMARY:          %s\xa",
+               &primary);
+        printf("                        --->> PRIMARY LONG:     %s\xa",
+               &primary_long);
+        printf("                        --->> SECONDARY:        %s\xa",
+               &secondary);
+        printf("                        --->> SECONDARY_LONG:   %s\xa",
+               &secondary_long);
+        printf("\xa");
+    }
+}
+
+int errormsg(alias errormessage)
+{
+    //  Writes an error log messge to the T.A.R.G.E.T. window.
+    //
+    //  Args:
+    //      errormessage:       The message to display.
+
+    printf("[DCS-Warthog] >>>> ERROR [%s] ERROR <<<<\xa", &errormessage);
+}
+
+// ============================================================================
+//  EVENT HANDLER
+// ============================================================================
+int EventHandle(int type, alias o, int x)
+{
+    DefaultMapping(&o, x);
+}
+
+// ============================================================================
+//  MAIN
+// ============================================================================
+int main()
+{
+    // ***** DEVICE SELECTION *************************************************
+
+    // Exclude the HOTAS Cougar from the configuration, unless the Cougar is
+    // used
+    if (JOYSTICK_GRIP != JOYSTICK_GRIP_COUGAR)
+    {
+        msg("Excluding Cougar joysticks from the configuration...");
+        Configure(&HCougar, MODE_EXCLUDED);
+    }
+
+    // Exclude T.16000 joysticks from the configuration
+    msg("Excluding T.16000 joysticks from the configuration...");
+    Configure(&T16000, MODE_EXCLUDED);
+    Configure(&T16000L, MODE_EXCLUDED);
+
+    // Rudder device selection
+    if (USE_RUDDER == YES)
+    {
+        if (RUDDER_TYPE == RUDDER_TFLIGHT)
+        {
+            // Use the standard T.Flight rudder
+            msg("Configuring to use the T.Flight rudder...");
+            Configure(&TFRPRudder, MODE_FILTERED);
+            Configure(&TFRPHARudder, MODE_EXCLUDED);
+        }
+        else
+        {
+            // Use the Pendulum rudder
+            msg("Configuring to use the Pendulum rudder...");
+            Configure(&TFRPRudder, MODE_EXCLUDED);
+            Configure(&TFRPHARudder, MODE_FILTERED);
+        }
+    }
+    else
+    {
+        // Exclude all rudders from the configuration
+        msg("Excluding all rudders from the configuration...");
+        Configure(&TFRPRudder, MODE_EXCLUDED);
+        Configure(&TFRPHARudder, MODE_EXCLUDED);
+    }
+
+    // Exclude the MFDs if they are not used
+    if (USE_MFD == NO)
+    {
+        msg("Excluding MFDs from the configuration...");
+        Configure(&LMFD, MODE_EXCLUDED);
+        Configure(&RMFD, MODE_EXCLUDED);
+    }
+
+    // ***** EVENT HANDLER ****************************************************
+    if (Init(&EventHandle))
+    {
+        return 1;
+    }
+
+    // ***** HARDWARE CONFIGURATION *******************************************
+
+    SetShiftButton(&Joystick, S4);
+    SetKBRate(PULSE_TIME, DELAY_TIME);
+    SetKBLayout(KEYBOARD_LAYOUT);
+
+    // ***** AXES CONFIGURATION ***********************************************
+
+    // Init the joystick axes based on the selected HOTAS grip
+    if(JOYSTICK_GRIP == JOYSTICK_GRIP_A10)
+    {
+        msg("Mapping joystick axes for the A-10 grip...");
+        MapAxis(&Joystick, JOYX, DX_X_AXIS);
+        MapAxis(&Joystick, JOYY, DX_Y_AXIS);
+        SetSCurve(&Joystick, JOYX, 0, JOYSTICK_DEADZONE, 0, JOYSTICK_CURVE, 0);
+        SetSCurve(&Joystick, JOYY, 0, JOYSTICK_DEADZONE, 0, JOYSTICK_CURVE, 0);
+    }
+    else if(JOYSTICK_GRIP == JOYSTICK_GRIP_FA18)
+    {
+        msg("Mapping joystick axes for the F/A-18C grip...");
+        MapAxis(&JoystickF18, JOYX, DX_X_AXIS);
+        MapAxis(&JoystickF18, JOYY, DX_Y_AXIS);
+        SetSCurve(&Joystick, JOYX, 0, JOYSTICK_DEADZONE, 0, JOYSTICK_CURVE, 0);
+        SetSCurve(&Joystick, JOYY, 0, JOYSTICK_DEADZONE, 0, JOYSTICK_CURVE, 0);
+    }
+    else if (JOYSTICK_GRIP == JOYSTICK_GRIP_COUGAR)
+    {
+        msg("Mapping joystick axes for the Cougar grip...");
+        MapAxis(&HCougar, JOYX, DX_X_AXIS);
+        MapAxis(&HCougar, JOYY, DX_Y_AXIS);
+        SetSCurve(&Joystick, JOYX, 0, JOYSTICK_DEADZONE, 0, JOYSTICK_CURVE, 0);
+        SetSCurve(&Joystick, JOYY, 0, JOYSTICK_DEADZONE, 0, JOYSTICK_CURVE, 0);
+    }
+    else
+    {
+        errormsg("Unknown grip type configured.");
+        return 1;
+    }
+
+    // Init throttle axes based on the selected configurations
+    if (THROTTLE_PRESET == THROTTLE_PRESET_SINGLE)
+    {
+        msg("Mapping a single throttle axis only...");
+        MapAxis(&Throttle, THR_RIGHT, DX_THROTTLE_AXIS);
+        SetSCurve(&Throttle, THR_RIGHT, 0, THROTTLE_DEADZONE, 0, THROTTLE_CURVE, 0);
+    }
+    else if (THROTTLE_PRESET == THROTTLE_PRESET_DUAL)
+    {
+        msg("Mapping throttle axes as two separate axes...");
+        MapAxis(&Throttle, THR_LEFT, DX_Z_AXIS);
+        MapAxis(&Throttle, THR_RIGHT, DX_THROTTLE_AXIS);
+        SetSCurve(&Throttle, THR_LEFT, 0, THROTTLE_DEADZONE, 0, THROTTLE_CURVE, 0);
+        SetSCurve(&Throttle, THR_RIGHT, 0, THROTTLE_DEADZONE, 0, THROTTLE_CURVE, 0);
+    }
+    else
+    {
+        errormsg("Unknown throttle preset configured.");
+        return 1;
+    }
+
+    msg("Mapping friction slider...");
+    MapAxis(&Throttle, THR_FC, DX_SLIDER_AXIS);
+
+    msg ("Mapping slew axes...");
+    MapAxis(&Throttle, SCX, DX_XROT_AXIS);
+    MapAxis(&Throttle, SCY, DX_YROT_AXIS);
+
+    msg("Mapping mouse as secondary function for slew axes...");
+    MapKey(&Joystick, S4, EXEC( "MapAxis(&Throttle, SCX, MOUSE_X_AXIS, AXIS_NORMAL, MAP_RELATIVE);"
+                                "SetSCurve(&Throttle, SCX, 0, 10, 0, 0, -5);"
+                                "MapAxis(&Throttle, SCY, MOUSE_Y_AXIS, AXIS_NORMAL, MAP_RELATIVE);"
+                                "SetSCurve(&Throttle, SCY, 0, 10, 0, 0, -5);"));
+
+
+    MapKeyR(&Joystick, S4, EXEC("MapAxis(&Throttle, SCX, DX_XROT_AXIS, AXIS_NORMAL, MAP_ABSOLUTE);"
+                                "SetSCurve(&Throttle, SCX, 0, 0, 0, 0, 0);"
+                                "MapAxis(&Throttle, SCY, DX_YROT_AXIS, AXIS_NORMAL, MAP_ABSOLUTE);"
+                                "SetSCurve(&Throttle, SCY, 0, 0, 0, 0, 0);"));
+
+    // Init rudder axes based on the selected configuration
+    if (USE_RUDDER == YES)
+    {
+        if (RUDDER_TYPE == RUDDER_TFLIGHT)
+        {
+            msg("Configuring the T.Flight rudder axes...");
+            MapAxis(&TFRPRudder, TRUDDER, DX_ZROT_AXIS);
+            SetSCurve(&TFRPRudder, TRUDDER, 0, RUDDER_DEADZONE, 0, RUDDER_CURVE, 0);
+
+            // The remaining two axes will be converted to keystrokes to get around
+            // the issue of having too many axes in the virtual controller
+            KeyAxis(&TFRPRudder, TRPRIGHT, 0, AXMAP2(2, GENERAL_WheelBrake, 0));
+            KeyAxis(&TFRPRudder, TRPLEFT, 0, AXMAP2(2, GENERAL_WheelBrake, 0));
+        }
+        else if (RUDDER_TYPE == RUDDER_PENDULUM)
+        {
+            msg("Configuring the Pendulum rudder axes...");
+            // TODO
+        }
+        else
+        {
+            errormsg("Unknown rudder model configured.");
+            return 1;
+        }
+    }
+
+    // ***** MFD CONFIGURATION ************************************************
+    if (USE_MFD == YES)
+    {
+        msg("Configuring MFDs...");
+        // TODO
+    }
+
+    // ***** LED CONFIGURATION ************************************************
+    msg("Configuring LEDs...");
+
+    int i = 0;
+
+    ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT-LED1)); //set LED 1 OFF
+    ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT-LED2)); //set LED 2 OFF
+    ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT-LED3)); //set LED 3 OFF
+    ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT-LED4)); //set LED 4 OFF
+    ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT-LED5)); //set LED 5 OFF
+
+    if (ENABLE_LED_BACKLIGHT == NO)
+    {
+        ActKey(PULSE+KEYON+LED(&Throttle, LED_INTENSITY, 0)); // Set LED intensity level to 0
+        ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT-LED0)); // set backlight OFF
+    }
+    else
+    {
+        ActKey(PULSE+KEYON+LED(&Throttle, LED_INTENSITY, LED_INTENSITY_LEVEL)); // Set LED intensity level
+        ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT+LED0)); // set backlight ON
+    }
+
+    if (ENABLE_LOAD_BAR == YES)
+    {
+        ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT+LED5));
+        Sleep(500);
+        ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT+LED4));
+        Sleep(500);
+        ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT+LED3));
+        Sleep(500);
+        ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT+LED2));
+        Sleep(500);
+        ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT+LED1));
+        Sleep(500);
+
+        while (i < 3)
+        {
+            ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT-LED1));
+            ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT-LED2));
+            ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT-LED3));
+            ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT-LED4));
+            ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT-LED5));
+            Sleep(200);
+            ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT+LED1));
+            ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT+LED2));
+            ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT+LED3));
+            ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT+LED4));
+            ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT+LED5));
+            Sleep(200);
+            i = i + 1;
+        }
+
+        ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT-LED1));
+        ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT-LED2));
+        ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT-LED3));
+        ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT-LED4));
+        ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT-LED5));
+    }
+
+    if (ENABLE_REAL_BACKLIGHT == YES)
+    {
+        // Turn off backlight LEDs
+        ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT-LED0));
+    }
+
+    // ***** JOYSTICK GRIP CONFIGURATION **************************************
+
+    msg("Setting up control profile...");
+
+    if (JOYSTICK_GRIP == JOYSTICK_GRIP_A10)
+    {
+        // ----- JOYSTICK BUTTON CONFIGURATION --------------------------------
+
+        msg("Setting up control profile with the default A-10 joystick grip...");
+        msg("");
+        msg("Control Layout:");
+
+        // --------------------------------------------------------------------
+        // Trigger - stage 1
+        // --------------------------------------------------------------------
+        MapKey(&Joystick, TG1, $JoystickTG1Primary);
+
+        // --------------------------------------------------------------------
+        // Trigger - stage 2
+        // --------------------------------------------------------------------
+        MapKey(&Joystick, TG2, $JoystickTG2Primary);
+
+        // --------------------------------------------------------------------
+        // S1
+        // --------------------------------------------------------------------
+        MapKeyIO(&Joystick, S1, TEMPO($JoystickS1Secondary, $JoystickS1SecondaryLong, 500), TEMPO( $JoystickS1Primary, $JoystickS1PrimaryLong, 500));
+
+        // --------------------------------------------------------------------
+        // S2
+        // --------------------------------------------------------------------
+        MapKeyIO(&Joystick, S2, $JoystickS2Secondary, $JoystickS2Primary);
+
+        // --------------------------------------------------------------------
+        // S3
+        // --------------------------------------------------------------------
+        MapKeyIO(&Joystick, S3, $JoystickS3Secondary, $JoystickS3Primary);
+
+        // ----- JOYSTICK TRIM CONFIGURATION ----------------------------------
+
+        MapKeyIO(&Joystick, H1U, $JoystickH1USecondary, $JoystickH1UPrimary);
+        MapKeyIO(&Joystick, H1D, $JoystickH1DSecondary, $JoystickH1DPrimary);
+        MapKeyIO(&Joystick, H1L, $JoystickH1LSecondary, $JoystickH1LPrimary);
+        MapKeyIO(&Joystick, H1R, $JoystickH1RSecondary, $JoystickH1RPrimary);
+
+        // ----- JOYSTICK TMS CONFIGURATION -----------------------------------
+
+        MapKeyIO(&Joystick, H2U, $JoystickH2USecondary, $JoystickH2UPrimary);
+        MapKeyIO(&Joystick, H2D, $JoystickH2DSecondary, $JoystickH2DPrimary);
+        MapKeyIO(&Joystick, H2L, $JoystickH2LSecondary, $JoystickH2LPrimary);
+        MapKeyIO(&Joystick, H2R, $JoystickH2RSecondary, $JoystickH2RPrimary);
+
+        // ----- JOYSTICK DMS CONFIGURATION -----------------------------------
+
+        MapKeyIO(&Joystick, H3U, $JoystickH3USecondary, $JoystickH3UPrimary);
+        MapKeyIO(&Joystick, H3D, $JoystickH3DSecondary, $JoystickH3DPrimary);
+        MapKeyIO(&Joystick, H3L, $JoystickH3LSecondary, $JoystickH3LPrimary);
+        MapKeyIO(&Joystick, H3R, $JoystickH3RSecondary, $JoystickH3RPrimary);
+
+        // ----- JOYSTICK CMS CONFIGURATION -----------------------------------
+
+        MapKeyIO(&Joystick, H4U, $JoystickH4USecondary, $JoystickH4UPrimary);
+        MapKeyIO(&Joystick, H4D, $JoystickH4DSecondary, $JoystickH4DPrimary);
+        MapKeyIO(&Joystick, H4L, $JoystickH4LSecondary, $JoystickH4LPrimary);
+        MapKeyIO(&Joystick, H4R, $JoystickH4RSecondary, $JoystickH4RPrimary);
+    }
+    else if (JOYSTICK_GRIP == JOYSTICK_GRIP_FA18)
+    {
+        // TODO
+    }
+    else if (JOYSTICK_GRIP == JOYSTICK_GRIP_COUGAR)
+    {
+        // TODO
+    }
+    else
+    {
+        errormsg("Unsupported grip type specified.");
+        return 1;
+    }
+
+    // ***** THROTTLE GRIP CONFIGURATION **************************************
+
+    msg("Configuring Throttle Grip...");
+
+    // ------------------------------------------------------------------------
+    // MIC Switch
+    // ------------------------------------------------------------------------
+
+    MapKeyIO(&Throttle, MSU, $ThrottleGripMSUSecondary, $ThrottleGripMSUPrimary);
+    MapKeyIO(&Throttle, MSD, $ThrottleGripMSDSecondary, $ThrottleGripMSDPrimary);
+    MapKeyIO(&Throttle, MSL, $ThrottleGripMSLSecondary, $ThrottleGripMSLPrimary);
+    MapKeyIO(&Throttle, MSR, $ThrottleGripMSRSecondary, $ThrottleGripMSRPrimary);
+    MapKeyIO(&Throttle, MSP, $ThrottleGripMSPSecondary, $ThrottleGripMSPPrimary);
+
+    // ------------------------------------------------------------------------
+    // Speedbrake
+    // ------------------------------------------------------------------------
+
+    MapKeyIO(&Throttle, SPDB, $ThrottleGripSPDBSecondary, $ThrottleGripSPDBPrimary);
+    MapKeyIO(&Throttle, SPDM, $ThrottleGripSPDBSecondary, $ThrottleGripSPDBPrimary);
+    MapKeyIO(&Throttle, SPDF, $ThrottleGripSPDBSecondary, $ThrottleGripSPDBPrimary);
+
+    // ------------------------------------------------------------------------
+    // Boar Switch
+    // ------------------------------------------------------------------------
+
+    MapKeyIO(&Throttle, BSB, $ThrottleGripBSBSecondary, $ThrottleGripBSBPrimary);
+    MapKeyIO(&Throttle, BSM, $ThrottleGripBSMSecondary, $ThrottleGripBSMPrimary);
+    MapKeyIO(&Throttle, BSF, $ThrottleGripBSFSecondary, $ThrottleGripBSFPrimary);
+
+    // ------------------------------------------------------------------------
+    // China Hat
+    // ------------------------------------------------------------------------
+
+    MapKeyIO(&Throttle, CHF, $ThrottleGripCHFSecondary, $ThrottleGripCHFPrimary);
+    MapKeyIO(&Throttle, CHB, $ThrottleGripCHBSecondary, $ThrottleGripCHBPrimary);
+
+    // ------------------------------------------------------------------------
+    // Pinkie Switch
+    // ------------------------------------------------------------------------
+
+    MapKeyIO(&Throttle, PSB, $ThrottleGripPSBSecondary, $ThrottleGripPSBPrimary);
+    MapKeyIO(&Throttle, PSF, $ThrottleGripPSFSecondary, $ThrottleGripPSFPrimary);
+
+    // ------------------------------------------------------------------------
+    // Left Throttle Button
+    // ------------------------------------------------------------------------
+
+    MapKeyIO(&Throttle, LTB, TEMPO($ThrottleGripLTBSecondary, $ThrottleGripLTBSecondaryLong), TEMPO(ThrottleGripLTBPrimary, ThrottleGripLTBPrimaryLong, 500));
+
+    // ------------------------------------------------------------------------
+    // Coolie Hat
+    // ------------------------------------------------------------------------
+
+    MapKeyIO(&Throttle, CSU, $ThrottleGripCSUSecondary, $ThrottleGripCSUPrimary);
+    MapKeyIO(&Throttle, CSD, $ThrottleGripCSDSecondary, $ThrottleGripCSDPrimary);
+    MapKeyIO(&Throttle, CSL, $ThrottleGripCSLSecondary, $ThrottleGripCSLPrimary);
+    MapKeyIO(&Throttle, CSR, $ThrottleGripCSRSecondary, $ThrottleGripCSRPrimary);
+
+    // ***** THROTTLE BASE CONFIGURATION **************************************
+
+    msg("Configuring Throttle Base...");
+
+    // ------------------------------------------------------------------------
+    // Engine Fuel Flow Switch
+    // ------------------------------------------------------------------------
+    MapKeyIO(&Throttle, EFLNORM, $ThrottleBaseEFLNORMSecondary, $ThrottleBaseEFLNORMPrimary);
+    MapKeyIO(&Throttle, EFRNORM, $ThrottleBaseEFRNORMSecondary, $ThrottleBaseEFRNORMPrimary);
+
+    MapKeyIO(&Throttle, EFLOVER, $ThrottleBaseEFLOVERSecondary, $ThrottleBaseEFLOVERPrimary);
+    MapKeyIO(&Throttle, EFROVER, $ThrottleBaseEFROVERSecondary, $ThrottleBaseEFROVERPrimary);
+
+    // ------------------------------------------------------------------------
+    // Engine Oper Switch
+    // ------------------------------------------------------------------------
+    MapKeyIO(&Throttle, EOLIGN, $ThrottleBaseEOLIGNSecondary, $ThrottleBaseEOLIGNPrimary);
+    MapKeyIO(&Throttle, EORIGN, $ThrottleBaseEORIGNSecondary, $ThrottleBaseEORIGNPrimary);
+
+    MapKeyIO(&Throttle, EOLNORM, $ThrottleBaseEOLNORMSecondary, $ThrottleBaseEOLNORMPrimary);
+    MapKeyIO(&Throttle, EORNORM, $ThrottleBaseEORNORMSecondary, $ThrottleBaseEORNORMPrimary);
+
+    MapKeyIO(&Throttle, EOLMOTOR, $ThrottleBaseEOLMOTORSecondary, $ThrottleBaseEOLMOTORPrimary);
+    MapKeyIO(&Throttle, EORMOTOR, $ThrottleBaseEORMOTORSecondary, $ThrottleBaseEORMOTORPrimary);
+
+    // ------------------------------------------------------------------------
+    // APU
+    // ------------------------------------------------------------------------
+    MapKeyIO(&Throttle, APUON, $ThrottleBaseAPUONSecondary, $ThrottleBaseAPUONPrimary);
+    MapKeyIO(&Throttle, APUOFF, $ThrottleBaseAPUOFFSecondary, $ThrottleBaseAPUOFFPrimary);
+
+    // ------------------------------------------------------------------------
+    // Flaps
+    // ------------------------------------------------------------------------
+    MapKeyIO(&Throttle, FLAPU, $ThrottleBaseFLAPUSecondary, $ThrottleBaseFLAPUPrimary);
+    MapKeyIO(&Throttle, FLAPM, $ThrottleBaseFLAPMSecondary, $ThrottleBaseFLAPMPrimary);
+    MapKeyIO(&Throttle, FLAPD, $ThrottleBaseFLAPDSecondary, $ThrottleBaseFLAPDPrimary);
+
+    // ------------------------------------------------------------------------
+    // Landing Gear Horn
+    // ------------------------------------------------------------------------
+    MapKeyIO(&Throttle, LDGH, $ThrottleBaseLDGHSecondary, $ThrottleBaseLDGHPrimary);
+
+    // ------------------------------------------------------------------------
+    // EAC Switch
+    // ------------------------------------------------------------------------
+    MapKeyIO(&Throttle, EACON, $ThrottleBaseEACONSecondary, $ThrottleBaseEACONPrimary);
+    MapKeyIO(&Throttle, EACOFF, $ThrottleBaseEACOFFSecondary, $ThrottleBaseEACOFFPrimary);
+
+    // ------------------------------------------------------------------------
+    // RDR Switch
+    // ------------------------------------------------------------------------
+
+    MapKeyIO(&Throttle, RDRNRM, $ThrottleBaseRDRNRMSecondary, $ThrottleBaseRDRNRMPrimary);
+    MapKeyIO(&Throttle, RDRDIS, $ThrottleBaseRDRDISSecondary, $ThrottleBaseRDRDISPrimary);
+
+    // ------------------------------------------------------------------------
+    // Autopilot
+    // ------------------------------------------------------------------------
+    MapKeyIO(&Throttle, APENG, $ThrottleBaseAPENGSecondary, $ThrottleBaseAPENGSecondary);
+
+    MapKeyIO(&Throttle, APPAT, $ThrottleBaseAPPATSecondary, $ThrottleBaseAPPATSecondary);
+    MapKeyIO(&Throttle, APAH, $ThrottleBaseAPAHSecondary, $ThrottleBaseAPAHSecondary);
+    MapKeyIO(&Throttle, APALT, $ThrottleBaseAPALTSecondary, $ThrottleBaseAPALTSecondary);
+
+    // ------------------------------------------------------------------------
+    // Idle
+    // ------------------------------------------------------------------------
+
+    MapKeyR( &Throttle, IDLELON, $ThrottleBaseIDLELONPrimaryRelease);
+    MapKeyR( &Throttle, IDLERON, $ThrottleBaseIDLERONPrimaryRelease);
+
+    MapKey( &Throttle, IDLELON, $ThrottleBaseIDLELONPrimary);
+    MapKey( &Throttle, IDLERON, $ThrottleBaseIDLERONPrimary);
+}

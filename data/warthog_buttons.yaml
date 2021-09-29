@@ -1,0 +1,52 @@
+## ============================================================================
+##                       ---=== DCS:World Tools ===---
+##                  Copyright (C) 2021-2022, Attila Kovacs
+## ============================================================================
+##
+## Permission is hereby granted, free of charge, to any person obtaining a copy
+## of this software and associated documentation files (the "Software"), to
+## deal in the Software without restriction, including without limitation the
+## rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+## sell copies of the Software, and to permit persons to whom the Software is
+## furnished to do so, subject to the following conditions:
+##
+## The above copyright notice and this permission notice shall be included in
+## all copies or substantial portions of the Software.
+##
+## THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+## IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+## FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+## AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+## LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+## FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+## IN THE SOFTWARE.
+##
+## ============================================================================
+
+a10grip:
+  tg1: Gun Trigger - First Stage (TG1)
+  tg2: Gun Trigger - Second Stage (TG2)
+  s1: Master Mode Control Button (S1)
+  s2: Weapon Release Button (S2)
+  s3: Nosewheel Steering Button (S3)
+  h1u: Trim Switch Up (H1U)
+  h1d: Trim Switch Down (H1D)
+  h1l: Trim Switch Left (H1L)
+  h1r: Trim Switch Right (H1R)
+  h2u: TMS Switch Up (H2U)
+  h2d: TMS Switch Down (H2D)
+  h2l: TMS Switch Left (H2L)
+  h2r: TMS Switch Right (H2R)
+  h3u: DMS Switch Up (H3U)
+  h3d: DMS Switch Down (H3D)
+  h3l: DMS Switch Left (H3L)
+  h3r: DMS Switch Right (H3R)
+  h4u: CMS Switch Up (H4U)
+  h4d: CMS Switch Down (H4D)
+  h4l: CMS Switch Left (H4L)
+  h4r: CMS Switch Right (H4R)
+  h4p: CMS Switch Press (H4P)
+fa18grip: {}
+cougargrip: {}
+throttlegrip: {}
+throttebase: {}
