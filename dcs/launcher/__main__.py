@@ -32,6 +32,7 @@ import argparse
 # DCS Imports
 from dcs.constants import DCSTOOLS_LOG_CHANNEL
 from dcs.tools.localizer import LOCALIZER
+from dcs.launcher.ui.application import DCSLauncherGUIApplication
 
 def configure_logging() -> None:
 
@@ -86,7 +87,8 @@ def execute(arguments: argparse.Namespace) -> int:
         pass
     else:
         # Normal startup, start the GUI
-        pass
+        application = DCSLauncherGUIApplication()
+        application.mainloop()
 
     return  0
 
