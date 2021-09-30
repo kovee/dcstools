@@ -22,8 +22,10 @@
 """Contains the implementation of the DCSLauncherMainWindow."""
 
 # Runtime Imports
+import os
 import tkinter
 from tkinter import ttk
+from PIL import ImageTk
 
 # DCS Imports
 from dcs.launcher.ui.window import Window
@@ -35,3 +37,26 @@ class DCSLauncherMainWindow(Window):
     def on_create(self, *args, **kwargs) -> None:
 
         """Initialization of the main window."""
+
+        # Create canvas
+        self._canvas = tkinter.Canvas(self,
+                                      width=self.Width,
+                                      height=self.Height)
+
+        # Load Images
+        self._stripe = render = ImageTk.PhotoImage(
+            file=os.path.abspath(os.path.expanduser(
+                './data/images/hazard_stripe.png')))
+
+        self._logo = render2 = ImageTk.PhotoImage(
+            file=os.path.abspath(os.path.expanduser(
+                './data/images/logo.png')))
+
+        self._canvas.pack()
+        self.pack()
+
+        self._canvas.create_image((0,-30), image=render, anchor='nw')
+        self._canvas.create_image((0,20), image=render2, anchor='nw')
+        self._canvas.create_image((0,975), image=render, anchor='nw')
+
+        self.master.resizable(width=False, height=False)
