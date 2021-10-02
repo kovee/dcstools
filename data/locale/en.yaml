@@ -2,3 +2,10 @@ CLI_DESCRIPTION: DCS Launcher tool.
 CLI_EPILOG: This is a free tool. If you have paid for it, you have been robbed.
 CLI_OPTION_DEBUG_DESCRIPTION: Enables debug mode.
 CLI_OPTION_RUN_DESCRIPTION: Starts DCS according to the specified profile without displaying the GUI.
+MAIN_WINDOW_TITLE: DCS Launcher
+MAIN_WINDOW_EDIT_PROFILE_BUTTON: Edit Profile
+MAIN_WINDOW_PROFILE_MANAGER_BUTTON: Profile Manager
+MAIN_WINDOW_LAUNCH_BUTTON: LAUNCH
+MAIN_WINDOW_DONATE_BUTTON: Donate
+MAIN_WINDOW_SETTINGS_BUTTON: Settings
+MAIN_WINDOW_EXIT_BUTTON: Exit

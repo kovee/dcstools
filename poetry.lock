@@ -312,7 +312,7 @@ python-versions = "*"
 
 [[package]]
 name = "hstspreload"
-version = "2021.9.1"
+version = "2021.10.1"
 description = "Chromium HSTS Preload list as a Python package"
 category = "main"
 optional = false
@@ -840,7 +840,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [[package]]
 name = "pytz"
-version = "2021.1"
+version = "2021.3"
 description = "World timezone definitions, modern and historical"
 category = "dev"
 optional = false
@@ -864,7 +864,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*"
 
 [[package]]
 name = "readme-renderer"
-version = "29.0"
+version = "30.0"
 description = "readme_renderer is a library for rendering \"readme\" descriptions for Warehouse"
 category = "dev"
 optional = false
@@ -874,10 +874,9 @@ python-versions = "*"
 bleach = ">=2.1.0"
 docutils = ">=0.13.1"
 Pygments = ">=2.5.1"
-six = "*"
 
 [package.extras]
-md = ["cmarkgfm (>=0.5.0,<0.6.0)"]
+md = ["cmarkgfm (>=0.5.0,<0.7.0)"]
 
 [[package]]
 name = "requests"
@@ -1500,8 +1499,8 @@ hpack = [
     {file = "hpack-3.0.0.tar.gz", hash = "sha256:8eec9c1f4bfae3408a3f30500261f7e6a65912dc138526ea054f9ad98892e9d2"},
 ]
 hstspreload = [
-    {file = "hstspreload-2021.9.1-py3-none-any.whl", hash = "sha256:c677c0886f5dfade2c81b9e39be8619d62bb0816784dd7d2b6a97942bc8add97"},
-    {file = "hstspreload-2021.9.1.tar.gz", hash = "sha256:a81748bbf9004f293a5cee2405d558d9fff38a2247f1f98ce4aed8f5c7ab4d25"},
+    {file = "hstspreload-2021.10.1-py3-none-any.whl", hash = "sha256:4115ea63e87b4bea3c01a5a4e5d74993485811e0ed16d9a71dec453e2c731b65"},
+    {file = "hstspreload-2021.10.1.tar.gz", hash = "sha256:5bb90f438bec40faf320170ee48cf1978f40423ee1ba39a57bb686f3f9c061c7"},
 ]
 httpcore = [
     {file = "httpcore-0.9.1-py3-none-any.whl", hash = "sha256:9850fe97a166a794d7e920590d5ec49a05488884c9fc8b5dba8561effab0c2a0"},
@@ -1883,8 +1882,8 @@ python-magic = [
     {file = "python_magic-0.4.24-py2.py3-none-any.whl", hash = "sha256:4fec8ee805fea30c07afccd1592c0f17977089895bdfaae5fec870a84e997626"},
 ]
 pytz = [
-    {file = "pytz-2021.1-py2.py3-none-any.whl", hash = "sha256:eb10ce3e7736052ed3623d49975ce333bcd712c7bb19a58b9e2089d4057d0798"},
-    {file = "pytz-2021.1.tar.gz", hash = "sha256:83a4a90894bf38e243cf052c8b58f381bfe9a7a483f6a9cab140bc7f702ac4da"},
+    {file = "pytz-2021.3-py2.py3-none-any.whl", hash = "sha256:3672058bc3453457b622aab7a1c3bfd5ab0bdae451512f6cf25f64ed37f5b87c"},
+    {file = "pytz-2021.3.tar.gz", hash = "sha256:acad2d8b20a1af07d4e4c9d2e9285c5ed9104354062f275f3fcd88dcef4f1326"},
 ]
 pywin32-ctypes = [
     {file = "pywin32-ctypes-0.2.0.tar.gz", hash = "sha256:24ffc3b341d457d48e8922352130cf2644024a4ff09762a2261fd34c36ee5942"},
@@ -1922,8 +1921,8 @@ pyyaml = [
     {file = "PyYAML-5.4.1.tar.gz", hash = "sha256:607774cbba28732bfa802b54baa7484215f530991055bb562efbed5b2f20a45e"},
 ]
 readme-renderer = [
-    {file = "readme_renderer-29.0-py2.py3-none-any.whl", hash = "sha256:63b4075c6698fcfa78e584930f07f39e05d46f3ec97f65006e430b595ca6348c"},
-    {file = "readme_renderer-29.0.tar.gz", hash = "sha256:92fd5ac2bf8677f310f3303aa4bce5b9d5f9f2094ab98c29f13791d7b805a3db"},
+    {file = "readme_renderer-30.0-py2.py3-none-any.whl", hash = "sha256:3286806450d9961d6e3b5f8a59f77e61503799aca5155c8d8d40359b4e1e1adc"},
+    {file = "readme_renderer-30.0.tar.gz", hash = "sha256:8299700d7a910c304072a7601eafada6712a5b011a20139417e1b1e9f04645d8"},
 ]
 requests = [
     {file = "requests-2.26.0-py2.py3-none-any.whl", hash = "sha256:6c1246513ecd5ecd4528a0906f910e8f0f9c6b8ec72030dc9fd154dc1a6efd24"},

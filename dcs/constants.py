@@ -183,3 +183,6 @@ DEFAULT_LOCALE = 'en'
 
 DEFAULT_LOCALIZATION_PATH = './data/locale'
 """Path to the directory where language files are stored."""
+
+DEFAULT_PROFILES_PATH = './data/profiles'
+"""Path to the directory containing the user profiles."""

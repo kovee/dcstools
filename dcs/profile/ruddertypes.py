@@ -23,7 +23,21 @@
 ##
 ## ============================================================================
 
-"""Contains the implementation of the profile handling."""
+"""Contains the implementation of the RudderTypes enum."""
 
-from dcs.profile.profile import Profile
-from dcs.profile.profilemanager import ProfileManager, PROFILE_MANAGER
+# Runtime Imports
+from enum import IntEnum, auto
+
+class RudderTypes(IntEnum):
+
+    RUDDER_TYPE_NONE = auto()
+    """Default value, represents no rudder."""
+
+    RUDDER_TYPE_GENERIC = auto()
+    """Represents a generic rudder."""
+
+    RUDDER_TYPE_TFLIGHT = auto()
+    """Represents the Thrustmaster TFlight rudder."""
+
+    RUDDER_TYPE_TPR = auto()
+    """Represents the Thrustmaster TPR rudder."""

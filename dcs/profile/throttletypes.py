@@ -23,7 +23,20 @@
 ##
 ## ============================================================================
 
-"""Contains the implementation of the profile handling."""
+"""Contains the implementation of the ThrottleTypes enum."""
 
-from dcs.profile.profile import Profile
-from dcs.profile.profilemanager import ProfileManager, PROFILE_MANAGER
+# Runtime Imports
+from enum import IntEnum, auto
+
+class ThrottleTypes(IntEnum):
+
+    """List of supported throttle types."""
+
+    THROTTLE_TYPE_NONE = auto()
+    """Default value, represents tno throttle."""
+
+    THROTTLE_TYPE_GENERIC = auto()
+    """Represents a generic throttle."""
+
+    THROTTLE_TYPE_WARTHOG = auto()
+    """Represents the Thrustmaster Warthog throttle."""

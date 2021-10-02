@@ -31,6 +31,7 @@ import tkinter
 from ttkbootstrap import Style
 
 # DCS Imports
+from dcs.tools.localizer import LOCALIZER
 from dcs.launcher.ui.mainwindow import DCSLauncherMainWindow
 
 class DCSLauncherGUIApplication(tkinter.Tk):
@@ -55,8 +56,8 @@ class DCSLauncherGUIApplication(tkinter.Tk):
 
         self._mainwindow = DCSLauncherMainWindow(
             master=self,
-            title='DCS Launcher',
+            title=LOCALIZER.get(key='MAIN_WINDOW_TITLE'),
             favicon=favicon_path,
             centered=True,
             width=615,
-            height=485)
+            height=655)

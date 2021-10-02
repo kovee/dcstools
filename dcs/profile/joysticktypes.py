@@ -23,7 +23,20 @@
 ##
 ## ============================================================================
 
-"""Contains the implementation of the profile handling."""
+"""Contains the implementation of the JoystickTypes enum."""
 
-from dcs.profile.profile import Profile
-from dcs.profile.profilemanager import ProfileManager, PROFILE_MANAGER
+# Runtime Imports
+from enum import IntEnum, auto
+
+class JoystickTypes(IntEnum):
+
+    """List of supported joystick types."""
+
+    JOYSTICK_NONE = auto()
+    """Default value, represents no joystick."""
+
+    JOYSTICK_GENERIC = auto()
+    """Represents a generic joystick."""
+
+    JOYSTICK_WARTHOG = auto()
+    """Represents the Thrustmaster Warthog joystick."""

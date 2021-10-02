@@ -23,7 +23,23 @@
 ##
 ## ============================================================================
 
-"""Contains the implementation of the profile handling."""
+"""Contains the implementation of the JoystickGripTypes enum."""
 
-from dcs.profile.profile import Profile
-from dcs.profile.profilemanager import ProfileManager, PROFILE_MANAGER
+# Runtime Imports
+from enum import IntEnum, auto
+
+class JoystickGripTypes(IntEnum):
+
+    """List of supported joystick grips."""
+
+    JOYSTICK_GRIP_NONE = auto()
+    """Default value, represents no special joystick grip."""
+
+    JOYSTICK_GRIP_A10 = auto()
+    """Represents the Thrustmaster A-10 grip for the Warthog joystick."""
+
+    JOYSTICK_GRIP_F18 = auto()
+    """Represents the Thrustmaster F/A-18 grip for the Warthog joystick."""
+
+    JOYSTICK_F16 = auto()
+    """Represents the Thrustmaster F-16 grip for the Warthog joystick."""

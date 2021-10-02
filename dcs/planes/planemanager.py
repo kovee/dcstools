@@ -23,16 +23,30 @@
 ##
 ## ============================================================================
 
-name: F/A-18C Hornet (VR)
-description: DCS Launcher profile for flying the F/A-18C Hornet in VR mode.
-controllermode: target
-plane: fa18c
-vrenabled: Yes
-headsettype: psvr
-vrmodenabled: Yes
-keyboardlayout: en
-joystick: warthog
-grip: a10
-throttle: warthog
-rudder: tflight
-mfdenabled: No
+"""Contains the implementation of the PlaneManager class."""
+
+# Platform Imports
+from typing import Union
+
+# DCS Imports
+from dcs.planes.plane import Plane
+
+class PlaneManager:
+
+    """Manager class for plane types."""
+
+    def get(self, plane_type: str) -> Union[Plane, None]:
+
+        """Returns the Plane object associated with the given plane type.
+
+        :param plane_type: The type of the plane to retrieve.
+        :type plane_type: str
+
+        :return: The Plane object associated with the given type, or 'None' if
+            it was not found.
+        :rtype: Union[Plane, None]
+        """
+
+        return  None
+
+PLANE_MANAGER = PlaneManager()

@@ -24,3 +24,5 @@
 ## ============================================================================
 
 """Contains functionality related to planes."""
+
+from dcs.planes.planemanager import PLANE_MANAGER
