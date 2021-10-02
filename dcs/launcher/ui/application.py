@@ -47,6 +47,7 @@ class DCSLauncherGUIApplication(tkinter.Tk):
 
         super().__init__()
 
+        # Set Theme
         self._style = Style(theme='darkly')
 
         favicon_path = os.path.abspath(os.path.expanduser(
@@ -57,5 +58,5 @@ class DCSLauncherGUIApplication(tkinter.Tk):
             title='DCS Launcher',
             favicon=favicon_path,
             centered=True,
-            width=800   ,
-            height=1000)
+            width=615,
+            height=485)
