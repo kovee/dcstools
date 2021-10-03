@@ -38,6 +38,7 @@ from dcs.constants import DCSTOOLS_LOG_CHANNEL
 from dcs.profile import Profile
 from dcs.profile.controllermodes import ControllerModes
 from dcs.planes import PLANE_MANAGER
+from dcs.profile.vrheadsettypes import VRHeadsetTypes, VR_HEADSET_MAP
 
 class ProfileSerializer:
 
@@ -111,12 +112,49 @@ class ProfileSerializer:
                          f'profile {path}.')
             return None
 
+        # Deserialize VR enabled
+        try:
+            vr_enabled = content['vrenabled']
+        except KeyError:
+            logger.warning(f'VR mode is not specified in profile {path}.')
+            vr_enabled = False
+
+        # Look for the rest of the VR options only if VR is enabled
+        headset_type = VRHeadsetTypes.VR_HEADSET_NONE
+        vr_mod_enabled = False
+
+        if vr_enabled:
+            try:
+                headset_type = ProfileSerializer._load_headset_type(
+                    content['headsettype'])
+            except KeyError:
+                logger.warning(f'VR mode is enabled, but headset type is not '
+                               f'specified in profile {path}.')
+
+            try:
+                vr_mod_enabled  = content['vrmodenabled']
+            except KeyError:
+                logger.warning(f'VR mode is enabled, but VR mod usage is not '
+                               f'specified.')
+
+        # Deserialize keyboard layout
+        try:
+            keyboard_layout = content['keyboardlayout']
+        except KeyError:
+            logger.warning(f'Keyboard layout is not specified in profile '
+                           f'{path}, using english by default.')
+            keyboard_layout = 'en'
+
         # Create the profile object
         profile = Profile(
             name=name,
             description=description,
             controller_mode=controller_mode,
-            plane=plane)
+            plane=plane,
+            vr_enabled=vr_enabled,
+            headset_type=headset_type,
+            vr_mod_enabled=vr_mod_enabled,
+            keyboard_layout=keyboard_layout)
 
         logger.debug(f'Profile {profile.name} loaded successfully.')
         return profile
@@ -137,3 +175,17 @@ class ProfileSerializer:
             return
 
         logger.debug(f'Saving profile {profile.name} to disk.')
+
+    @staticmethod
+    def _load_headset_type(raw_data: str) -> VRHeadsetTypes:
+
+        """Deserializes the VR headset type from its raw format.
+
+        :param raw_data: The serialized format of the headset type.
+        :type raw_data: str
+
+        :return: The type of the VR headset.
+        :rtype: VRHeadsetTypes
+        """
+
+        return VR_HEADSET_MAP.get(raw_data, VRHeadsetTypes.VR_HEADSET_NONE)

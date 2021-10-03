@@ -186,3 +186,6 @@ DEFAULT_LOCALIZATION_PATH = './data/locale'
 
 DEFAULT_PROFILES_PATH = './data/profiles'
 """Path to the directory containing the user profiles."""
+
+DEFAULT_PLANES_PATH = './data/planes'
+"""Path to the directory containing the plane configurations."""

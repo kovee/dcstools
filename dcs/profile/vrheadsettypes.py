@@ -139,3 +139,27 @@ class VRHeadsetTypes(IntEnum):
     Resolution (per eye): 2560x1440
     Refresh rate: 90 Hz
     """
+
+VR_HEADSET_MAP = \
+{
+    'none': VRHeadsetTypes.VR_HEADSET_NONE,
+    'generic': VRHeadsetTypes.VR_HEADSET_GENERIC,
+    'psvr': VRHeadsetTypes.VR_HEADSET_PSVR,
+    'rift': VRHeadsetTypes.VR_HEADSET_RIFT,
+    'rifts': VRHeadsetTypes.VR_HEADSET_RIFT_S,
+    'quest': VRHeadsetTypes.VR_HEADSET_QUEST,
+    'quest2': VRHeadsetTypes.VR_HEADSET_QUEST_2,
+    'index': VRHeadsetTypes.VR_HEADSET_INDEX,
+    'vive': VRHeadsetTypes.VR_HEADSET_HTC_VIVE,
+    'vivepro': VRHeadsetTypes.VR_HEADSET_HTC_VIVE_PRO,
+    'odyssey': VRHeadsetTypes.VR_HEADSET_ODYSSEY,
+    'reverb': VRHeadsetTypes.VR_HEADSET_REVERB,
+    'reverb2': VRHeadsetTypes.VR_HEADSET_REVERB_G2,
+    'primax4k': VRHeadsetTypes.VR_HEADSET_PRIMAX_4K,
+    'primax5ksuper': VRHeadsetTypes.VR_HEADSET_PRIMAX_5K_SUPER,
+    'primax5kxr': VRHeadsetTypes.VR_HEADSET_PRIMAX_5K_XR,
+    'primax8k': VRHeadsetTypes.VR_HEADSET_PRIMAX_8K,
+    'primax8kplus': VRHeadsetTypes.VR_HEADSET_PRIMAX_8K_PLUS,
+    'primax8kx': VRHeadsetTypes.VR_HEADSET_PRIMAX_8K_X
+}
+"""Helper map used when deserializing headset type data from file."""

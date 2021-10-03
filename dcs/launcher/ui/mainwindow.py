@@ -72,6 +72,8 @@ class DCSLauncherMainWindow(Window):
         index = self.get_last_profile_index()
         if index >= 0:
             self._profile_list.current(index)
+        else:
+            self._profile_list.current(0)
 
         # Profile Editor Button
         self._profile_editor_button = ttk.Button(

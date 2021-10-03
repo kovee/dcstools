@@ -26,64 +26,59 @@
 """Contains the implementation of the PlaneLoader class."""
 
 # Runtime Imports
+import logging
 import os
+from typing import Union
 
 # Dependency Imports
 from ruamel.yaml import YAML
 
 # DCS Imports
+from dcs.constants import DCSTOOLS_LOG_CHANNEL
 from dcs.planes.plane import Plane
 from dcs.planes.planereleasestatuses import PlaneReleaseStatuses
 
 class PlaneLoader:
-    """Utility class used to load planes from the configuration file.
+    """Utility class used to load planes from the configuration file."""
 
-    :param _config_path: Path to the config file to load the planes from.
-    :type: _config_path: str
-    """
-
-    def __init__(self, config_file: str) -> None:
-
-        """Creates a new PlaneLoader instance.
-
-        :param config_file: Path to the config file to load the planes from.
-        :type config_file: str
-        """
-
-        self._config_path = os.path.abspath(os.path.expanduser(config_path))
-
-        if not os.path.isfile(self._config_path):
-            raise FileNotFoundError(f'Cannot load planes from non-existing '
-                                    f'configuration file {self._config_path}.')
-
-    def load(self) -> dict:
+    @staticmethod
+    def load(path: str) -> Union[Plane, None]:
 
         """Loads all planes from the config file and returns them as a
         dictionary.
 
-        :return: The dictionary containing all planes from the configuration.
-        :rtype: dict
+        :param path: Path to the plane to load.
+        :type path: str
+
+        :return: The loaded Plane object.
+        :rtype: Plane
         """
 
-        result = {}
+        logger = logging.getLogger(DCSTOOLS_LOG_CHANNEL)
+        logger.debug(f'Loading plane {path} from disk...')
 
-        yaml = YAML()
-        content = yaml.load(self._config_path)
-        planes = content['planes']
+        plane = None
 
-        for raw_plane in planes:
-            plane = Plane(
-                key=raw_plane['key'],
-                name=raw_plane['name'],
-                status=self._parse_status(raw_plane),
-                supported=raw_plane['supported'],
-                target_name=raw_plane['targetname']
-            )
-            result[plane.key] = plane
+        if not os.path.isfile(path):
+            logger.error(f'Plane configuration {path} does not exist.')
+            return None
 
-        return  result
+        content = None
+        with open(file=path, mode='r', encoding='utf-8') as raw_plane:
+            yaml = YAML()
+            content = yaml.load(raw_plane.read())
 
-    def _parse_status(self, raw_data: dict) -> PlaneReleaseStatuses:
+        plane = Plane(
+            key=content['key'],
+            name=content['name'],
+            status=PlaneLoader._parse_status(content),
+            supported=content['supported'],
+            target_name=content['targetname'])
+
+        return plane
+
+    @staticmethod
+    def _parse_status(raw_data: dict) -> PlaneReleaseStatuses:
 
         """Parses the release status of the plane.
 
@@ -95,9 +90,9 @@ class PlaneLoader:
         """
 
         status_string = raw_data['status']
-        if status == 'RELEASED':
+        if status_string == 'RELEASED':
             return  PlaneReleaseStatuses.RELEASED
-        elif status == 'EARLY ACCESS':
+        elif status_string == 'EARLY ACCESS':
             return  PlaneReleaseStatuses.EARLY_ACCESS
 
         return  PlaneReleaseStatuses.IN_DEVELOPMENT
