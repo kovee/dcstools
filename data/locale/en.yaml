@@ -2,10 +2,18 @@ CLI_DESCRIPTION: DCS Launcher tool.
 CLI_EPILOG: This is a free tool. If you have paid for it, you have been robbed.
 CLI_OPTION_DEBUG_DESCRIPTION: Enables debug mode.
 CLI_OPTION_RUN_DESCRIPTION: Starts DCS according to the specified profile without displaying the GUI.
-MAIN_WINDOW_TITLE: DCS Launcher
+MAIN_WINDOW_TITLE: DCS Launcher $version
 MAIN_WINDOW_EDIT_PROFILE_BUTTON: Edit Profile
 MAIN_WINDOW_PROFILE_MANAGER_BUTTON: Profile Manager
 MAIN_WINDOW_LAUNCH_BUTTON: LAUNCH
 MAIN_WINDOW_DONATE_BUTTON: Donate
 MAIN_WINDOW_SETTINGS_BUTTON: Settings
 MAIN_WINDOW_EXIT_BUTTON: Exit
+PROFILE_EDITOR_WINDOW_TITLE: Profile Editor
+PROFILE_MANAGER_WINDOW_TITLE: Profile Manager
+SETTINGS_WINDOW_TITLE: Settings
+DONATE_WINDOW_TITLE: Donate
+COPYRIGHT_LABEL: Copyright © 2021, Attila Kovacs. All rights reserved.
+DISCLAIMER_LABEL: This is a free utility, use at your own risk.
+ACKNOWLEDGEMENT_LABEL: DCS:World is the property of Eagle Dynamics.
+DONATION_LABEL: If you like this tool, please consider making a small donation.

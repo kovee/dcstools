@@ -131,11 +131,11 @@ class Localizer:
                 logger.debug(
                     f'Received translation for {key}: {localized_text}')
 
-        if attributes:
+        if attributes is not None:
             logger.debug(f'Substituting supplied attributes in localized text '
-                       f'for {key}.')
+                       f'for {key} with attribute map {attributes}.')
             localized_text = Template(localized_text).safe_substitute(
-                mapping=attributes)
+                attributes)
 
         logger.debug(f'Final localized text for {key}: {localized_text}')
 

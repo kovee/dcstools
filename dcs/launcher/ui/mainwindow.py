@@ -35,6 +35,10 @@ from PIL import ImageTk
 from dcs.tools.localizer import LOCALIZER
 from dcs.profile import PROFILE_MANAGER
 from dcs.launcher.ui.window import Window
+from dcs.launcher.ui.settingswindow import SettingsWindow
+from dcs.launcher.ui.profileeditorwindow import ProfileEditorWindow
+from dcs.launcher.ui.profilemanagerwindow import ProfileManagerWindow
+from dcs.launcher.ui.donatewindow import DonateWindow
 
 class DCSLauncherMainWindow(Window):
 
@@ -129,13 +133,32 @@ class DCSLauncherMainWindow(Window):
             command=self.on_exit)
         self._exit_button.place(x=50, y=580)
 
+        # Labels
+        self._disclaimer_label = ttk.Label(
+            self,
+            text=LOCALIZER.get(key='DISCLAIMER_LABEL'),
+            style='danger.TLabel')
+        self._disclaimer_label.place(x=307, y=635, anchor='center')
+
+        self._copyright_label = ttk.Label(
+            self,
+            text=LOCALIZER.get(key='COPYRIGHT_LABEL'),
+            style='secondary.TLabel')
+        self._copyright_label.place(x=307, y=655, anchor='center')
+
+        self._acknowledgement_label = ttk.Label(
+            self,
+            text=LOCALIZER.get(key='ACKNOWLEDGEMENT_LABEL'),
+            style='secondary.TLabel')
+        self._acknowledgement_label.place(x=307, y=675, anchor='center')
+
         self._canvas.pack()
         self.pack()
 
         self._canvas.create_image((0,-30), image=stripe, anchor='nw')
         self._canvas.create_image((0,37), image=logo, anchor='nw')
         self._canvas.create_image((7,150), image=profile_picture, anchor='nw')
-        self._canvas.create_image((0,635), image=stripe, anchor='nw')
+        self._canvas.create_image((0,695), image=stripe, anchor='nw')
 
         self.master.resizable(width=False, height=False)
 
@@ -162,14 +185,28 @@ class DCSLauncherMainWindow(Window):
 
         """Handler function called when the edit profile button is pressed."""
 
-        pass
+        favicon_path = os.path.abspath(os.path.expanduser(
+            './data/images/favicon.ico'))
+
+        _ = ProfileEditorWindow(
+            master=tkinter.Toplevel(self),
+            title=LOCALIZER.get('PROFILE_EDITOR_WINDOW_TITLE'),
+            favicon=favicon_path,
+            centered=True)
 
     def on_profile_manager(self) -> None:
 
         """Handler function called when the profile manager button is
         pressed."""
 
-        pass
+        favicon_path = os.path.abspath(os.path.expanduser(
+            './data/images/favicon.ico'))
+
+        _ = ProfileManagerWindow(
+            master=tkinter.Toplevel(self),
+            title=LOCALIZER.get('PROFILE_MANAGER_WINDOW_TITLE'),
+            favicon=favicon_path,
+            centered=True)
 
     def on_launch(self) -> None:
 
@@ -181,7 +218,14 @@ class DCSLauncherMainWindow(Window):
 
         """Handler function called when the settings button is pressed."""
 
-        pass
+        favicon_path = os.path.abspath(os.path.expanduser(
+            './data/images/favicon.ico'))
+
+        _ = SettingsWindow(
+            master=tkinter.Toplevel(self),
+            title=LOCALIZER.get('SETTINGS_WINDOW_TITLE'),
+            favicon=favicon_path,
+            centered=True)
 
     def on_exit(self) -> None:
 
@@ -193,4 +237,11 @@ class DCSLauncherMainWindow(Window):
 
         """Handler function called when the donate button is pressed."""
 
-        pass
+        favicon_path = os.path.abspath(os.path.expanduser(
+            './data/images/favicon.ico'))
+
+        _ = SettingsWindow(
+            master=tkinter.Toplevel(self),
+            title=LOCALIZER.get('DONATE_WINDOW_TITLE'),
+            favicon=favicon_path,
+            centered=True)

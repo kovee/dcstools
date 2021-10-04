@@ -118,7 +118,7 @@ class ProfileSerializer:
 
         # Deserialize VR enabled
         try:
-            vr_enabled = content['vrenabled']
+            vr_enabled = True if content['vrenabled'] == 'Yes' else False
         except KeyError:
             logger.warning(f'VR mode is not specified in profile {path}.')
             vr_enabled = False
@@ -136,7 +136,8 @@ class ProfileSerializer:
                                f'specified in profile {path}.')
 
             try:
-                vr_mod_enabled  = content['vrmodenabled']
+                vr_mod_enabled  = True if content['vrmodenabled'] == 'Yes' \
+                                    else False
             except KeyError:
                 logger.warning(f'VR mode is enabled, but VR mod usage is not '
                                f'specified.')
@@ -187,17 +188,17 @@ class ProfileSerializer:
 
         # Deserialize MFD
         try:
-            mfd_enabled = content['mfdenabled']
+            mfd_enabled = True if content['mfdenabled'] == 'Yes' else False
         except KeyError:
             logger.debug(f'MFD configuration not found in profile {path}.')
             mfd_enabled = False
 
+        num_mfds = 0
         if mfd_enabled:
             try:
                 num_mfds = content['nummfds']
             except KeyError:
                 logger.error(f'Number of MFDs not found in profile {path}. ')
-                num_mfds = 0
                 mfd_enabled = False
 
         # Create the profile object

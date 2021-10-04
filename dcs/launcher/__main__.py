@@ -39,6 +39,8 @@ def configure_logging() -> None:
     """Initializes the logging configuration of the launcher."""
     logging.basicConfig(filename='dcstools.log',
                         encoding='utf-8',
+                        filemode='w',
+                        format='[%(asctime)s][%(levelname)s]: %(message)s',
                         level=logging.INFO)
 
 def process_command_line() -> argparse.Namespace:

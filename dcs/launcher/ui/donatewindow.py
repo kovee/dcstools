@@ -23,44 +23,19 @@
 ##
 ## ============================================================================
 
-"""Contains the implementation of the DCSLauncherGUIApplication class."""
-
-# Runtime Imports
-import os
-import tkinter
-from ttkbootstrap import Style
+"""Contains the implementation of the DonateWindow."""
 
 # DCS Imports
-from dcs.constants import VERSION_STRING
-from dcs.tools.localizer import LOCALIZER
-from dcs.launcher.ui.mainwindow import DCSLauncherMainWindow
+from dcs.launcher.ui.window import Window
 
-class DCSLauncherGUIApplication(tkinter.Tk):
+class DonateWindow(Window):
 
-    """Wrapper class for the main Tkinter application.
+    """Contains the implementation of the donate window of the
+    application."""
 
-    :param _mainwindow: The main application window.
-    :type _mainwindow: DCSLauncherMainWindow
-    """
+    def on_create(self, *args, **kwargs) -> None:
 
-    def __init__(self) -> None:
+        """Handler function called when the window is created."""
 
-        """Creates a new DCSLauncherGUIApplication instance."""
+        
 
-        super().__init__()
-
-        # Set Theme
-        self._style = Style(theme='darkly')
-
-        favicon_path = os.path.abspath(os.path.expanduser(
-            './data/images/favicon.ico'))
-
-        self._mainwindow = DCSLauncherMainWindow(
-            master=self,
-            title=LOCALIZER.get(
-                key='MAIN_WINDOW_TITLE',
-                attributes={'version':VERSION_STRING}),
-            favicon=favicon_path,
-            centered=True,
-            width=615,
-            height=715)

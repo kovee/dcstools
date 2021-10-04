@@ -68,7 +68,7 @@ class ProfileManager:
         :rtype: list[str]
         """
 
-        return self._profiles.keys()
+        return [key for key in self._profiles.keys()]
 
     def _load_profiles(self) -> None:
 

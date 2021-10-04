@@ -25,6 +25,18 @@
 
 """Contains common constants used throughout the codebase."""
 
+MAJOR_VERSION = 0
+"""The major version of the application."""
+
+MINOR_VERSION = 1
+"""The minor version of the application."""
+
+PATCH_LEVEL = 0
+"""The patch level of the application."""
+
+VERSION_STRING = f'v{MAJOR_VERSION}.{MINOR_VERSION}.{PATCH_LEVEL}'
+"""The version string of the application."""
+
 DCSTOOLS_LOG_CHANNEL = 'dcstools'
 """Log channel to use for writing logs."""
 
