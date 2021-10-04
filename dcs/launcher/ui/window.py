@@ -125,14 +125,12 @@ class Window(tkinter.Frame):
         titlebar_height = window.winfo_rooty() - window.winfo_y()
         window_height = height + titlebar_height + frame_width
 
-        x = window.winfo_screenwidth() // 2 - window_width // 2
-        y = window.winfo_screenheight() // 2 - window_height // 2
+        x_pos = window.winfo_screenwidth() // 2 - window_width // 2
+        y_pos = window.winfo_screenheight() // 2 - window_height // 2
 
-        window.geometry(f'{width}x{height}+{x}+{y}')
+        window.geometry(f'{width}x{height}+{x_pos}+{y_pos}')
         window.deiconify()
 
     def on_create(self, *args, **kwargs) -> None:
 
         """Handler function called when the window is created."""
-
-        pass

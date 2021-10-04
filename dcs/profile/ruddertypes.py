@@ -30,6 +30,8 @@ from enum import IntEnum, auto
 
 class RudderTypes(IntEnum):
 
+    """List of supported rudder types."""
+
     RUDDER_TYPE_NONE = auto()
     """Default value, represents no rudder."""
 

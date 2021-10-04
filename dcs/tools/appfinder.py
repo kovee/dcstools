@@ -90,7 +90,7 @@ class AppFinder:
         try:
             root = winreg.ConnectRegistry(None, winreg.HKEY_CURRENT_USER)
             key = winreg.OpenKey(root, 'SOFTWARE\\Valve\\Steam')
-            value, value_type = winreg.QueryValueEx(key, 'SteamPath')
+            value, _ = winreg.QueryValueEx(key, 'SteamPath')
             dcs_path = os.path.abspath(f'{value}/steamapps/common/DCSWorld')
             logger.info(
                 f'DCS install directory identified as {dcs_path}.')
@@ -107,7 +107,7 @@ class AppFinder:
         try:
             root = winreg.ConnectRegistry(None, winreg.HKEY_CURRENT_USER)
             key = winreg.OpenKey(root, 'SOFTWARE\\Eagle Dynamics\\DCS World')
-            value, value_type = winreg.QueryValueEx(key, 'path')
+            value, _ = winreg.QueryValueEx(key, 'path')
             logger.info(
                 f'DCS install directory identified as {value}.')
             return value
@@ -119,7 +119,7 @@ class AppFinder:
             key = winreg.OpenKey(
                 root,
                 'SOFTWARE\\Eagle Dynamics\\DCS World Open Beta')
-            value, value_type = winreg.QueryValueEx(key, 'path')
+            value, _ = winreg.QueryValueEx(key, 'path')
             logger.info(
                 f'DCS install directory identified as {value}.')
             return value
@@ -131,7 +131,7 @@ class AppFinder:
             key = winreg.OpenKey(
                 root,
                 'SOFTWARE\\Eagle Dynamics\\DCS World Open Alpha')
-            value, value_type = winreg.QueryValueEx(key, 'path')
+            value, _ = winreg.QueryValueEx(key, 'path')
             logger.info(
                 f'DCS install directory identified as {value}.')
             return value

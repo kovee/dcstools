@@ -34,11 +34,8 @@ class TARGETGenerator:
     """Utility class that generates a T.A.R.G.E.T. configuration for the
     Thrustmaster devices configured in the selected profile."""
 
-    def __init__(self) -> None:
-
-        """Creates a new TARGETGenerator instance."""
-
-    def generate(self) -> None:
+    @staticmethod
+    def generate() -> None:
 
         """Generates the T.A.R.G.E.T. configuration script.
 

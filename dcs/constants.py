@@ -42,8 +42,7 @@ TARGET_PATH = 'c:/Program Files (x86)/Thrustmaster/TARGET'
 """The default installation directory of T.A.R.G.E.T."""
 
 TARGET_EXECUTABLE = 'x64/TARGETGUI.exe'
-"""Path to the T.A.R.G.E.T. executable inside the T.A.R.G.E.T. installation 
-path."""
+"""Path to the T.A.R.G.E.T. executable inside the installation path."""
 
 PSVR_INSTALL_DIRECTORY = 'c:/Program Files (x86)/TrinusPSVR'
 """Path to the directory where Trinus PSVR is installed by default."""

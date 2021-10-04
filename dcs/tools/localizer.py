@@ -28,12 +28,12 @@
 # Runtime Imports
 import os
 import logging
+from string import Template
 
 # Dependency Imports
 import httpx
-from ruamel.yaml import YAML, Loader
+from ruamel.yaml import YAML
 from googletrans import Translator
-
 
 # DCS Imports
 from dcs.constants import (
@@ -169,7 +169,7 @@ class Localizer:
                      f'to {new_language}.')
 
         self._language = new_language
-        self._load_language()
+        self._load_language_data()
 
         logger.debug(f'Localization language was set to {new_language}.')
 
@@ -246,7 +246,7 @@ class Localizer:
         self._data = self._load_language_file(language=self._language)
         logger.debug(f'Language {self._language} has been loaded.')
 
-    def _cache_default_language(self) -> None:
+    def _cache_default_language_data(self) -> None:
 
         """Loads the default language file into memory to speed up retrieval of
         default language texts when the translation is missing."""

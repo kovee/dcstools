@@ -29,6 +29,7 @@
 import os
 import glob
 import logging
+from typing import Union
 
 # DCS Imports
 from dcs.constants import DEFAULT_PROFILES_PATH, DCSTOOLS_LOG_CHANNEL
@@ -46,6 +47,19 @@ class ProfileManager:
         self._profiles = {}
         self._load_profiles()
 
+    def get_profile(self, profile_name: str) -> Union[Profile, None]:
+
+        """Returns a profile with the given name.
+
+        :param profile_name: Name of the profile to retrieve.
+        :type profile_name: str
+
+        :return: The requested profile object, or 'None' if it was not found.
+        :rtype: Union[Profile, None]
+        """
+
+        return  self._profiles.get(profile_name, None)
+
     def get_profile_names(self) -> list[str]:
 
         """Returns the list of existing profile names.
@@ -54,7 +68,7 @@ class ProfileManager:
         :rtype: list[str]
         """
 
-        return [key for key in self._profiles.keys()]
+        return self._profiles.keys()
 
     def _load_profiles(self) -> None:
 
@@ -95,3 +109,4 @@ class ProfileManager:
                      f'manager.')
 
 PROFILE_MANAGER = ProfileManager()
+"""The global profile manager instance."""
