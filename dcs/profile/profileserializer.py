@@ -39,6 +39,10 @@ from dcs.profile import Profile
 from dcs.profile.controllermodes import ControllerModes
 from dcs.planes import PLANE_MANAGER
 from dcs.profile.vrheadsettypes import VRHeadsetTypes, VR_HEADSET_MAP
+from dcs.profile.joysticktypes import JoystickTypes, JOYSTICK_MAP
+from dcs.profile.joystickgriptypes import JoystickGripTypes, JOYSTICK_GRIP_MAP
+from dcs.profile.throttletypes import ThrottleTypes, THROTTLE_MAP
+from dcs.profile.ruddertypes import RudderTypes, RUDDER_MAP
 
 class ProfileSerializer:
 
@@ -145,6 +149,57 @@ class ProfileSerializer:
                            f'{path}, using english by default.')
             keyboard_layout = 'en'
 
+        # Deserialize joystick type
+        try:
+            joystick_type = ProfileSerializer._load_joystick_type(
+                content['joystick'])
+        except KeyError:
+            logger.warning(f'Joystick type is not found in profile {path}.')
+            joystick_type = JoystickTypes.JOYSTICK_NONE
+
+        # Deserialize joystick grip if needed
+        has_grip = joystick_type not in (JoystickTypes.JOYSTICK_NONE,
+                                         JoystickTypes.JOYSTICK_GENERIC)
+        if has_grip:
+            try:
+                grip_type = ProfileSerializer._load_joystick_grip_type(
+                    content['grip'])
+            except KeyError:
+                logger.warning(f'Joystick grip type has not specified in '
+                               f'profile {path}.')
+                grip_type = JoystickGripTypes.JOYSTICK_GRIP_NONE
+
+        # Deserialize throttle type
+        try:
+            throttle_type = ProfileSerializer._load_throttle_type(
+                content['throttle'])
+        except KeyError:
+            logger.debug(f'Throttle type is not specified in profile {path}.')
+            throttle_type = ThrottleTypes.THROTTLE_TYPE_NONE
+
+        # Deserialize rudder type
+        try:
+            rudder_type = ProfileSerializer._load_rudder_type(
+                content['rudder'])
+        except KeyError:
+            logger.warning(f'Rudder type is not specified in profile {path}.')
+            rudder_type = RudderTypes.RUDDER_TYPE_NONE
+
+        # Deserialize MFD
+        try:
+            mfd_enabled = content['mfdenabled']
+        except KeyError:
+            logger.debug(f'MFD configuration not found in profile {path}.')
+            mfd_enabled = False
+
+        if mfd_enabled:
+            try:
+                num_mfds = content['nummfds']
+            except KeyError:
+                logger.error(f'Number of MFDs not found in profile {path}. ')
+                num_mfds = 0
+                mfd_enabled = False
+
         # Create the profile object
         profile = Profile(
             name=name,
@@ -154,7 +209,13 @@ class ProfileSerializer:
             vr_enabled=vr_enabled,
             headset_type=headset_type,
             vr_mod_enabled=vr_mod_enabled,
-            keyboard_layout=keyboard_layout)
+            keyboard_layout=keyboard_layout,
+            joystick=joystick_type,
+            grip=grip_type,
+            throttle=throttle_type,
+            rudder=rudder_type,
+            mfd_enabled=mfd_enabled,
+            num_mfds=num_mfds)
 
         logger.debug(f'Profile {profile.name} loaded successfully.')
         return profile
@@ -189,3 +250,60 @@ class ProfileSerializer:
         """
 
         return VR_HEADSET_MAP.get(raw_data, VRHeadsetTypes.VR_HEADSET_NONE)
+
+    @staticmethod
+    def _load_joystick_type(raw_data: str) -> JoystickTypes:
+
+        """Deserializes the joystick type from its raw format.
+
+        :param raw_data: The serialized format of the joystick type.
+        :type raw_data: str
+
+        :return: The type of joystick to use.
+        :rtype: JoystickTypes
+        """
+
+        return JOYSTICK_MAP.get(raw_data, JoystickTypes.JOYSTICK_NONE)
+
+    @staticmethod
+    def _load_joystick_grip_type(raw_data: str) -> JoystickGripTypes:
+
+        """Deserializes the joystick grip type from its raw format.
+
+        :param raw_data: The serialized format of the joystick grip type.
+        :type raw_data: str
+
+        :return: The type of joystick grip type to use.
+        :rtype: JoystickGripTypes
+        """
+
+        return  JOYSTICK_GRIP_MAP.get(raw_data,
+                                      JoystickGripTypes.JOYSTICK_GRIP_NONE)
+
+    @staticmethod
+    def _load_throttle_type(raw_data: str) -> ThrottleTypes:
+
+        """Deserializes the throttle type from its raw format.
+
+        :param raw_data: The serialized format of the throttle type.
+        :type raw_data: str
+
+        :return: The type of throttle to use.
+        :rtype: ThrottleTypes
+        """
+
+        return THROTTLE_MAP.get(raw_data, ThrottleTypes.THROTTLE_TYPE_NONE)
+
+    @staticmethod
+    def _load_rudder_type(raw_data: str) -> RudderTypes:
+
+        """Deserializes the rudder type from its raw format.
+
+        :param raw_data: The serialized format of the rudder type.
+        :type raw_data: str
+
+        :return: The type of rudder to use.
+        :rtype: RudderTypes
+        """
+
+        return RUDDER_MAP.get(raw_data, RudderTypes.RUDDER_TYPE_NONE)

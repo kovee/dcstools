@@ -41,3 +41,12 @@ class RudderTypes(IntEnum):
 
     RUDDER_TYPE_TPR = auto()
     """Represents the Thrustmaster TPR rudder."""
+
+RUDDER_MAP = \
+{
+    'none': RudderTypes.RUDDER_TYPE_NONE,
+    'generic': RudderTypes.RUDDER_TYPE_GENERIC,
+    'tflight': RudderTypes.RUDDER_TYPE_TFLIGHT,
+    'tpr': RudderTypes.RUDDER_TYPE_TPR
+}
+"""Mapping table for rudder types."""

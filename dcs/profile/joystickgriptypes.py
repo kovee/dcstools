@@ -41,5 +41,14 @@ class JoystickGripTypes(IntEnum):
     JOYSTICK_GRIP_F18 = auto()
     """Represents the Thrustmaster F/A-18 grip for the Warthog joystick."""
 
-    JOYSTICK_F16 = auto()
+    JOYSTICK_GRIP_F16 = auto()
     """Represents the Thrustmaster F-16 grip for the Warthog joystick."""
+
+JOYSTICK_GRIP_MAP = \
+{
+    'none': JoystickGripTypes.JOYSTICK_GRIP_NONE,
+    'a10': JoystickGripTypes.JOYSTICK_GRIP_A10,
+    'f18': JoystickGripTypes.JOYSTICK_GRIP_F18,
+    'f16': JoystickGripTypes.JOYSTICK_GRIP_F16
+}
+"""Mapping table for joystick grip types."""

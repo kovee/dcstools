@@ -40,3 +40,11 @@ class ThrottleTypes(IntEnum):
 
     THROTTLE_TYPE_WARTHOG = auto()
     """Represents the Thrustmaster Warthog throttle."""
+
+THROTTLE_MAP = \
+{
+    'none': ThrottleTypes.THROTTLE_TYPE_NONE,
+    'generic': ThrottleTypes.THROTTLE_TYPE_GENERIC,
+    'warthog': ThrottleTypes.THROTTLE_TYPE_WARTHOG
+}
+"""Mapping table for throttle types."""

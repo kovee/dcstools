@@ -26,8 +26,12 @@
 """Contains the implementation of the AppFinder class."""
 
 # Runtime Imports
+import os
 import logging
-import winreg
+
+if os.name == 'nt':
+    import winreg
+
 from typing import Union
 
 # DCS Imports

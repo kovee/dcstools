@@ -34,3 +34,4 @@ grip: a10
 throttle: warthog
 rudder: tflight
 mfdenabled: No
+nummfds: 0

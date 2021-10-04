@@ -40,3 +40,11 @@ class JoystickTypes(IntEnum):
 
     JOYSTICK_WARTHOG = auto()
     """Represents the Thrustmaster Warthog joystick."""
+
+JOYSTICK_MAP = \
+{
+    'none': JoystickTypes.JOYSTICK_NONE,
+    'generic': JoystickTypes.JOYSTICK_GENERIC,
+    'warthog': JoystickTypes.JOYSTICK_WARTHOG
+}
+"""Mapping table for joystick types."""
