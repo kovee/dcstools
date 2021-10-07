@@ -23,8 +23,503 @@
 ##
 ## ============================================================================
 
+# Unique plane identifier
 key: fa18c
+
+# String description of the plane
 name: McDonnell Douglas F/A-18C Hornet
+
+# Plane release status
 status: RELEASED
+
+# Whether or not the plane is supported by the launcher
 supported: Yes
+
+# Name of the plane in the target script
 targetname: DCS_PLANE_FA18C
+
+# Default control mapping used for the plane
+defaultassignments:
+
+  ## ***** ALR-67 *****************************************************************************************************
+
+  FA18C_CALR67BitPushbutton: 0                  # ALR-67 BIT Pushbutton
+
+  FA18C_ALR67DisTypeSwitchA: 0                  # ALR-67 DIS TYPE Switch - A
+  FA18C_ALR67DisTypeSwitchCCW: 0                # ALR-67 DIS TYPE Switch - CCW
+  FA18C_ALR67DisTypeSwitchCW: 0                 # ALR-67 DIS TYPE Switch - CW
+  FA18C_ALR67DisTypeSwitchF: 0                  # ALR-67 DIS TYPE Switch - F
+  FA18C_ALR67DisTypeSwitchI: 0                  # ALR-67 DIS TYPE Switch - I
+  FA18C_ALR67DisTypeSwitchN: 0                  # ALR-67 DIS TYPE Switch - N
+  FA18C_ALR67DisTypeSwitchU: 0                  # ALR-67 DIS TYPE Switch - U
+
+  FA18C_ALR67DisplayPushbutton: 0               # ALR-67 DISPLAY Pushbutton
+
+  FA18C_ALT67DmrCCWDecrease: 0                  # ALR-67 DMR Control Knob - CCW/Decrease
+  FA18C_ALT67DmrCWIncrease: 0                   # ALR-67 DMR Control Knob - CW/Increase
+
+  FA18C_ALR67OffsetPushbutton: 0                # ALR-67 OFFSET Pushbutton
+
+  FA18C_ALR67PowerPushbuttonOnOffSpecial: 0     # ALR-67 POWER Pushbutton (special) - ON/OFF
+  FA18C_ALR67PowerPushbuttonOff: 0              # ALR-67 POWER Pushbutton - OFF
+  FA18C_ALR67PowerPushbuttonOn: 0               # ALR-67 POWER Pushbutton - ON
+  FA18C_ALR67PowerPushbuttonOnOff: 0            # ALR-67 POWER Pushbutton - ON/OFF
+
+  FA18C_ALR67SpecialPushbutton: 0               # ALR-67 SPECIAL Pushbutton
+
+  ## ***** AMPCD ******************************************************************************************************
+
+  FA18C_AMPCDContrastControlDown: 0             # AMPCD Contrast Control Switch - DOWN
+  FA18C_AMPCDContrastControlUp: 0               # AMPCD Contrast Control Switch - UP
+
+  FA18C_AMPCDGaiunControlDown: 0                # AMPCD Gain Control Switch - DOWN
+  FA18C_AMPCDGainControlUp: 0                   # AMPCD Gain Control Switch - UP
+
+  FA18C_AMPCDNightDaySelectorDay: 0             # AMPCD Night/Day Brightness Selector - DAY
+  FA18C_AMPCDNightDaySelectorNight: 0           # AMPCD Night/Day Brightness Selector - NIGHT
+
+  FA18C_AMPCDKnobCCWDecrease: 0                 # AMPCD Off/Brightness Control Knob - CCW/Dec
+  FA18C_AMPCDKnobCWIncrease: 0                  # AMPCD Off/Brightness Control Knob - CW/Inc
+
+  FA18C_AMPCDPB01: 0                            # AMPCD PD 1
+  FA18C_AMPCDPB02: 0                            # AMPCD PD 2
+  FA18C_AMPCDPB03: 0                            # AMPCD PD 3
+  FA18C_AMPCDPB04: 0                            # AMPCD PD 4
+  FA18C_AMPCDPB05: 0                            # AMPCD PD 5
+  FA18C_AMPCDPB06: 0                            # AMPCD PD 6
+  FA18C_AMPCDPB07: 0                            # AMPCD PD 7
+  FA18C_AMPCDPB08: 0                            # AMPCD PD 8
+  FA18C_AMPCDPB09: 0                            # AMPCD PD 9
+  FA18C_AMPCDPB10: 0                            # AMPCD PD 10
+  FA18C_AMPCDPB11: 0                            # AMPCD PD 11
+  FA18C_AMPCDPB12: 0                            # AMPCD PD 12
+  FA18C_AMPCDPB13: 0                            # AMPCD PD 13
+  FA18C_AMPCDPB14: 0                            # AMPCD PD 14
+  FA18C_AMPCDPB15: 0                            # AMPCD PD 15
+  FA18C_AMPCDPB16: 0                            # AMPCD PD 16
+  FA18C_AMPCDPB17: 0                            # AMPCD PD 17
+  FA18C_AMPCDPB18: 0                            # AMPCD PD 18
+  FA18C_AMPCDPB19: 0                            # AMPCD PD 19
+  FA18C_AMPCDPB20: 0                            # AMPCD PD 20
+
+  FA18C_AMPCDSymbologySwitchDown: 0             # AMPCD Symbology Control Switch - DOWN
+  FA18C_AMPCDSymbologySwitchUp: 0               # AMPCD Symbology Control Switch - UP
+
+  ## ***** CHEAT ******************************************************************************************************
+
+  FA18C_AutoStart: L_WIN+USB_HOME               # Auto Start
+  FA18C_AutoStop: L_WIN+USB_END                 # Auto Stop
+  FA18C_RecorderOff: L_ALT+L_SHIFT+USB_R        # Recorder Off
+  FA18C_RecorderOn: L_CTL+L_SHIFT+USB_R         # Recorder On
+
+  CHEAT_ActivePause: L_SHIFT+L_WIN+USB_PAUSE    # Active Pause
+
+  ## ***** COMMUNICATION CONTROL PANEL ********************************************************************************
+
+  FA18C_AuxKnobCCWDecrease: 0                   # AUX Volume Control Knob - CCW/Decrease
+  FA18C_AuxKnobCWIncrease: 0                    # AUX Volume Control Knob - CW/Increase
+
+  FA18C_CommGXMTSwitchComm1: 0                  # COMM G XMT Switch - COMM 1
+  FA18C_CommGXMTSwitchComm1Off: 0               # COMM G XMT Switch - COMM 1/OFF
+  FA18C_CommGXMTSwitchComm2: 0                  # COMM G XMT Switch - COMM 2
+  FA18C_CommGXMTSwitchComm2Off: 0               # COMM G XMT Switch - COMM 2/OFF
+  FA18C_CommGXMTSwitchDown: 0                   # COMM G XMT Switch - Down
+  FA18C_CommGXMTSwitchOff: 0                    # COMM G XMT Switch - OFF
+  FA18C_CommGXMTSwitchUp: 0                     # COMM G XMT Switch - Up
+
+  FA18C_CommRelaySwitchCipher: 0                # Comm Relay Switch - CIPHER
+  FA18C_CommRelaySwitchCipherOff: 0             # Comm Relay Switch - CIPHER/OFF
+  FA18C_CommRelaySwitchDown: 0                  # Comm Relay Switch - Down
+  FA18C_CommRelaySwitchOff: 0                   # Comm Relay Switch - OFF
+  FA18C_CommRelaySwitchPlain: 0                 # Comm Relay Switch - PLAIN
+  FA18C_CommRelaySwitchPlainOff: 0              # Comm Relay Switch - PLAIN/OFF
+  FA18C_CommRelaySwitchUp: 0                    # Comm Relay Switch - Up
+
+  FA18C_CryptoSwitchHoldNorm: 0                 # CRYPTO Switch HOLD/NORM
+  FA18C_CryptoSwitchZeroNorm: 0                 # CRYPTO Switch ZERO/NORM
+
+  FA18C_ICSVolumeKnobCCWDecrease: 0             # ICS Volume Control Knob - CCW/Decrease
+  FA18C_ICSVolumeKnobCWIncrease: 0              # ICS Volume Control Knob - CCW/Decrease
+
+  FA18C_IFFMasterEmer: 0                        # IFF Master Switch - EMER
+  FA18C_IFFMasterEmerNorm: 0                    # IFF Master Switch - EMER/NORM
+  FA18C_IFFMasterNorm: 0                        # IFF Master Switch - NORM
+
+  FA18C_IFFMode4Dis: 0                          # IFF Mode 4 Switch - DIS
+  FA18C_IFFMode4DisAud: 0                       # IFF Mode 4 Switch - DIS/AUD
+  FA18C_IFFMode4DisAudDis: 0                    # IFF Mode 4 Switch - DIS/AUD /DIS
+  FA18C_IFFMode4Down: 0                         # IFF Mode 4 Switch - Down
+  FA18C_IFFMode4Off: 0                          # IFF Mode 4 Switch - OFF
+  FA18C_IFFMode4OffDis: 0                       # IFF Mode 4 Switch - OFF/DIS
+  FA18C_IFFMode4Up: 0                           # IFF Mode 4 Switch - Up
+
+  FA18C_ILSChannelSelectorCCWDecrease: 0        # ILS Channel Selector - CCW/Decrease
+  FA18C_ILSChannelSelectorCWIncrease: 0         # ILS Channel Selector - CW/Increase
+
+  FA18C_ILSUfcManSwitchMan: 0                   # ILS UFC/MAN Switch - MAN
+  FA18C_ILSUfcManSwitchUfc: 0                   # ILS UFC/MAN Switch - UFC
+  FA18C_ILSUfcManSwitchUfcMan: 0                # ILS UFC/MAN Switch - UFC/MAN
+
+  FA18C_MIDSAVolumeCCWDecrease: 0               # MIDS A Volume Control Knob - CCW/Decrease
+  FA18C_MIDSAVolumeCWIncrease: 0                # MIDS A Volume Control Knob - CW/Increase
+
+  FA18C_MIDSBVolumeCCWDecrease: 0               # MIDS B Volume Control Knob - CCW/Decrease
+  FA18C_MIDSBVolumeCWIncrease: 0                # MIDS B Volume Control Knob - CW/Increase
+
+  FA18C_RWRVolumeCCWDecrease: 0                 # RWR Volume Control Knob - CCW/Decrease
+  FA18C_RWRVolumeCWIncrease: 0                  # RWR Volume Control Knob - CW/Increase
+
+  FA18C_TACANVolumeCCWDecrease: 0               # TACAN Volume Control Knob - CCW/Decrease
+  FA18C_TACANVolumeCWIncrease: 0                # TACAN Volume Control Knob - CW/Increase
+
+  FA18C_VOXVolumeCCWDecrease: 0                 # VOX Volume Control Knob - CCW/Decrease
+  FA18C_VOXVolumeCWIncrease: 0                  # VOX Volume Control Knob - CW/Increase
+
+  FA18C_WPNVolumeCCWDecrease: 0                 # WPN Volume Control Knob - CCW/Decrease
+  FA18C_WPNVolumeCWIncrease: 0                  # WPN Volume Control Knob - CW/Increase
+
+  ## ***** COMMUNICATIONS *********************************************************************************************
+
+  COMM_CommunicationsMenu: USB_BACKSLASH        #  Communication Menu
+  COMM_SwitchDialog: L_SHIFT+USB_BACKSLASH      #  Switch dialog
+  COMM_SwitchToMainMenu: L_CTL+USB_BACKSLASH    #  Switch dialog
+  COMM_ReceiveMode: R_SHIFT+USB_BACKSLASH       #  Receive mode
+
+  COMM_CMDAttackMyTarget: L_WIN+USB_Q           # Attack My Target
+  COMM_CMDCoverMe: L_WIN+USB_W                  # Cover Me
+  COMM_CMDFlightAttackAirDefenses: L_WIN+USB_D  # Flight - Attack Air Defenses
+  COMM_CMDFlightAttackGrndTargets: L_WIN+USB_G  # Flight - Attack Ground Targets
+  COMM_CMDFlightCmplMisAndRTB: L_WIN+USB_E      # Flight - Complete mission and RTB
+  COMM_CMDFlightCmplMisAndRejoin: L_WIN+USB_R   # Flight - Complete mission and rejoin
+  COMM_CMDFlightEngageBandits: L_WIN+USB_B      # Flight - Engage bandits
+  COMM_CMDFlightRTB: 0                          # Flight - RTB
+  COMM_CMDFlightJoinUpFormation: L_WIN+USB_Y    # Join up formation
+  COMM_CMDRequestAWACSAvailTanker: L_WIN+USB_I  # Request AWACS Available Tanker
+  COMM_CMDRequestAWACSBogeyDope: L_WIN+USB_O    # Request AWACS Bogey Dope
+  COMM_CMDRequestAWACSHomeAirbase: L_WIN+USB_U  # Request AWACS Home Airbase
+  COMM_CMDToggleFormation: L_WIN+USB_T          # Toggle Formation
+
+  ## ***** DEBUG ******************************************************************************************************
+
+  DEBUG_RestartMission: L_SHIFT+USB_R           # Restart mission
+  DEBUG_ToggleConsole: L_ALT+USB_TILDE          # Toggle console
+
+  ## ***** DISPENSER **************************************************************************************************
+
+  FA18C_DispenserSwitchBypass: 0                # DISPENSER Switch - BYPASS
+  FA18C_DispenserSwitchBypassOn: 0              # DISPENSER Switch - BYPASS/ON
+  FA18C_DispenserSwitchDown: 0                  # DISPENSER Switch - Down
+  FA18C_DispenserSwitchOff: 0                   # DISPENSER Switch - OFF
+  FA18C_DispenserSwitchOffOn: 0                 # DISPENSER Switch - OFF/ON
+  FA18C_DispenserSwitchOn: 0                    # DISPENSER Switch - ON
+  FA18C_DispenserSwitchUp: 0                    # DISPENSER Switch - Up
+  FA18C_DispenseButton: 0                       # Dispense Button
+
+  FA18C_ECMJettJettSelSwitchOff: 0              # ECM JETT JETT SEL Pushbutton - OFF
+  FA18C_ECMJettJettSelSwitchOn: 0               # ECM JETT JETT SEL Pushbutton - ON
+  FA18C_ECMJettJettSelSwitchOnOff: 0            # ECM JETT JETT SEL Pushbutton - ON/OFF
+
+  ## ***** ECS PANEL **************************************************************************************************
+
+  FA18C_BleedAirKnobAugPull: 0                  # Bleed Air Knob - AUG PULL
+  FA18C_BleedAirKnobCCW: 0                      # Bleed Air Knob - CCW
+  FA18C_BleedAirKnobCW: 0                       # Bleed Air Knob - CW
+  FA18C_BleedAirKnobLOff: 0                     # Bleed Air Knob - L OFF
+  FA18C_BleedAirKnobNorm: 0                     # Bleed Air Knob - NORM
+  FA18C_BleedAirKnobOff: 0                      # Bleed Air Knob - OFF
+  FA18C_BleedAirKnobROff: 0                     # Bleed Air Knob - R OFF
+
+  FA18C_CabinPressureSwitchDown: 0              # Cabin Pressure Switch - Down
+  FA18C_CabinPressureSwitchDump: 0              # Cabin Pressure Switch - DUMP
+  FA18C_CabinPressureSwitchNorm: 0              # Cabin Pressure Switch - NORM
+  FA18C_CabinPressureSwitchNormDump: 0          # Cabin Pressure Switch - NORM/DUMP
+  FA18C_CabinPressureSwitchRamDump: 0           # Cabin Pressure Switch - RAM/DUMP
+  FA18C_CabinPressureSwitchRamDumpDump: 0       # Cabin Pressure Switch - RAM/DUMP /DUMP
+  FA18C_CabinPressureSwitchup: 0                # Cabin Pressure Switch - Up
+
+  FA18C_CabinTemperatureKnobCCWDecreaseCold: 0  # Cabin Temperature Knob - CCW/Decrease/COLD
+  FA18C_CabinTemperatureKnobCWIncreaseHot: 0    # Cabin Temperature Knob - CW/Increase/HOT
+
+  FA18C_ECSModeSwitchAuto: 0                    # ECS Mode Switch - AUTO
+  FA18C_ECSModeSwitchAutoMan: 0                 # ECS Mode Switch - AUTO/MAN
+  FA18C_ECSModeSwitchDown: 0                    # ECS Mode Switch - Down
+  FA18C_ECSModeSwitchMan: 0                     # ECS Mode Switch - MAN
+  FA18C_ECSModeSwitchOffRam: 0                  # ECS Mode Switch - OFF/RAM
+  FA18C_ECSModeSwitchOffRamMan: 0               # ECS Mode Switch - OFF/RAM/MAN
+  FA18C_ECSModeSwitchUp: 0                      # ECS Mode Switch - Up
+
+  FA18C_EngineAntiIceSwitchDown: 0              # Engine Anti-Ice Switch - Down
+  FA18C_EngineAntiIceSwitchOff: 0               # Engine Anti-Ice Switch - OFF
+  FA18C_EngineAntiIceSwitchOn: 0                # Engine Anti-Ice Switch - ON
+  FA18C_EngineAntiIceSwitchOnOff: 0             # Engine Anti-Ice Switch - ON/OFF
+  FA18C_EngineAntiIceSwitchTest: 0              # Engine Anti-Ice Switch - TEST
+  FA18C_EngineAntiIceSwitchTestOff: 0           # Engine Anti-Ice Switch - TEST/OFF
+  FA18C_EngineAntiIceSwitchUp: 0                # Engine Anti-Ice Switch - Up
+
+  FA18C_PitotHeaterSwitchOnAuto: 0              # Pitot Heater Switch - ON/AUTO
+
+  FA18C_SuitTemperatureKnobCCWDecreaseCold: 0   # Suit Temperature Knob - CCW/Decrease/COLD
+  FA18C_SuitTemperatureKnobCWIncreaseCold: 0    # Suit Temperature Knob - CW/Increase/HOT
+
+  ## ***** EJECTION SEAT **********************************************************************************************
+
+  FA18C_EjectionControlHandle: 0                # Ejection Control Handle (3 times)
+
+  FA18C_EjectionSeatManualOverridePull: 0       # Ejection Seat Manual Override Handle - PULL
+  FA18C_EjectionSeatManualOverridePullPush: 0   # Ejection Seat Manual Override Handle - PULL/PUSH
+  FA18C_EjectionSeatManualOverridePush: 0       # Ejection Seat Manual Override Handle - PUSH
+
+  FA18C_EjectionSeatSafeArmedHandleArmed: 0     # Ejection Seat SAFE/ARMED Handle - ARMED
+  FA18C_EjectionSeatSafeArmedHandleSafe: 0      # Ejection Seat SAFE/ARMED Handle - SAFE
+  FA18C_EjectionSeatSafeArmedHandleSafeArmed: 0 # Ejection Seat SAFE/ARMED Handle - SAFE/ARMED
+
+  FA18C_SeatHeightAdjustmentDown: 0             # Seat Height Adjustment Switch - DOWN/HOLD
+  FA18C_SeatHeightAdjustmentUp: 0               # Seat Height Adjustment Switch - UP/HOLD
+
+  FA18C_ShoulderHarnessControlLock: 0           # Shoulder Harness Control Handle - LOCK
+  FA18C_ShoulderHarnessControlLockUnlock: 0     # Shoulder Harness Control Handle - LOCK/UNLOCK
+  FA18C_ShoulderHarnessControlUnlock: 0         # Shoulder Harness Control Handle - UNLOCK
+
+  ## ***** ELECTRICAL POWER PANEL **************************--*********************************************************
+
+  FA18C_BatterySwitchDown: 0                    # Battery Switch - Down
+  FA18C_BatterySwitchOff: 0                     # Battery Switch - OFF
+  FA18C_BatterySwitchOn: 0                      # Battery Switch - ON
+  FA18C_BatterySwitchOnOff: 0                   # Battery Switch - ON/OFF
+  FA18C_BatterySwitchOverride: 0                # Battery Switch - OVERRIDE
+  FA18C_BatterySwitchOverrideOff: 0             # Battery Switch - OVERRIDE/OFF
+  FA18C_BatterySwitchUp: 0                      # Battery Switch - Up
+
+  FA18C_LeftGeneratorSwitchNorm: 0              # Left Generator Control Switch - NORM
+  FA18C_LeftGeneratorSwitchNormOff: 0           # Left Generator Control Switch - NORM/OFF
+  FA18C_LeftGeneratorSwitchOff: 0               # Left Generator Control Switch - OFF
+
+  FA18C_RightGeneratorSwitchNorm: 0             # Right Generator Control Switch - NORM
+  FA18C_RightGeneratorSwitchNormOff: 0          # Right Generator Control Switch - NORM/OFF
+  FA18C_RightGeneratorSwitchOff: 0              # Right Generator Control Switch - OFF
+
+  ## ***** EXTERIOR LIGHTS PANEL **************************************************************************************
+
+  FA18C_FormationLightsDimmerCCWLeft: 0         # FORMATION Lights Dimmer Control - CCW/Left
+  FA18C_FormationLightsDimmerCWRight: 0         # FORMATION Lights Dimmer Control - CW/Right
+
+  FA18C_InternalWingFuelControlInhibit: 0       # Internal Wing Fuel Tank Control Switch - INHIBIT
+  FA18C_InternalWingFuelControlInhibitNorm: 0   # Internal Wing Fuel Tank Switch - INHIBIT/NORM
+  FA18C_InternalWingFuelControlNORM: 0          # Internal Wing Fuel Tank Control Switch - NORM
+
+  FA18C_PositionLightsDimmerCCWLeft: 0          # POSITION Lights Dimmer Control - CCW/Left
+  FA18C_PositionLightsDimmerCWRight: 0          # POSITION Lights Dimmer Control - CW/Right
+
+  FA18C_StrobeLightsBrt: 0                      # STROBE Lights Switch - BRT
+  FA18C_StrobeLightsBrtOff: 0                   # STROBE Lights Switch - BRT/OFF
+  FA18C_StrobeLightsDim: 0                      # STROBE Lights Switch - DIM
+  FA18C_StrobeLightsDimOff: 0                   # STROBE Lights Switch - DIM/OFF
+  FA18C_StrobeLightsDown: 0                     # STROBE Lights Switch - Down
+  FA18C_StrobeLightsUp:  0                      # STROBE Lights Switch - Up
+
+  ## ***** FCS PANEL **************************************************************************************************
+
+  FA18C_FCSReset: 0                             # FCS Reset Button
+
+  FA18C_GainSwitchNorm: 0                       # GAIN Switch - NORM
+  FA18C_GainSwitchNormOverride: 0               # GAIN Switch - NORM/ORIDE
+  FA18C_GainSwitchOverride: 0                   # GAIN Switch - ORIDE
+  FA18C_GainSwitchClose: 0                      # GAIN Switch - CLOSE
+  FA18C_GainSwitchOpen: 0                       # GAIN Switch - OPEN
+  FA18C_GainSwitchOpenClose: 0                  # GAIN Switch - OPEN/CLOSE
+
+  FA18C_RudTrimControlCCWLeft: 0                # RUD TRIM Control - CCW/Left
+  FA18C_RudTrimControlCWRight: 0                # RUD TRIM Control - CW/Right
+
+  ## ***** FIRE TEST PANEL ********************************************************************************************
+
+  FA18C_FireAndBleetAirTestSwitchTestA: 0       # Fire And Bleed Air Test Switch - TEST A
+  FA18C_FireAndBleetAirTestSwitchTestB: 0       # Fire And Bleed Air Test Switch - TEST B
+
+  ## ***** FLIGHT CONTROL *********************************************************************************************
+
+  FA18C_AircraftBankLeft: USB_LEFTARROW         # Aircraft Bank Left
+  FA18C_AircraftBankRight: USB_RIGHTARROW       # Aircraft Bank Right
+  FA18C_AircraftPitchDown: USB_UPARROW          # Aircraft Pitch Down
+  FA18C_AircraftPitchUp: USB_DOWNARROW          # Aircraft Pitch Up
+  FA18C_AircraftRudderLeft: USB_Z               # Aircraft Rudder Left
+  FA18C_AircraftRudderRight: USB_X              # Aircraft Rudder Left
+
+  FA18C_ThrottleSmoothlyDecreaseBoth: USB_NUMPAD_HYPHEN           # Throttle Smoothly (Both) - Decrease
+  FA18C_ThrottleSmoothlyIncreaseBoth: USB_NUMPAD_PLUS             # Throttle Smoothly (Both) - Increase
+  FA18C_ThrottleSmoothlyDecreaseLeft: R_ALT+USB_NUMPAD_HYPHEN     # Throttle Smoothly (Left) - Decrease
+  FA18C_ThrottleSmoothlyIncreaseLeft: R_ALT+USB_NUMPAD_PLUS       # Throttle Smoothly (Left) - Increase
+  FA18C_ThrottleSmoothlyDecreaseRight: R_SHIFT+USB_NUMPAD_HYPHEN  # Throttle Smoothly (Right) - Decrease
+  FA18C_ThrottleSmoothlyIncreaseRight: R_SHIFT+USB_NUMPAD_PLUS    # Throttle Smoothly (Right) - Increase
+
+  FA18C_ThrottleStepDecreaseBoth: USB_PAGEDOWN              # Throttle Step (Both) - Decrease
+  FA18C_ThrottleStepIncreaseBoth: USB_PAGEUP                # Throttle Step (Both) - Increase
+  FA18C_ThrottleStepDecreaseLeft: R_ALT+USB_PAGEDOWN        # Throttle Step (Left) - Decrease
+  FA18C_ThrottleStepIncreaseLeft: R_ALT+USB_PAGEUP          # Throttle Step (Left) - Increase
+  FA18C_ThrottleStepDecreaseRight: R_SHIFT+USB_PAGEDOWN     # Throttle Step (Right) - Decrease
+  FA18C_ThrottleStepIncreaseRight: R_SHIFT+USB_PAGEUP       # Throttle Step (Right) - Increase
+
+  FA18C_TrimmerSwitchLeftWingDown: R_CTL+USB_COMMA   # Trimmer Switch - LEFT WING DOWN
+  FA18C_TrimmerSwitchClimb: R_CTL+USB_PERIOD         # Trimmer Switch - PULL(CLIMB)
+  FA18C_TrimmerSwitchDescend: R_CTL+USB_SEMICOLON    # Trimmer Switch - PUSH(DESCEND)
+  FA18C_TrimmerSwitchRightWingDown: R_CTL+USB_SLASH  # Trimmer Switch - RIGHT WING DOWN
+
+  ## ***** FUEL CONTROL PANEL *****************************************************************************************
+
+  FA18C_ExternalCenterlineTankSwitchDown: 0          # External Centerline Tank Fuel Control Switch - Down
+  FA18C_ExternalCenterlineTankSwitchNorm: 0          # External Centerline Tank Fuel Control Switch - NORM
+  FA18C_ExternalCenterlineTankSwitchOverride: 0      # External Centerline Tank Fuel Control Switch - ORIDE
+  FA18C_ExternalCenterlineTankSwitchOverrideNorm: 0  # External Centerline Tank Fuel Control Switch - ORIDE/NORM
+  FA18C_ExternalCenterlineTankSwitchStop: 0          # External Centerline Tank Fuel Control Switch - STOP
+  FA18C_ExternalCenterlineTankSwitchStopNorm: 0      # External Centerline Tank Fuel Control Switch - STOP/NORM
+  FA18C_ExternalCenterlineTankSwitchUp: 0            # External Centerline Tank Fuel Control Switch - Up
+
+  FA18C_ExternalWingTanksSwitchDown: 0               # External Wing Tanks Fuel Control Switch - Down
+  FA18C_ExternalWingTanksSwitchNorm: 0               # External Wing Tanks Fuel Control Switch - NORM
+  FA18C_ExternalWingTanksSwitchOverride: 0           # External Wing Tanks Fuel Control Switch - ORIDE
+  FA18C_ExternalWingTanksSwitchOverrideNorm: 0       # External Wing Tanks Fuel Control Switch - ORIDE/NORM
+  FA18C_ExternalWingTanksSwitchStop: 0               # External Wing Tanks Fuel Control Switch - STOP
+  FA18C_ExternalWingTanksSwitchStopNorm: 0           # External Wing Tanks Fuel Control Switch - STOP/NORM
+  FA18C_ExternalWingTanksSwitchUp: 0                 # External Wing Tanks Fuel Control Switch - Up
+
+  FA18C_FuelDumpSwitch: 0                            # Fuel Dump Switch - ON/OFF
+
+  FA18C_ProbeControlSwitchDown: 0                    # Probe Control Switch - Down
+  FA18C_ProbeControlSwitchEmergencyExtend: 0         # Probe Control Switch - EMERG EXTD
+  FA18C_ProbeControlSwitchEmergencyExtendRetract: 0  # Probe Control Switch - EMERG EXTD/RETRACT
+  FA18C_ProbeControlSwitchExtend: 0                  # Probe Control Switch - EXTEND
+  FA18C_ProbeControlSwitchExtendRetract: 0           # Probe Control Switch - EXTEND/RETRACT
+  FA18C_ProbeControlSwitchRetract: 0                 # Probe Control Switch - RETRACT
+  FA18C_ProbeControlSwitchUp: 0                      # Probe Control Switch - Up
+
+  ## ***** GENERAL ****************************************************************************************************
+
+  FA18C_CatapultHookUp: USB_U                        # Catapult Hook-Up
+  FA18C_SmokeDeviceOnOff: 0                          # Smoke Device - ON/OFF
+
+  GENERAL_MouseCockpitMode: L_ALT+USB_C              # Clickable Mouse Cockpit Mode On/Off
+  GENERAL_EndMission: USB_ESCAP                      # End mission
+  GENERAL_FrameRateCounter: R_CTL+USB_PAUSE          # Frame rate counter - Service info
+  GENERAL_Respawn: R_CTL+R_SHIFT+USB_TAB             # Get new plane - respawn
+  GENERAL_InfoBarCoordinateUnitsToggle: L_ALT+USB_Y  # Info bar coordinate units toggle
+  GENERAL_InfoBarViewToggle: L_CTL+USB_Y             # Info bar view toggle
+  GENERAL_JumpIntoSelectedAircraft: R_ALT+USB_J      # Jump into selected aircraft
+  GENERAL_Pause: USB_PAUSE                           # Pause
+  GENERAL_RearmingAndRefuelingWindow: L_ALT+USB_QUOTE  # Rearming and Refueling Window
+  GENERAL_ScoreWindow: USB_QUOTE                     # Score Window
+  GENERAL_Screenshot: 0                              # Screenshot
+  GENERAL_ShowControlsIndicator: R_CTL+USB_ENTER     # Show Controls Indicator
+  GENERAL_ShowPilotBody: R_SHIFT+USB_P               # Show pilot body
+  GENERAL_SoundOnOff: L_CTL+USB_S                    # Sound On/Off
+  GENERAL_TimeAccelerate: L_CTL+USB_Z                # Time Accelerate
+  GENERAL_TimeDecelerate: L_ALT+USB_Z                # Time Decelerate
+  GENERAL_TimeNormal: L_SHIFT+USB_Z                  # Time Normal
+  GENERAL_ViewBriefing: L_ALT+USB_B                  # View Briefing
+
+  GENERAL_WheelBrake: USB_W                          # Wheel Brake
+
+  ## ***** GROUND POWER PANEL *****************************************************************************************
+
+  FA18C_ExternalPowerSwitchDown: 0                # External Power Switch - Down
+  FA18C_ExternalPowerSwitchNorm: 0                # External Power Switch - NORM
+  FA18C_ExternalPowerSwitchOff: 0                # External Power Switch - OFF
+  FA18C_ExternalPowerSwitchOffNorm: 0                # External Power Switch - OFF/NORM
+  FA18C_ExternalPowerSwitchReset: 0                # External Power Switch - RESET
+  FA18C_ExternalPowerSwitchUp: 0                # External Power Switch - Up
+
+  FA18C_GroundPowerSwitch1AOn: 0                # Ground Power Switch 1 - A ON
+  FA18C_GroundPowerSwitch1Auto: 0                # Ground Power Switch 1 - AUTO
+  FA18C_GroundPowerSwitch1BOn: 0                # Ground Power Switch 1 - B ON
+  FA18C_GroundPowerSwitch1Down: 0                # Ground Power Switch 1 - Down
+  FA18C_GroundPowerSwitch1Up: 0                # Ground Power Switch 1 - Up
+
+  FA18C_GroundPowerSwitch2AOn: 0                # Ground Power Switch 2 - A ON
+  FA18C_GroundPowerSwitch2Auto: 0                # Ground Power Switch 2 - AUTO
+  FA18C_GroundPowerSwitch2BOn: 0                # Ground Power Switch 2 - B ON
+  FA18C_GroundPowerSwitch2Down: 0                # Ground Power Switch 2 - Down
+  FA18C_GroundPowerSwitch2Up: 0                # Ground Power Switch 2 - Up
+
+  FA18C_GroundPowerSwitch3AOn: 0                # Ground Power Switch 3 - A ON
+  FA18C_GroundPowerSwitch3Auto: 0                # Ground Power Switch 3 - AUTO
+  FA18C_GroundPowerSwitch3BOn: 0                # Ground Power Switch 3 - B ON
+  FA18C_GroundPowerSwitch3Down: 0                # Ground Power Switch 3 - Down
+  FA18C_GroundPowerSwitch3Up: 0                # Ground Power Switch 3 - Up
+
+  FA18C_GroundPowerSwitch4AOn: 0                # Ground Power Switch 4 - A ON
+  FA18C_GroundPowerSwitch4Auto: 0                # Ground Power Switch 4 - AUTO
+  FA18C_GroundPowerSwitch4BOn: 0                # Ground Power Switch 4 - B ON
+  FA18C_GroundPowerSwitch4Down: 0                # Ground Power Switch 4 - Down
+  FA18C_GroundPowerSwitch4Up: 0                # Ground Power Switch 4 - Up
+
+  ## ***** HUD CONTROL PANEL ******************************************************************************************
+
+  FA18C_AltitudeSwitchBaro: 0    # Altitude Switch - BARO
+  FA18C_AltitudeSwitchBaroRdr: 0    # Altitude Switch - BARO/RDR
+  FA18C_AltitudeSwitchRdr: 0    # Altitude Switch - RDR
+
+  FA18C_AOAIndexerKnobCCWDecrease: 0    # AOA Indexer Control Knob - CCW/Decrease
+  FA18C_AOAIndexerKnobCWIncrease: 0    # AOA Indexer Control Knob - CW/Increase
+
+  FA18C_AltitudeSelectorSwitchAuto: 0    # Altitude Selector Switch - AUTO
+  FA18C_AltitudeSelectorSwitchDown: 0    # Altitude Selector Switch - Down
+  FA18C_AltitudeSelectorSwitchINS: 0    # Altitude Selector Switch - INS
+  FA18C_AltitudeSelectorSwitchINSAuto: 0    # Altitude Selector Switch - INS/AUTO
+  FA18C_AltitudeSelectorSwitchStandby: 0    # Altitude Selector Switch - STBY
+  FA18C_AltitudeSelectorSwitchStandbyAuto: 0    # Altitude Selector Switch - STBY/AUTO
+  FA18C_AltitudeSelectorSwitchUp: 0    # Altitude Selector Switch - Up
+
+  FA18C_BalanceControlKnobCCWDecrease: 0    # Balance Control Knob - CCW/Decrease
+  FA18C_BalanceControlKnobCWIncrease: 0    # Balance Control Knob - CW/Increase
+
+  FA18C_BlackLevelControlKnobCCWDecrease: 0    # Black Level Control Knob - CCW/Decrease
+  FA18C_BlackLevelControlKnobCWIncrease: 0    # Black Level Control Knob - CW/Increase
+
+  FA18C_HUDSymbologyBrightnessCCWDecrease: 0    # HUD Symbology Brightness Control Knob - CCW/Decrease
+  FA18C_HUDSymbologyBrightnessCWIncrease: 0    # HUD Symbology Brightness Control Knob - CW/Increase
+
+  FA18C_HUDSymbologyBrightnessSelectorDay: 0    # HUD Symbology Brightness Selector Knob - DAY
+  FA18C_HUDSymbologyBrightnessSelectorDayNight: 0    # HUD Symbology Brightness Selector Knob - DAY/NIGHT
+  FA18C_HUDSymbologyBrightnessSelectorNight: 0    # HUD Symbology Brightness Selector Knob - NIGHT
+
+  FA18C_HUDSymbologyRejectSwitchDown: 0    # HUD Symbology Reject Switch - Down
+  FA18C_HUDSymbologyRejectSwitchNorm: 0    # HUD Symbology Reject Switch - NORM
+  FA18C_HUDSymbologyRejectSwitchNormRej1: 0    # HUD Symbology Reject Switch - NORM/REJ 1
+  FA18C_HUDSymbologyRejectSwitchRej1: 0    # HUD Symbology Reject Switch - REJ 1
+  FA18C_HUDSymbologyRejectSwitchRej2: 0    # HUD Symbology Reject Switch - REJ 2
+  FA18C_HUDSymbologyRejectSwitchRej2Rej1: 0    # HUD Symbology Reject Switch - REJ 2/REJ 1
+  FA18C_HUDSymbologyRejectSwitchUp: 0    # HUD Symbology Reject Switch - Up
+
+  FA18C_HUDVideoControlSwitchDown: 0    # HUD Video Control Switch - Down
+  FA18C_HUDVideoControlSwitchOff: 0    # HUD Video Control Switch - OFF
+  FA18C_HUDVideoControlSwitchOffVid: 0    # HUD Video Control Switch - OFF/VID
+  FA18C_HUDVideoControlSwitchUp: 0    # HUD Video Control Switch - Up
+  FA18C_HUDVideoControlSwitchVid: 0    # HUD Video Control Switch - VID
+  FA18C_HUDVideoControlSwitchWB: 0    # HUD Video Control Switch - W/B
+  FA18C_HUDVideoControlSwitchWBVid: 0    # HUD Video Control Switch - W/B /VID
+
+  ## ***** INTR LT CONTROL PANEL **************************************************************************************
+
+  FA18C_ChartLightDimmerCCWDecrease: 0  # CHART Light Dimmer Control - CCW/Decrease
+  FA18C_ChartLightDimmerCWIncrease: 0  # CHART Light Dimmer Control - CW/Increase
+
+  FA18C_ConsolesLightDimmerCCWDecrease: 0  # CONSOLES Light Dimmer Control - CCW/Decrease
+  FA18C_ConsolesLightDimmerCWIncrease: 0  # CONSOLES Light Dimmer Control - CW/Increase
+
+  FA18C_FloodLightDimmerCCWDecrease: 0  # FLOOD Light Dimmer Control - CCW/Decrease
+  FA18C_FloodLightDimmerCWIncrease: 0  # FLOOD Light Dimmer Control - CW/Increase
+
+  FA18C_InstrumentPanelLightDimmerCCWDecrease: 0  # INST PNL Dimmer Control - CCW/Decrease
+  FA18C_InstrumentPanelLightDimmerCWIncrease: 0  # INST PNL Dimmer Control - CW/Increase
+
+  FA18C_LightsTestSwitch: 0  # Lights Test Switch - TEST/OFF
+
+  FA18C_ModeSwitchDay: 0  # MODE Switch - DAY
+  FA18C_ModeSwitchDayNite: 0  # MODE Switch - DAY/NITE
+  FA18C_ModeSwitchDown: 0  # MODE Switch - Down
+  FA18C_ModeSwitchNite: 0  # MODE Switch - NITE
+  FA18C_ModeSwitchNvg: 0  # MODE Switch - NVG
+  FA18C_ModeSwitchnvgNite: 0  # MODE Switch - NVG/NITE
+  FA18C_ModeSwitchUp: 0  # MODE Switch - Up
+
+  FA18C_WarnCautionDimmerCCWDecrease: 0  # WARN/CAUTION Dimmer Control - CCW/Decrease
+  FA18C_WarnCautionDimmerCWIncrease: 0  # WARN/CAUTION Dimmer Control - CW/Increase

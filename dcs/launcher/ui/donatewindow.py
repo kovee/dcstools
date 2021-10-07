@@ -37,5 +37,5 @@ class DonateWindow(Window):
 
         """Handler function called when the window is created."""
 
-        
+
 
