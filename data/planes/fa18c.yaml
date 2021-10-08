@@ -43,10 +43,18 @@ defaultassignments:
 
   ## ***** ALR-67 *****************************************************************************************************
 
-  FA18C_CALR67BitPushbutton: 0                  # ALR-67 BIT Pushbutton
+  FA18C_ALR67BitPushbutton:
+    assignment: 0
+    name: ALR-67 BIT Pushbutton
 
-  FA18C_ALR67DisTypeSwitchA: 0                  # ALR-67 DIS TYPE Switch - A
-  FA18C_ALR67DisTypeSwitchCCW: 0                # ALR-67 DIS TYPE Switch - CCW
+  FA18C_ALR67DisTypeSwitchA:
+    assignment: 0
+    name: ALR-67 DIS TYPE Switch - A
+
+  FA18C_ALR67DisTypeSwitchCCW:
+    assignment: 0
+    name: ALR-67 DIS TYPE Switch - CCW
+
   FA18C_ALR67DisTypeSwitchCW: 0                 # ALR-67 DIS TYPE Switch - CW
   FA18C_ALR67DisTypeSwitchF: 0                  # ALR-67 DIS TYPE Switch - F
   FA18C_ALR67DisTypeSwitchI: 0                  # ALR-67 DIS TYPE Switch - I
@@ -523,3 +531,806 @@ defaultassignments:
 
   FA18C_WarnCautionDimmerCCWDecrease: 0  # WARN/CAUTION Dimmer Control - CCW/Decrease
   FA18C_WarnCautionDimmerCWIncrease: 0  # WARN/CAUTION Dimmer Control - CW/Increase
+
+  ## ***** INSTRUMENT PANEL *******************************************************************************************
+
+  FA18C_AAU52PressureCCWDecrease: 0   # AAU-52 Altimeter Pressure Setting Knob - CCW/Decrease
+  FA18C_AAU52PressureCWIncrease: 0   # AAU-52 Altimeter Pressure Setting Knob - CW/Increase
+
+  FA18C_APUFireWarningExtinguisherLightPress: 0   # APU Fire Warning/Extinguisher Light Switch - PRESS
+  FA18C_APUFireWarningExtinguisherLightPressRel: 0   # APU Fire Warning/Extinguisher Light Switch - PRESS/REL
+  FA18C_APUFireWarningExtinguisherLightRelease: 0   # APU Fire Warning/Extinguisher Light Switch - RELEASE
+
+  FA18C_AuxilliaryReleaseSwitchEnable: 0   # Auxilliary Release Switch - ENABLE
+  FA18C_AuxilliaryReleaseSwitchEnableNorm: 0   # Auxilliary Release Switch - ENABLE/NORM
+  FA18C_AuxilliaryReleaseSwitchNorm: 0   # Auxilliary Release Switch - NORM
+
+  FA18C_CourseSetSwitchLeft: 0   # Course Set Switch - Left
+  FA18C_CourseSetSwitchRight: 0   # Course Set Switch - Right
+
+  FA18C_EmergencyJettison: 0   # Emergency Jettison Button
+
+  FA18C_HeadingSetSwitchLeft: 0   # Heading Set Switch - Left
+  FA18C_HeadingSetSwitchRight: 0   # Heading Set Switch - Right
+
+  FA18C_HMDOffBrtKnobCCWDecrease: 0   # HMD OFF/BRT Knob - CCW/Decrease
+  FA18C_HMDOffBrtKnobCWIncrease: 0   # HMD OFF/BRT Knob - CW/Increase
+
+  FA18C_IFEIBrightnessKnobCCWDecrease: 0   # IFEI Brightness Control Knob - CCW/Decrease
+  FA18C_IFEIBrightnessKnobCWIncrease: 0   # IFEI Brightness Control Knob - CW/Increase
+
+  FA18C_IFEIDownArrowButton: 0   # IFEI Down Arrow Button
+  FA18C_IFEIETButton: 0   # IFEI ET Button
+  FA18C_IFEIModeButton: 0   # IFEI Mode Button
+  FA18C_IFEIQTYButton: 0   # IFEI QTY Button
+  FA18C_IFEIUpArrowButton: 0   # IFEI Up Arrow Button
+  FA18C_IFEIZoneButton: 0   # IFEI Zone Button
+
+  FA18C_IRCoolingSwitchDown: 0   # IR Cooling Switch - Down
+  FA18C_IRCoolingSwitchNORM: 0   # IR Cooling Switch - NORM
+  FA18C_IRCoolingSwitchOff: 0   # IR Cooling Switch - OFF
+  FA18C_IRCoolingSwitchOffNorm: 0   # IR Cooling Switch - OFF/NORM
+  FA18C_IRCoolingSwitchOverride: 0   # IR Cooling Switch - ORIDE
+  FA18C_IRCoolingSwitchOverrideNorm: 0   # IR Cooling Switch - ORIDE/NORM
+  FA18C_IRCoolingSwitchUp: 0   # IR Cooling Switch - Up
+
+  FA18C_LeftEngineFireExtinguisherCoverClose: 0   # Left Engine/AMAD Fire Warning/Extinguisher Light Cover - CLOSE
+  FA18C_LeftEngineFireExtinguisherCoverOpen: 0   # Left Engine/AMAD Fire Warning/Extinguisher Light Cover - OPEN
+  FA18C_LeftEngineFireExtinguisherCoverOpenClose: 0   # Left Engine/AMAD Fire Warning/Extinguisher Light Cover - OPEN/CLOSE
+  FA18C_LeftEngineFireExtinguisherSwitchPress: 0   # Left Engine/AMAD Fire Warning/Extinguisher Light Switch - PRESS
+  FA18C_LeftEngineFireExtinguisherSwitchPressRel: 0   # Left Engine/AMAD Fire Warning/Extinguisher Light Switch - PRESS/REL
+  FA18C_LeftEngineFireExtinguisherSwitchRelease: 0   # Left Engine/AMAD Fire Warning/Extinguisher Light Switch - RELEASE
+
+  FA18C_MasterCautionResetButton: USB_N   # Maser Caution Reset Button
+
+  FA18C_RightEngineFireExtinguisherCoverClose: 0   # Right Engine/AMAD Fire Warning/Extinguisher Light Cover - CLOSE
+  FA18C_RightEngineFireExtinguisherCoverOpen: 0   # Right Engine/AMAD Fire Warning/Extinguisher Light Cover - OPEN
+  FA18C_RightEngineFireExtinguisherCoverOpenClose: 0   # Right Engine/AMAD Fire Warning/Extinguisher Light Cover - OPEN/CLOSE
+  FA18C_RightEngineFireExtinguisherSwitchPress: 0   # Right Engine/AMAD Fire Warning/Extinguisher Light Switch - PRESS
+  FA18C_RightEngineFireExtinguisherSwitchPressRel: 0   # Right Engine/AMAD Fire Warning/Extinguisher Light Switch - PRESS/REL
+  FA18C_RightEngineFireExtinguisherSwitchRelease: 0   # Right Engine/AMAD Fire Warning/Extinguisher Light Switch - RELEASE
+
+  FA18C_RudderPedalAdjustLever: 0   # Rudder Pedal Adjust Lever
+
+  FA18C_RWRIntensityKnobCCWDecrease: 0   # RWR Intensity Knob - CCW/Decrease
+  FA18C_RWRIntensityKnobCWIncrease: 0   # RWR Intensity Knob - CW/Increase
+
+  FA18C_SAICageKnobCCWDecrease: 0   # SAI Cage Knob - CCW/Decrease
+  FA18C_SAICageKnobCWIncrease: 0   # SAI Cage Knob - CW/Increase
+  FA18C_SAICageKnobPull: 0   # SAI Cage Knob - PULL
+
+  FA18C_SpinRecoverySwitchNorm: 0   # Spin Recovery Switch - NORM
+  FA18C_SpinRecoverySwitchRecovery: 0   # Spin Recovery Switch - RCVY
+  FA18C_SpinRecoverySwitchRecoveryNorm: 0   # Spin Recovery Switch - RCVY/NORM
+
+  FA18C_SpinRecoverySwitchCoverClose: 0   # Spin Recovery Switch Cover - CLOSE
+  FA18C_SpinRecoverySwitchCoverOpen: 0   # Spin Recovery Switch Cover - OPEN
+  FA18C_SpinRecoverySwitchCoverOpenClose: 0   # Spin Recovery Switch Cover - OPEN/CLOSE
+
+  FA18C_StationJettisonSelectCenterOff: 0   # Station Jettison Select Button CENTER - OFF
+  FA18C_StationJettisonSelectCenterOn: 0   # Station Jettison Select Button CENTER - ON
+  FA18C_StationJettisonSelectCenterOnOff: 0   # Station Jettison Select Button CENTER - ON/OFF
+
+  FA18C_StationJettisonSelectLeftInOff: 0   # Station Jettison Select Button LEFT IN - OFF
+  FA18C_StationJettisonSelectLeftInOn: 0   # Station Jettison Select Button LEFT IN - ON
+  FA18C_StationJettisonSelectLeftInOnOff: 0   # Station Jettison Select Button LEFT IN - ON/OFF
+
+  FA18C_StationJettisonSelectLeftOutOff: 0   # Station Jettison Select Button LEFT OUT - OFF
+  FA18C_StationJettisonSelectLeftOutOn: 0   # Station Jettison Select Button LEFT OUT - ON
+  FA18C_StationJettisonSelectLeftOutOnOff: 0   # Station Jettison Select Button LEFT OUT - ON/OFF
+
+  FA18C_StationJettisonSelectRightInOff: 0   # Station Jettison Select Button RIGHT IN - OFF
+  FA18C_StationJettisonSelectRightInOn: 0   # Station Jettison Select Button RIGHT IN - ON
+  FA18C_StationJettisonSelectRightInOnOff: 0   # Station Jettison Select Button RIGHT IN - ON/OFF
+
+  FA18C_StationJettisonSelectRightOutOff: 0   # Station Jettison Select Button RIGHT OUT - OFF
+  FA18C_StationJettisonSelectRightOutOn: 0   # Station Jettison Select Button RIGHT OUT - ON
+  FA18C_StationJettisonSelectRightOutOnOff: 0   # Station Jettison Select Button RIGHT OUT - ON/OFF
+
+  ## ***** KNEEBOARD **************************************************************************************************
+
+  KB_KneeboardCurrentPositionMarkPoint: R_CTL+USB_K       # Kneeboard current position mark point
+  KB_KneeboardGlanceView: USB_K             # Kneeboard current position mark point
+  KB_KneeboardShortcut1: 0                 # Kneeboard jump to shortcut 1
+  KB_KneeboardShortcut2: 0                 # Kneeboard jump to shortcut 2
+  KB_KneeboardShortcut3: 0                 # Kneeboard jump to shortcut 3
+  KB_KneeboardShortcut4: 0                 # Kneeboard jump to shortcut 4
+  KB_KneeboardShortcut5: 0                 # Kneeboard jump to shortcut 5
+  KB_KneeboardShortcut6: 0                 # Kneeboard jump to shortcut 6
+  KB_KneeboardShortcut7: 0                 # Kneeboard jump to shortcut 7
+  KB_KneeboardShortcut8: 0                 # Kneeboard jump to shortcut 8
+  KB_KneeboardShortcut9: 0                 # Kneeboard jump to shortcut 9
+  KB_KneeboardShortcut10: 0                 # Kneeboard jump to shortcut 10
+  KB_KneeboardMakeShortcut: 0                 # Kneeboard make shortcut
+  KB_KneeboardNextPage: USB_CLOSEBRACKET  # Kneeboard next page
+  KB_KneeboardNextShortcut: 0                 # Kneeboard next shortcut
+  KB_KneeboardOnOff: R_SHIFT+USB_K     # Kneeboard ON/OFF
+  KB_KneeboardPreviousPage: USB_OPENBRACKET   # Kneeboard previous page
+  KB_KneeboardPreviousShortcut: 0                 # Kneeboard previous shortcut
+
+  ## ***** KY-58 CONTROL PANEL ****************************************************************************************
+
+  FA18C_KY58FillSelectKnob1: 0         # KY-58 Fill Select Knob - 1
+  FA18C_KY58FillSelectKnob2: 0         # KY-58 Fill Select Knob - 2
+  FA18C_KY58FillSelectKnob3: 0         # KY-58 Fill Select Knob - 3
+  FA18C_KY58FillSelectKnob4: 0         # KY-58 Fill Select Knob - 4
+  FA18C_KY58FillSelectKnob5: 0         # KY-58 Fill Select Knob - 5
+  FA18C_KY58FillSelectKnob6: 0         # KY-58 Fill Select Knob - 6
+  FA18C_KY58FillSelectKnobCCW: 0         # KY-58 Fill Select Knob - CCW
+  FA18C_KY58FillSelectKnobCW: 0         # KY-58 Fill Select Knob - CW
+
+  FA18C_KY58ModeSelectKnobC: 0         # KY-58 Mode Select Knob - C
+  FA18C_KY58ModeSelectKnobCCW: 0         # KY-58 Mode Select Knob - CCW
+  FA18C_KY58ModeSelectKnobCW: 0         # KY-58 Mode Select Knob - CW
+  FA18C_KY58ModeSelectKnobLD: 0         # KY-58 Mode Select Knob - LD
+  FA18C_KY58ModeSelectKnobP: 0         # KY-58 Mode Select Knob - P
+  FA18C_KY58ModeSelectKnobRV: 0         # KY-58 Mode Select Knob - RV
+
+  FA18C_KY58PowerSelectKnobCCW: 0         # KY-58 Power Select Knob - CCW
+  FA18C_KY58PowerSelectKnobCW: 0         # KY-58 Power Select Knob - CW
+  FA18C_KY58PowerSelectKnobOff: 0         # KY-58 Power Select Knob - OFF
+  FA18C_KY58PowerSelectKnobOffOn: 0         # KY-58 Power Select Knob - OFF/ON
+  FA18C_KY58PowerSelectKnobOn: 0         # KY-58 Power Select Knob - ON
+  FA18C_KY58PowerSelectKnobTd: 0         # KY-58 Power Select Knob - TD
+  FA18C_KY58PowerSelectKnobTdOn: 0         # KY-58 Power Select Knob - TD/ON
+
+  FA18C_KY58VolumeControlKnobCCWDecrease: 0         # KY-58 Volume Control Knob - CCW/Decrease
+  FA18C_KY58VolumeControlKnobCWIncrease: 0         # KY-58 Volume Control Knob - CW/Increase
+
+  ## ***** LABELS *****************************************************************************************************
+
+  LABELS_AircraftLabels: L_SHIFT+USB_F2       # Aircraft Labels
+  LABELS_AllLabels: L_SHIFT+USB_F10      # All Labels
+  LABELS_MissileLabels: L_SHIFT+USB_F6       # Missile Labels
+  LABELS_VehicleAndShipLabels: L_SHIFT+USB_F9       # Vehicle & Ship Labels
+
+  ## ***** LEFT CIRCUIT BREAKER PANEL *********************************************************************************
+
+  FA18C_CBFCSCHAN1Off: 0                   # CB FCS CHAN 1 - OFF
+  FA18C_CBFCSCHAN1On: 0                   # CB FCS CHAN 1 - ON
+  FA18C_CBFCSCHAN1OnOff: 0                   # CB FCS CHAN 1 - ON/OFF
+
+  FA18C_CBFCSCHAN2Off: 0                   # CB FCS CHAN 2 - OFF
+  FA18C_CBFCSCHAN2On: 0                   # CB FCS CHAN 2 - ON
+  FA18C_CBFCSCHAN2OnOff: 0                   # CB FCS CHAN 2 - ON/OFF
+
+  FA18C_CBLaunchBarOff: 0                   # CB LAUNCH BAR - OFF
+  FA18C_CBLaunchBarOn: 0                   # CB LAUNCH BAR - ON
+  FA18C_CBLaunchBarOnOff: 0                   # CB LAUNCH BAR - ON/OFF
+
+  FA18C_CBSpeedBrakeOff: 0                   # CB SPD BRK - OFF
+  FA18C_CBSpeedBrakeOn: 0                   # CB SPD BRK - ON
+  FA18C_CBSpeedBrakeOnOff: 0                   # CB SPD BRK - ON/OFF
+
+  ## ***** LEFT CONSOLE ***********************************************************************************************
+
+  FA18C_APUControlSwitchOnOffSpecial: 0                   # APU Control Switch (special) - ON/OFF
+  FA18C_APUControlSwitchOnOff: L_CTL+L_SHIFT+USB_A # APU Control Switch (special) - ON/OFF
+
+  FA18C_Comm1AntennaSelectorAuto: 0                  # COMM 1 Antenna Selector Switch - AUTO
+  FA18C_Comm1AntennaSelectorDown: 0                  # COMM 1 Antenna Selector Switch - Down
+  FA18C_Comm1AntennaSelectorLower: 0                  # COMM 1 Antenna Selector Switch - LOWER
+  FA18C_Comm1AntennaSelectorLowerAuto: 0                  # COMM 1 Antenna Selector Switch - LOWER/AUTO
+  FA18C_Comm1AntennaSelectorUpper: 0                  # COMM 1 Antenna Selector Switch - UPPER
+  FA18C_Comm1AntennaSelectorUpperAuto: 0                  # COMM 1 Antenna Selector Switch - UPPER/AUTO
+  FA18C_Comm1AntennaSelectorUp: 0                  # COMM 1 Antenna Selector Switch - Up
+
+  FA18C_EngineCrankSwitchCycleLeft: 0                  # Engine Crank Shift - Cycle Left
+  FA18C_EngineCrankSwitchCycleRight: 0                  # Engine Crank Shift - Cycle Right
+  FA18C_EngineCrankSwitchLeft: L_CTL+L_ALT+USB_E  # Engine Crank Shift - LEFT
+  FA18C_EngineCrankSwitchOff: 0                  # Engine Crank Shift - OFF
+  FA18C_EngineCrankSwitchRight: R_CTL+R_ALT+USB_E  # Engine Crank Shift - RIGHT
+
+  FA18C_GeneratorTieControlSwitchNorm: 0                  # Generator TIE Control Switch - NORM
+  FA18C_GeneratorTieControlSwitchNormReset: 0                  # Generator TIE Control Switch - NORM/RESET
+  FA18C_GeneratorTieControlSwitchReset: 0                  # Generator TIE Control Switch - RESET
+
+  FA18C_GeneratorTieControlSwitchCoverClose: 0                  # Generator TIE Control Switch Cover - CLOSE
+  FA18C_GeneratorTieControlSwitchCoverOpen: 0                  # Generator TIE Control Switch Cover - OPEN
+  FA18C_GeneratorTieControlSwitchCoverOpenClose: 0                  # Generator TIE Control Switch Cover - OPEN/CLOSE
+
+  FA18C_HydraulicIsolateOverrideNorm: 0                  # Hydraulic Isolate Override Switch - NORM
+  FA18C_HydraulicIsolateOverrideNormOverride: 0                  # Hydraulic Isolate Override Switch - NORM/ORIDE
+  FA18C_HydraulicIsolateOverrideOverride: 0                  # Hydraulic Isolate Override Switch - ORIDE
+
+  FA18C_IFFAntennaSelectorBoth: 0                  # IFF Antenna Selector Switch - BOTH
+  FA18C_IFFAntennaSelectorDown: 0                  # IFF Antenna Selector Switch - Down
+  FA18C_IFFAntennaSelectorLower: 0                  # IFF Antenna Selector Switch - LOWER
+  FA18C_IFFAntennaSelectorLowerBoth: 0                  # IFF Antenna Selector Switch - LOWER/BOTH
+  FA18C_IFFAntennaSelectorUpper: 0                  # IFF Antenna Selector Switch - UPPER
+  FA18C_IFFAntennaSelectorUpperBoth: 0                  # IFF Antenna Selector Switch - UPPER/BOTH
+  FA18C_IFFAntennaSelectorUp: 0                  # IFF Antenna Selector Switch - Up
+
+  FA18C_MCSwitch1Off: 0                  # MC Switch - 1 OFF
+  FA18C_MCSwitch2Off: 0                  # MC Switch - 2 OFF
+  FA18C_MCSwitchDown: 0                  # MC Switch - Down
+  FA18C_MCSwitchNorm: 0                  # MC Switch - NORM
+  FA18C_MCSwitchUp: 0                  # MC Switch - Up
+
+  FA18C_OBOGSControlSwitchOff: 0                  # OBOGS Control Switch - OFF
+  FA18C_OBOGSControlSwitchOn: 0                  # OBOGS Control Switch - ON
+  FA18C_OBOGSControlSwitchOnOff: 0                  # OBOGS Control Switch - OnOff
+
+  FA18C_OxygenFlowKnobCCWDecreaseOff: 0                  # OXY Flow Knob - CCW/Decrease/OFF
+  FA18C_OxygenFlowKnobCWIncreaseOn: 0                  # OXY Flow Knob - CW/Increase/ON
+
+  ## ***** LEFT MDI ***************************************************************************************************
+
+  FA18C_LeftMDIBrightnessControlCCWDecrease: 0            # Left MDI Brightness Control Knob - CCW/Decrease
+  FA18C_LeftMDIBrightnessControlCWIncrease: 0            # Left MDI Brightness Control Knob - CW/Increase
+
+  FA18C_LeftMDIBrightnessSelectorCCWDecrease: 0            # Left MDI Brightness Selector Knob - CCW/Decrease
+  FA18C_LeftMDIBrightnessSelectorCWIncrease: 0            # Left MDI Brightness Selector Knob - CW/Increase
+  FA18C_LeftMDIBrightnessSelectorDay: 0            # Left MDI Brightness Selector Knob - DAY
+  FA18C_LeftMDIBrightnessSelectorDayNight: 0            # Left MDI Brightness Selector Knob - DAY/NIGHT
+  FA18C_LeftMDIBrightnessSelectorNight: 0            # Left MDI Brightness Selector Knob - NIGHT
+  FA18C_LeftMDIBrightnessSelectorOff: 0            # Left MDI Brightness Selector Knob - OFF
+  FA18C_LeftMDIBrightnessSelectorOffNight: 0            # Left MDI Brightness Selector Knob - OFF/NIGHT
+
+  FA18C_LeftMDIContractControlCCWDecrease: 0            # Left MDI Contract Control Knob - CCW/Decrease
+  FA18C_LeftMDIContractControlCWIncrease: 0            # Left MDI Contract Control Knob - CW/Increase
+
+  FA18C_LeftMDIPB01: 0            # Left MDI PB 1
+  FA18C_LeftMDIPB02: 0            # Left MDI PB 2
+  FA18C_LeftMDIPB03: 0            # Left MDI PB 3
+  FA18C_LeftMDIPB04: 0            # Left MDI PB 4
+  FA18C_LeftMDIPB05: 0            # Left MDI PB 5
+  FA18C_LeftMDIPB06: 0            # Left MDI PB 6
+  FA18C_LeftMDIPB07: 0            # Left MDI PB 7
+  FA18C_LeftMDIPB08: 0            # Left MDI PB 8
+  FA18C_LeftMDIPB09: 0            # Left MDI PB 9
+  FA18C_LeftMDIPB10: 0            # Left MDI PB 10
+  FA18C_LeftMDIPB11: 0            # Left MDI PB 11
+  FA18C_LeftMDIPB12: 0            # Left MDI PB 12
+  FA18C_LeftMDIPB13: 0            # Left MDI PB 13
+  FA18C_LeftMDIPB14: 0            # Left MDI PB 14
+  FA18C_LeftMDIPB15: 0            # Left MDI PB 15
+  FA18C_LeftMDIPB16: 0            # Left MDI PB 16
+  FA18C_LeftMDIPB17: 0            # Left MDI PB 17
+  FA18C_LeftMDIPB18: 0            # Left MDI PB 18
+  FA18C_LeftMDIPB19: 0            # Left MDI PB 19
+  FA18C_LeftMDIPB20: 0            # Left MDI PB 20
+
+  ## ***** LEFT VERTICAL PANEL ****************************************************************************************
+
+  FA18C_AntiSkidOff: 0                       # Anti Skid Switch - OFF
+  FA18C_AntiSkidOn: 0                       # Anti Skid Switch - ON
+  FA18C_AntiSkidOnOff: 0                       # Anti Skid Switch - ON/OFF
+
+  FA18C_DownLockOverride: 0                       # Down Lock Override Button
+
+  FA18C_EmergencyParkingBrakeCCW: L_CTL+USB_P             # Emergency/Parking Brake Handle - CCW
+  FA18C_EmergencyParkingBrakeCW: L_ALT+USB_P             # Emergency/Parking Brake Handle - CW
+  FA18C_EmergencyParkingBrakePull: R_CTL+USB_P             # Emergency/Parking Brake Handle - PULL
+  FA18C_EmergencyParkingBrakeStow: R_ALT+USB_P             # Emergency/Parking Brake Handle - STOW
+
+  FA18C_FlapAuto: USB_F                   # FLAP Switch - AUTO
+  FA18C_FlapAutoHalp: 0                       # FLAP Switch - AUTO/HALF
+  FA18C_FlapCycle: 0                       # FLAP Switch - Cycle
+  FA18C_FlapDown: L_CTL+L_ALT+USB_F       # FLAP Switch - Down
+  FA18C_FlapFull: L_CTL+USB_F             # FLAP Switch - FULL
+  FA18C_FlapFullHalf: 0                       # FLAP Switch - FULL/HALF
+  FA18C_FlapHalf: L_SHIFT+USB_F           # FLAP Switch - HALF
+  FA18C_FlapUp: L_SHIFT+L_ALT+USB_F     # FLAP Switch - Up
+
+  FA18C_HookBypassFieldCarrier: 0                       # HOOK BYPASS Switch FIELD/CARRIER
+
+  FA18C_GearControlHandleEmergencyExtend: 0                       # Landing Gear Control (EMERGENCY DOWN) - EXTEND
+  FA18C_GearControlHandleEmergencyExtendRetract: 0                       # Landing Gear Control (EMERGENCY DOWN) - EXTEND/RETRACT
+  FA18C_GearControlHandleEmergencyRetract: 0                       # Landing Gear Control (EMERGENCY DOWN) - RETRACT
+
+  FA18C_GearControlHandleDown: L_SHIFT+USB_G           # Landing Gear Control Handle - DOWN
+  FA18C_GearControlHandleUp: L_CTL+USB_G             # Landing Gear Control Handle - UP
+  FA18C_GearControlHandleUpDown: USB_G                   # Landing Gear Control Handle - UP/DOWN
+
+  FA18C_LaunchBarControlSwitchExtendRetract: L_CTL+USB_L             # Launch Bar Control Switch - EXTEND/RETRACT
+
+  FA18C_LdgTaxiLightOff: 0                       # LDG/TAXI LIGHT Switch - OFF
+  FA18C_LdgTaxiLightOn: 0                       # LDG/TAXI LIGHT Switch - ON
+  FA18C_LdgTaxiLightOnOff : 0                       # LDG/TAXI LIGHT Switch - ON/OFF
+
+  FA18C_LeftLouverLeft: 0                       # Left Louver - Left
+  FA18C_LeftLouverRight: 0                       # Left Louver - Right
+
+  FA18C_SelectiveJettisonKnobCCW: 0                       # Selective Jettison Knob - CCW
+  FA18C_SelectiveJettisonKnobCW: 0                       # Selective Jettison Knob - CW
+  FA18C_SelectiveJettisonKnobLeftFuselageMsl: 0                       # Selective Jettison Knob - L FUS MSL
+  FA18C_SelectiveJettisonKnobRightFuselageMsl: 0                       # Selective Jettison Knob - R FUS MSL
+  FA18C_SelectiveJettisonKnobRackLchr: 0                       # Selective Jettison Knob - RACK/LCHR
+  FA18C_SelectiveJettisonKnobSafe: 0                       # Selective Jettison Knob - SAFE
+  FA18C_SelectiveJettisonKnobStores: 0                       # Selective Jettison Knob - STORES
+  FA18C_SelectiveJettisonButton: 0                       # Selective Jettison Pushbutton
+  FA18C_WarningToneSilenceButton: 0                       # Warning Tone Silence Button
+
+  ## ***** LEFT WALL **************************************************************************************************
+
+  FA18C_CanopyJettisonHandlePull: 0             # Canopy Jettison Handle - PULL
+  FA18C_CanopyJettisonHandlePullPush: 0             # Canopy Jettison Handle - PULL/PUSH
+  FA18C_CanopyJettisonHandlePush: 0             # Canopy Jettison Handle - PUSH
+  FA18C_CanopyJettisonHandleUnlock: 0             # Canopy Jettison Handle Unlock Button
+
+  ## ***** MASTER ARM PANEL *******************************************************************************************
+
+  FA18C_FireExtinguisherButton: 0                       # Fire Extinguisher Pushbutton
+  FA18C_MasterArmSwitchArm: 0                       # Master Arm Switch - ARM
+  FA18C_MasterArmSwitchArmSafe: USB_M                   # Master Arm Switch - ARM/SAFE
+  FA18C_MasterArmSwitchSafe: 0                       # Master Arm Switch - SAFE
+  FA18C_MasterModeButtonAA: L_CTL+L_SHIFT+USB_Q     # Master Mode Button - AA
+  FA18C_MasterModeButtonAG: L_CTL+L_SHIFT+USB_W     # Master Mode Button - AG
+
+  ## ***** RIGHT CIRCUIT BREAKER PANEL ********************************************************************************
+
+  FA18C_CBFCSCHAN3Off: 0                       # CB FCS CHAN 3 - OFF
+  FA18C_CBFCSCHAN3On: 0                       # CB FCS CHAN 3 - ON
+  FA18C_CBFCSCHAN3OnOff: 0                       # CB FCS CHAN 3 - ON/OFF
+
+  FA18C_CBFCSCHAN4Off: 0                       # CB FCS CHAN 4 - OFF
+  FA18C_CBFCSCHAN4On: 0                       # CB FCS CHAN 4 - ON
+  FA18C_CBFCSCHAN4OnOff: 0                       # CB FCS CHAN 4 - ON/OFF
+
+  FA18C_CBHookOff: 0                       # CB Hook - OFF
+  FA18C_CBHookOn: 0                       # CB Hook - ON
+  FA18C_CBHookOnOff: 0                       # CB Hook - ON/OFF
+
+  FA18C_CBLGOff: 0                       # CB LG - OFF
+  FA18C_CBLGOn: 0                       # CB LG - ON
+  FA18C_CBLGOnOff: 0                       # CB LG - ON/OFF
+
+  ## ***** RIGHT CONSOLE **********************************************************************************************
+
+  FA18C_DefogHandleBackward: 0               # Defog Handle - Backward/LOW
+  FA18C_DefogHandleForward: 0               # Defog Handle - Forward/HIGH
+
+  FA18C_WindshieldAntiIceRainAntiIce: 0               # Windshield Anti-Ice/Rain Switch - ANTI ICE
+  FA18C_WindshieldAntiIceRainAntiIceOff: 0               # Windshield Anti-Ice/Rain Switch - ANTI ICE/OFF
+  FA18C_WindshieldAntiIceRainDown: 0               # Windshield Anti-Ice/Rain Switch - Down
+  FA18C_WindshieldAntiIceRainOff: 0               # Windshield Anti-Ice/Rain Switch - OFF
+  FA18C_WindshieldAntiIceRainRain: 0               # Windshield Anti-Ice/Rain Switch - RAIN
+  FA18C_WindshieldAntiIceRainRainOff: 0               # Windshield Anti-Ice/Rain Switch - RAIN/OFF
+  FA18C_WindshieldAntiIceRainUp: 0               # Windshield Anti-Ice/Rain Switch - Up
+
+  ## ***** RIGHT MDI **************************************************************************************************
+
+  FA18C_RightMDIBrightnessControlCCWDecrease: 0        # Right MDI Brightness Control Knob - CCW/Decrease
+  FA18C_RightMDIBrightnessControlCWIncrease: 0        # Right MDI Brightness Control Knob - CW/Increase
+
+  FA18C_RightMDIBrightnessSelectorCCWDecrease: 0        # Right MDI Brightness Selector Knob - CCW/Decrease
+  FA18C_RightMDIBrightnessSelectorCWIncrease: 0        # Right MDI Brightness Selector Knob - CW/Increase
+  FA18C_RightMDIBrightnessSelectorDay: 0        # Right MDI Brightness Selector Knob - DAY
+  FA18C_RightMDIBrightnessSelectorDayNight: 0        # Right MDI Brightness Selector Knob - DAY/NIGHT
+  FA18C_RightMDIBrightnessSelectorNight: 0        # Right MDI Brightness Selector Knob - NIGHT
+  FA18C_RightMDIBrightnessSelectorOff: 0        # Right MDI Brightness Selector Knob - OFF
+  FA18C_RightMDIBrightnessSelectorOffNight: 0        # Right MDI Brightness Selector Knob - OFF/NIGHT
+
+  FA18C_RightMDIContractControlCCWDecrease: 0        # Right MDI Contract Control Knob - CCW/Decrease
+  FA18C_RightMDIContractControlCWIncrease: 0        # Right MDI Contract Control Knob - CW/Increase
+
+  FA18C_RightMDIPB01: 0        # Right MDI PB 1
+  FA18C_RightMDIPB02: 0        # Right MDI PB 2
+  FA18C_RightMDIPB03: 0        # Right MDI PB 3
+  FA18C_RightMDIPB04: 0        # Right MDI PB 4
+  FA18C_RightMDIPB05: 0        # Right MDI PB 5
+  FA18C_RightMDIPB06: 0        # Right MDI PB 6
+  FA18C_RightMDIPB07: 0        # Right MDI PB 7
+  FA18C_RightMDIPB08: 0        # Right MDI PB 8
+  FA18C_RightMDIPB09: 0        # Right MDI PB 9
+  FA18C_RightMDIPB10: 0        # Right MDI PB 10
+  FA18C_RightMDIPB11: 0        # Right MDI PB 11
+  FA18C_RightMDIPB12: 0        # Right MDI PB 12
+  FA18C_RightMDIPB13: 0        # Right MDI PB 13
+  FA18C_RightMDIPB14: 0        # Right MDI PB 14
+  FA18C_RightMDIPB15: 0        # Right MDI PB 15
+  FA18C_RightMDIPB16: 0        # Right MDI PB 16
+  FA18C_RightMDIPB17: 0        # Right MDI PB 17
+  FA18C_RightMDIPB18: 0        # Right MDI PB 18
+  FA18C_RightMDIPB19: 0        # Right MDI PB 19
+  FA18C_RightMDIPB20: 0        # Right MDI PB 20
+
+  ## ***** RIGHT VERTICAL PANEL ***************************************************************************************
+
+  FA18C_ArrestingHookHandleCycle: USB_H             # Arresting Hook Handle - Cycle
+  FA18C_ArrestingHookHandleDown: L_CTL+USB_H       # Arresting Hook Handle - Down
+  FA18C_ArrestingHookHandleUp: L_ALT+USB_H       # Arresting Hook Handle - Up
+
+  FA18C_AvCoolSwitchEmergNorm: 0                 # AV COOL Switch - EMERG/NORM
+
+  FA18C_PushToTestCCWDecrease: 0                 # Push To Test Switch - CCW/Decrease
+  FA18C_PushToTestCWIncrease: 0                 # Push To Test Switch - CW/Increase
+  FA18C_PushToTestPush: 0                 # Push To Test Switch - Push to activate BIT
+
+  FA18C_RightLouverLeft: 0                 # Right Louver - Left
+  FA18C_RightLouverRight: 0                 # Right Louver - Right
+
+  FA18C_WingFoldControlHandleCCWLeft: R_SHIFT+USB_O     # Wing Fold Control Handle - CCW/Left
+  FA18C_WingFoldControlHandleCWRight: R_CTL+USB_O       # Wing Fold Control Handle - CCW/Left
+  FA18C_WingFoldControlHandleFold: 0                 # Wing Fold Control Handle - FOLD
+  FA18C_WingFoldControlHandleFoldHold: 0                 # Wing Fold Control Handle - FOLD/HOLD
+  FA18C_WingFoldControlHandleHold: 0                 # Wing Fold Control Handle - HOLD
+  FA18C_WingFoldControlHandlePull: 0                 # Wing Fold Control Handle - PULL
+  FA18C_WingFoldControlHandlePullStow: USB_O             # Wing Fold Control Handle - PULL/STOW
+  FA18C_WingFoldControlHandleSpread: 0                 # Wing Fold Control Handle - SPREAD
+  FA18C_WingFoldControlHandleSpreadHold: 0                 # Wing Fold Control Handle - SPREAD/HOLD
+  FA18C_WingFoldControlHandleStow: 0                 # Wing Fold Control Handle - STOW
+
+  ## ***** RIGHT WALL *************************************************************************************************
+
+  FA18C_CanopyOpenClose: L_CTL+USB_C     # Canopy - OPEN/CLOSE
+  FA18C_CanopyControlClose: 0               # Canopy Control Switch - CLOSE
+  FA18C_CanopyControlHold: 0               # Canopy Control Switch - HOLD
+  FA18C_CanopyControlOpen: 0               # Canopy Control Switch - OPEN
+
+  FA18C_FCSBitSwitch: 0               # FCS BIT Switch
+
+  ## ***** SENSOR PANEL ***********************************************************************************************
+
+  FA18C_FLIRSwitchDown: 0        # FLIR Switch - Down
+  FA18C_FLIRSwitchOff: 0        # FLIR Switch - OFF
+  FA18C_FLIRSwitchOffStandby: 0        # FLIR Switch - OFF/STBY
+  FA18C_FLIRSwitchOn: 0        # FLIR Switch - ON
+  FA18C_FLIRSwitchOnStadby: 0        # FLIR Switch - ON/STBY
+  FA18C_FLIRSwitchStandby: 0        # FLIR Switch - STBY
+  FA18C_FLIRSwitchUp: 0        # FLIR Switch - Up
+
+  FA18C_INSSwitchCCW: 0        # INS Switch - CCW
+  FA18C_INSSwitchCV: 0        # INS Switch - CV
+  FA18C_INSSwitchCW: 0        # INS Switch - CW
+  FA18C_INSSwitchGB: 0        # INS Switch - GB
+  FA18C_INSSwitchGND: 0        # INS Switch - GND
+  FA18C_INSSwitchGYRO: 0        # INS Switch - GYRO
+  FA18C_INSSwitchIFA: 0        # INS Switch - IFA
+  FA18C_INSSwitchNAV: 0        # INS Switch - NAV
+  FA18C_INSSwitchOff: 0        # INS Switch - OFF
+  FA18C_INSSwitchTest: 0        # INS Switch - TEST
+
+  FA18C_LstNflrSwitchOff: 0        # LST/NFLR Switch - OFF
+  FA18C_LstNflrSwitchOn: 0        # LST/NFLR Switch - ON
+  FA18C_LstNflrSwitchOnOff: 0        # LST/NFLR Switch - ON/OFF
+
+  FA18C_LtdRSwitchAft: 0        # LTD/R Switch - AFT
+  FA18C_LtdRSwitchAftSafe: 0        # LTD/R Switch - AFT/SAFE
+  FA18C_LtdRSwitchArm: 0        # LTD/R Switch - ARM
+  FA18C_LtdRSwitchDown: 0        # LTD/R Switch - Down
+  FA18C_LtdRSwitchSAFE: 0        # LTD/R Switch - SAFE
+  FA18C_LtdRSwitchUp: 0        # LTD/R Switch - Up
+
+  FA18C_RadarSwitchCCW: 0        # RADAR Switch - CCW
+  FA18C_RadarSwitchCW: 0        # RADAR Switch - CW
+  FA18C_RadarSwitchEmergency: 0        # RADAR Switch - EMERG
+  FA18C_RadarSwitchOff: 0        # RADAR Switch - OFF
+  FA18C_RadarSwitchOpr: 0        # RADAR Switch - OPR
+  FA18C_RadarSwitchPull: 0        # RADAR Switch - PULL
+  FA18C_RadarSwitchPullStow: 0        # RADAR Switch - PULL/STOW
+  FA18C_RadarSwitchStandby: 0        # RADAR Switch - STBY
+  FA18C_RadarSwitchStow: 0        # RADAR Switch - STOW
+
+  ## ***** SENSORS ****************************************************************************************************
+
+  FA18C_GainGogglesDown:  R_SHIFT+R_ALT+USB_H  # Gain goggles down
+  FA18C_GainGogglesUp:  R_SHIFT+R_CTL+USB_H    # Gain goggles up
+  FA18C_ToggleGoggles:  R_SHIFT+USB_H          # Toggle goggles
+
+  ## ***** SRS RADIO **************************************************************************************************
+
+  SRS_COMM1: USB_1        # SRS Radio COMM 1 push to talk
+  SRS_COMM2: USB_2        # SRS Radio COMM 2 push to talk
+  SRS_COMM3: USB_3        # SRS Radio COMM 3 push to talk
+  SRS_INTERCOM: USB_5        # SRS Radio INTERCOM push to talk
+  SRS_OVERLAY_TOGGLE: L_CTL+USB_T  # SRS Radio Overlay
+
+  ## ***** STICK ******************************************************************************************************
+
+  FA18C_AutopilotNosewheelsteeringDisengage: USB_A                # Autopilot/Nosewheel Steering Disengage (Paddle) Switch
+
+  FA18C_ControlStickHide: 0                    # Control Stick - HIDE
+  FA18C_ControlStickHideShow: USB_BACKSPACE        # Control Stick - HIDE/SHOW
+  FA18C_ControlStickShow: 0                    # Control Stick - SHOW
+
+  FA18C_GunTrigger: USB_SPACE            # Gun Trigger - SECOND DETENT (Press to shoot)
+  FA18C_RecceEventMark: USB_R                # RECCE Event Mark Switch
+
+  FA18C_SelectAMRAAM: L_SHIFT+USB_D        # Select AMRAAM
+  FA18C_SelectGun: L_SHIFT+USB_X        # Select Gun
+  FA18C_SelectSidewinder: L_SHIFT+USB_S        # Select Sidewinder
+  FA18C_SelectSparrow: L_SHIFT+USB_W        # Select Sparrow
+
+  FA18C_SensorControlSwitchAft: R_ALT+USB_PERIOD     # Sensor Control Switch - Aft
+  FA18C_SensorControlSwitchDepress: 0                    # Sensor Control Switch - Depress
+  FA18C_SensorControlSwitchFwd: R_ALT+USB_SEMICOLON  # Sensor Control Switch - Aft
+  FA18C_SensorControlSwitchLeft: R_ALT+USB_COMMA      # Sensor Control Switch - Left
+  FA18C_SensorControlSwitchRight: R_ALT+USB_SLASH      # Sensor Control Switch - Right
+
+  FA18C_UndesignateNoseWheelSteerSwitch: USB_S                # Undesignate/Nose Wheel Steer Switch
+  FA18C_WeaponReleaseButton: R_ALT+USB_SPACE      # Weapon Release Button
+
+  ## ***** SYSTEMS ****************************************************************************************************
+
+  FA18C_Eject: L_CTL+USB_E             # Eject (3 times)
+
+  ## ***** THROTTLE GRIP **********************************************************************************************
+
+  FA18C_ATCSwitch: USB_T                # ATC Engage/Disengage Switch
+
+  FA18C_CageUncage: USB_C                # ATC Cage/Uncage Button
+
+  FA18C_CommSwitchComm1: R_ALT+USB_BACKSLASH  # COMM Switch - COMM 1
+  FA18C_CommSwitchComm2: R_CTL+USB_BACKSLASH  # COMM Switch - COMM 2
+  FA18C_CommSwitchMids1: 0                    # COMM Switch - MIDS A
+  FA18C_CommSwitchMids2: 0                    # COMM Switch - MIDS B
+
+  FA18C_DispenseSwitchFlare: USB_D                # Dispense Switch - Aft(FLARE)/Center(OFF)
+  FA18C_DispenseSwitchChaff: USB_E                # Dispense Switch - Forward(Chaff)/Center(OFF)
+
+  FA18C_ExteriorLightsOff: 0                    # Exterior Lights Switch - OFF
+  FA18C_ExteriorLightsOn: 0                    # Exterior Lights Switch - ON
+  FA18C_ExteriorLightsOnOff: USB_L                # Exterior Lights Switch - ON/OFF
+
+  FA18C_RaidFlirFovSelectButton : USB_I                # RAID/FLIR FOV Select Button
+
+  FA18C_RadarElevationControlDown: USB_MINUS            # Radar Elevation Control - Down
+  FA18C_RadarElevationControlUp: USB_EQUAL            # Radar Elevation Control - Up
+
+  FA18C_SpeedBrakeExtend: L_SHIFT+USB_B        # Speed Brake Switch - EXTEND
+  FA18C_SpeedBrakeOff: USB_B                # Speed Brake Switch - OFF
+  FA18C_SpeedBrakeRetract: L_CTL+USB_B          # Speed Brake Switch - RETRACT
+  FA18C_SpeedBrakeRetractOff: 0                    # Speed Brake Switch - RETRACT/OFF
+
+  FA18C_ThrottleDesignatorControllerDepress: USB_ENTER            # ThrottleDesignatorController - Depress
+  FA18C_ThrottleDesignatorControllerDown: USB_PERIOD           # ThrottleDesignatorController - Down
+  FA18C_ThrottleDesignatorControllerLeft: USB_COMMA            # ThrottleDesignatorController - Left
+  FA18C_ThrottleDesignatorControllerRight: USB_SLASH            # ThrottleDesignatorController - Right
+  FA18C_ThrottleDesignatorControllerUp: USB_SEMICOLON        # ThrottleDesignatorController - Up
+
+  ## ***** THROTTLE QUADRANT ******************************************************************************************
+
+  FA18C_CycleAfterburnerDetentOnOff            : 0                    # Cycle Afterburner Detent - ON/OFF
+
+  FA18C_ThrottleLeftIdle                       : R_ALT+USB_HOME       # Throttle (Left) - IDLE
+  FA18C_ThrottleLeftOff                        : R_ALT+USB_END        # Throttle (Left) - OFF
+  FA18C_ThrottleLeftOffIdle                    : 0                    # Throttle (Left) - IDLE/OFF
+
+  FA18C_ThrottleRightIdle                      : R_SHIFT+USB_HOME     # Throttle (Right) - IDLE
+  FA18C_ThrottleRightOff                       : R_SHIFT+USB_END      # Throttle (Right) - OFF
+  FA18C_ThrottleRightOffIdle                   : 0                    # Throttle (Right) - IDLE/OFF
+
+  FA18C_ThrottleFingerLiftBoth                 : USB_0                # Throttle Finger Lift (Both) - UP/DOWN
+  FA18C_ThrottleFingerLiftLeft                 : 0                    # Throttle Finger Lift (Left) - UP/DOWN
+  FA18C_ThrottleFingerLiftRight                : 0                    # Throttle Finger Lift (Right) - UP/DOWN
+
+  FA18C_ThrottleFrictionAdjustAft              : 0                    # Throttle Friction Adjusting Lever - Aft/Decrease
+  FA18C_ThrottleFrictionAdjustForward          : 0                    # Throttle Friction Adjusting Lever - Forward/Increase
+
+  ## ***** UFC ********************************************************************************************************
+
+  FA18C_UFCADFFunctionSelectSwitch1: 0     # UFC ADF Function Select Switch - 1
+  FA18C_UFCADFFunctionSelectSwitch1Off: 0     # UFC ADF Function Select Switch - 1/OFF
+  FA18C_UFCADFFunctionSelectSwitch2: 0     # UFC ADF Function Select Switch - 2
+  FA18C_UFCADFFunctionSelectSwitch2Off: 0     # UFC ADF Function Select Switch - 2/OFF
+  FA18C_UFCADFFunctionSelectSwitchDown: 0     # UFC ADF Function Select Switch - Down
+  FA18C_UFCADFFunctionSelectSwitchOff: 0     # UFC ADF Function Select Switch - OFF
+  FA18C_UFCADFFunctionSelectSwitchUp: 0     # UFC ADF Function Select Switch - Up
+
+  FA18C_UFCBrightnessControlCCWDecrease: 0     # UFC Brightness Control Knob - CCW/Decrease
+  FA18C_UFCBrightnessControlCWIncrease: 0     # UFC Brightness Control Knob - CW/Increase
+
+  FA18C_UFCComm1ChannelSelectorKnobCCW: 0     # UFC COMM 1 Channel Selector Knob - CCW/Decrease
+  FA18C_UFCComm1ChannelSelectorKnobCW: 0     # UFC COMM 1 Channel Selector Knob - CW/Increase
+  FA18C_UFCComm1ChannelSelectorKnobPull: 0     # UFC COMM 1 Channel Selector Knob - PULL
+
+  FA18C_UFCComm1VolumeControlKnobCCWDecrease: 0     # UFC COMM 1 Volume Control Knob - CCW/Decrease
+  FA18C_UFCComm1VolumeControlKnobCWIncrease: 0     # UFC COMM 1 Volume Control Knob - CW/Increase
+
+  FA18C_UFCComm2ChannelSelectorKnobCCW: 0     # UFC COMM 2 Channel Selector Knob - CCW/Decrease
+  FA18C_UFCComm2ChannelSelectorKnobCW: 0     # UFC COMM 2 Channel Selector Knob - CW/Increase
+  FA18C_UFCComm2ChannelSelectorKnobPull: 0     # UFC COMM 2 Channel Selector Knob - PULL
+
+  FA18C_UFCComm2VolumeControlKnobCCWDecrease: 0     # UFC COMM 2 Volume Control Knob - CCW/Decrease
+  FA18C_UFCComm2VolumeControlKnobCWIncrease: 0     # UFC COMM 2 Volume Control Knob - CW/Increase
+
+  FA18C_UFCEmissionControlButton: 0     # UFC Emission Control Pushbutton
+
+  FA18C_UFCFunctionSelectorPushbuttonAP: 0     # UFC Function Selector Pushbutton - A/P
+  FA18C_UFCFunctionSelectorPushbuttonBCN: 0     # UFC Function Selector Pushbutton - BCN
+  FA18C_UFCFunctionSelectorPushbuttonDL: 0     # UFC Function Selector Pushbutton - D/L
+  FA18C_UFCFunctionSelectorPushbuttonIFF: 0     # UFC Function Selector Pushbutton - IFF
+  FA18C_UFCFunctionSelectorPushbuttonILS: 0     # UFC Function Selector Pushbutton - ILS
+  FA18C_UFCFunctionSelectorPushbuttonOnOff: 0     # UFC Function Selector Pushbutton - ON/OFF
+  FA18C_UFCFunctionSelectorPushbuttonTCN: 0     # UFC Function Selector Pushbutton - TCN
+
+  FA18C_UFCIPPushbutton: 0     # UFC I/P Pushbutton
+
+  FA18C_UFCKeyboardPushbutton0: 0     # UFC Keyboard Pushbutton - 0
+  FA18C_UFCKeyboardPushbutton1: 0     # UFC Keyboard Pushbutton - 1
+  FA18C_UFCKeyboardPushbutton2: 0     # UFC Keyboard Pushbutton - 2
+  FA18C_UFCKeyboardPushbutton3: 0     # UFC Keyboard Pushbutton - 3
+  FA18C_UFCKeyboardPushbutton4: 0     # UFC Keyboard Pushbutton - 4
+  FA18C_UFCKeyboardPushbutton5: 0     # UFC Keyboard Pushbutton - 5
+  FA18C_UFCKeyboardPushbutton6: 0     # UFC Keyboard Pushbutton - 6
+  FA18C_UFCKeyboardPushbutton7: 0     # UFC Keyboard Pushbutton - 7
+  FA18C_UFCKeyboardPushbutton8: 0     # UFC Keyboard Pushbutton - 8
+  FA18C_UFCKeyboardPushbutton9: 0     # UFC Keyboard Pushbutton - 9
+  FA18C_UFCKeyboardPushbuttonClr: 0     # UFC Keyboard Pushbutton - CLR
+  FA18C_UFCKeyboardPushbuttonEnt: 0     # UFC Keyboard Pushbutton - ENT
+
+  FA18C_UFCOptionSelectPushbutton1: 0     # UFC Option Select Pushbutton 1
+  FA18C_UFCOptionSelectPushbutton2: 0     # UFC Option Select Pushbutton 2
+  FA18C_UFCOptionSelectPushbutton3: 0     # UFC Option Select Pushbutton 3
+  FA18C_UFCOptionSelectPushbutton4: 0     # UFC Option Select Pushbutton 4
+  FA18C_UFCOptionSelectPushbutton5: 0     # UFC Option Select Pushbutton 5
+
+  ## ***** VIEW *******************************************************************************************************
+
+  VIEW_F1CockpitView: USB_F1                     # F1 Cockpit view
+  VIEW_F1HeadShiftMovementOnOff: L_WIN+USB_F1               # F1 Head shift movement on/off
+  VIEW_F1HUDOnlyViewSwitch: L_ALT+USB_F1               # F1 HUD only view switch
+  VIEW_F1NaturalHeadMovementView: L_CTL+USB_F1               # F1 Natural head movement view
+
+  VIEW_F10TheaterMapViewCurrentPoint: L_CTL+USB_F10              # F10 Jump to theater map view over current point
+  VIEW_F10TheaterMapView: USB_F10                    # F10 Theater map view
+
+  VIEW_F11AirportFreeCamera: USB_F11                    # F11 Airport free camera
+  VIEW_F11CameraMovingBackward: L_ALT+USB_NUMPAD_SLASH     # F11 Camera moving backward
+  VIEW_F11CameraMovingForward: L_ALT+USB_NUMPAD_ASTERISK  # F11 Camera moving forward
+  VIEW_F11JumpToFreeCamera: L_CTL+USB_F11              # F11 Jump to free camera
+
+  VIEW_F12CivilTrafficView: L_CTL+USB_F12              # F12 Civil traffic view
+  VIEW_F12StaticObjectView: USB_F12                    # F12 Static object view
+  VIEW_F12TrainsCarsToggle: L_SHIFT+USB_F12            # F12 Trains/cars toggle
+
+  VIEW_F2AircraftView: USB_F2                     # F2 Aircraft View
+  VIEW_F2ToggleCameraPosition: R_ALT+USB_F2               # F2 Toggle camera position
+  VIEW_F2ToggleLocalCameraControl: L_ALT+USB_F2               # F2 Toggle local camera control
+  VIEW_F2ViewOwnAircraft: L_CTL+_F2                  # F2 View own aircraft
+
+  VIEW_F3FlyByJumpView: L_CTL+USB_F3               # F3 Fly-by jump view
+  VIEW_F3FlyByView: USB_F3                     # F3 Fly-by view
+
+  VIEW_F4ArcadeChaseView: L_SHIFT+USB_F4             # F4 Arcade chase view
+  VIEW_F4ChaseView: L_CTL+USB_F4               # F4 Chase view
+  VIEW_F4LookbackView: USB_F4                     # F4 Look back view
+
+  VIEW_F5GroundHostileView: L_CTL+USB_F5               # F5 Ground hostile view
+  VIEW_F5NearectAcView: USB_F5                     # F5 Nearest AC view
+
+  VIEW_F6ReleasedWeaponView: USB_F6                     # F6 Released weapon view
+  VIEW_F6WeaponToTargetView: L_CTL+USB_F6               # F6 Weapon to target view
+
+  VIEW_F7GroundUnitView: USB_F7                     # F7 Ground unit view
+
+  VIEW_F8PlayerTargetsAllTargetsFilter: R_CTL+USB_F8               # F8 Player targets/All targets filter
+  VIEW_F8TargetView: USB_F8                     # F8 Target view
+
+  VIEW_F9LSOView: L_ALT+USB_F9               # F9 Landing signal officer view
+  VIEW_F9ShipView: USB_F9                     # F9 Ship view
+
+  VIEW_KeyboardRateFast: L_SHIFT+USB_CLOSEBRACKET   # Keyboard Rate Fast
+  VIEW_KeyboardRateNormal: L_ALT+USB_CLOSEBRACKET     # Keyboard Rate Normal
+  VIEW_KeyboardRateSlow: L_CTL+USB_CLOSEBRACKET     # Keyboard Rate Slow
+
+  VIEW_MouseRateFast: L_SHIFT+USB_OPENBRACKET    # Mouse Rate Fast
+  VIEW_MouseRateNormal: L_ALT+USB_OPENBRACKET      # Mouse Rate Normal
+  VIEW_MouseRateSlow: L_CTL+USB_OPENBRACKET      # Mouse Rate Slow
+
+  VIEW_ViewCenter: USB_NUMPAD_5               # View Center
+  VIEW_ViewDownLeftSlow: USB_NUMPAD_1               # View Down Left Slow
+  VIEW_ViewDownRightSlow: USB_NUMPAD_3               # View Down Right Slow
+  VIEW_ViewDownSlow: USB_NUMPAD_2               # View Down Slow
+  VIEW_ViewLeftSlow: USB_NUMPAD_4               # View Left Slow
+  VIEW_ViewRightSlow: USB_NUMPAD_6               # View Right Slow
+  VIEW_ViewUpLeftSlow: USB_NUMPAD_7               # View Up Left Slow
+  VIEW_ViewUpRightSlow: USB_NUMPAD_9               # View Up Right Slow
+  VIEW_ViewUpSlow: USB_NUMPAD_8               # View Up Slow
+
+  VIEW_ZoomExternalIn: R_CTL+USB_NUMPAD_ASTERISK  # Zoom External In
+  VIEW_ZoomExternalNormal: R_CTL+USB_NUMPAD_ENTER     # Zoom External Normal
+  VIEW_ZoomExternalOut: R_CTL+USB_NUMPAD_SLASH     # Zoom External Out
+
+  VIEW_ZoomInSlow: USB_NUMPAD_ASTERISK        # Zoom In Slow
+  VIEW_ZoomNormal: USB_NUMPAD_ENTER           # Zoom Normal
+  VIEW_ZoomOutSlow: USB_NUMPAD_SLASH           # Zoom Out Slow
+
+  ## ***** VIEW COCKPIT ***********************************************************************************************
+
+  VIEW_CameraPanModeToggle: L_ALT+L_SHIFT+USB_Z      #  Camera pan mode toggle
+
+  VIEW_CameraSnapViewDown: R_ALT+USB_NUMPAD_2       #  Camera snap view down
+  VIEW_CameraSnapViewDownLeft: R_ALT+USB_NUMPAD_1       #  Camera snap view down-left
+  VIEW_CameraSnapViewDownRight: R_ALT+USB_NUMPAD_3       #  Camera snap view down-right
+  VIEW_CameraSnapViewLeft: R_ALT+USB_NUMPAD_4       #  Camera snap view left
+  VIEW_CameraSnapViewRight: R_ALT+USB_NUMPAD_6       #  Camera snap view right
+  VIEW_CameraSnapViewUp: R_ALT+USB_NUMPAD_8       #  Camera snap view up
+  VIEW_CameraSnapViewUpLeft: R_ALT+USB_NUMPAD_7       #  Camera snap view up-left
+  VIEW_CameraSnapViewUpRight: R_ALT+USB_NUMPAD_9       #  Camera snap view up-right
+
+  VIEW_CameraTransposeMode: 0                        #  Camera transpose mode (press and hold)
+
+  VIEW_CenterCameraMode: R_SHIFT+USB_NUMPAD_5     #  Center Camera View
+
+  VIEW_CockpitCameraMoveBack: R_CTL+R_SHIFT+USB_NUMPAD_SLASH    # Cockpit Camera Move Back
+  VIEW_CockpitCameraMoveCenter: R_CTL+R_SHIFT+USB_NUMPAD_5        # Cockpit Camera Move Center
+  VIEW_CockpitCameraMoveDown: R_CTL+R_SHIFT+USB_NUMPAD_2        # Cockpit Camera Move Down
+  VIEW_CockpitCameraMoveForward: R_CTL+R_SHIFT+USB_NUMPAD_ASTERISK # Cockpit Camera Move Forward
+  VIEW_CockpitCameraMoveLeft: R_CTL+R_SHIFT+USB_NUMPAD_4        # Cockpit Camera Move Left
+  VIEW_CockpitCameraMoveRight: R_CTL+R_SHIFT+USB_NUMPAD_6        # Cockpit Camera Move Right
+  VIEW_CockpitCameraMoveUp: R_CTL+R_SHIFT+USB_NUMPAD_8        # Cockpit Camera Move Up
+
+  VIEW_CockpitPanelViewIn: USB_NUMPAD_0             #  Cockpit panel view in
+  VIEW_CockpitPanelViewToggle: R_CTL+USB_NUMPAD_0       #  Cockpit panel view toggle
+
+  VIEW_CustomSnapView0: L_WIN+USB_NUMPAD_0       #  Custom snap view 0
+  VIEW_CustomSnapView1: L_WIN+USB_NUMPAD_1       #  Custom snap view 1
+  VIEW_CustomSnapView2: L_WIN+USB_NUMPAD_2       #  Custom snap view 2
+  VIEW_CustomSnapView3: L_WIN+USB_NUMPAD_3       #  Custom snap view 3
+  VIEW_CustomSnapView4: L_WIN+USB_NUMPAD_4       #  Custom snap view 4
+  VIEW_CustomSnapView5: L_WIN+USB_NUMPAD_5       #  Custom snap view 5
+  VIEW_CustomSnapView6: L_WIN+USB_NUMPAD_6       #  Custom snap view 6
+  VIEW_CustomSnapView7: L_WIN+USB_NUMPAD_7       #  Custom snap view 7
+  VIEW_CustomSnapView8: L_WIN+USB_NUMPAD_8       #  Custom snap view 8
+  VIEW_CustomSnapView9: L_WIN+USB_NUMPAD_9       #  Custom snap view 9
+
+  VIEW_EnableVisualReconMode: 0                        #  Enable visual recon mode
+
+  VIEW_Flashlight: L_ALT+USB_L              #  Flashlight
+
+  VIEW_FlashlightBrightnessDecrease: 0                        #  Flashlight BRT Control - Decrease
+  VIEW_FlashlightBrightnessIncrease: 0                        #  Flashlight BRT Control - Increase
+  VIEW_FlashlightColorToggle: 0                        #  Flashlight Color - Toggle Green/White
+
+  VIEW_GlanceDown: R_CTL+USB_NUMPAD_2       #  Glance Down
+  VIEW_GlanceDownLeft: R_CTL+USB_NUMPAD_1       #  Glance Down-left
+  VIEW_GlanceDownRight: R_CTL+USB_NUMPAD_3       #  Glance Down-left
+  VIEW_GlanceLeft: R_CTL+USB_NUMPAD_4       #  Glance Left
+  VIEW_GlanceRight: R_CTL+USB_NUMPAD_6       #  Glance Right
+  VIEW_GlanceUp: R_CTL+USB_NUMPAD_8       #  Glance Up
+  VIEW_GlanceUpLeft: R_CTL+USB_NUMPAD_7       #  Glance Up-left
+  VIEW_GlanceUpRight: R_CTL+USB_NUMPAD_9       #  Glance Up-right
+
+  VIEW_ReturnCamera: R_CTL+USB_NUMPAD_5       #  Return Camera
+  VIEW_ReturnCameraBase: R_ALT+USB_NUMPAD_5       #  Return Camera Base
+
+  VIEW_SaveCockpitAngles: R_ALT+USB_NUMPAD_0       #  Save Cockpit Angles
+
+  VIEW_ToggleMirrors: R_WIN+USB[0x10]          #  Toggle Mirrors
+
+  VIEW_ViewDown: R_SHIFT+USB[0x5A]        #  View Down
+  VIEW_ViewDownLeft: R_SHIFT+USB[0x59]        #  View Down-left
+  VIEW_ViewDownRight: R_SHIFT+USB[0x5B]        #  View Down-left
+  VIEW_ViewLeft: R_SHIFT+USB[0x5C]        #  View Left
+  VIEW_ViewRight: R_SHIFT+USB[0x5E]        #  View Right
+  VIEW_ViewUp: R_SHIFT+USB[0x60]        #  View Up
+  VIEW_ViewUpLeft: R_SHIFT+USB[0x5F]        #  View Up-left
+  VIEW_ViewUpRight: R_SHIFT+USB[0x61]        #  View Up-right
+
+  VIEW_ZoomIn: R_SHIFT+USB[0x55]        #  Zoom In
+  VIEW_ZoomOut: R_SHIFT+USB[0x54]        #  Zoom Out
+
+  ## ***** VIEW EXTENDED **********************************************************************************************
+
+  VIEW_CameraJiggleToggle: L_SHIFT+USB_J            # Camera jiggle toggle
+  VIEW_KeepTerrainCameraAltitude: L_ALT+USB_K              # Keep terrain camera altitude
+
+  VIEW_ObjectExclude: L_ALT+USB_DELETE         # Object exclude
+  VIEW_ObjectsAllExcludedInclude: L_ALT+USB_INSERT         # Object all excluded - include
+
+  VIEW_ObjectsSwitchingDirectionForward: L_CTL+USB_PAGEDOWN       # Objects switching direction forward
+  VIEW_ObjectsSwitchingDirectionReverse: L_CTL+USB_PAGEUP         # Objects switching direction reverse
+
+  VIEW_ToggleTrackingLaunchedWeapon: R_CTL+USB_NUMPAD_PLUS    # Toggle tracking launched weapon
+
+  VIEW_ViewAllMode: R_CTL+USB_DELETE         # View all mode
+  VIEW_ViewEnemiesMode: R_CTL+R_SHIFT+USB_END    # View enemies mode
+  VIEW_ViewFriendsMode: R_CTL+R_SHIFT+USB_HOME   # View friends mode
+
+  ## ***** VIEW PADLOCK ***********************************************************************************************
+
+  VIEW_AllMissilesPadlock: R_SHIFT+USB_NUMPAD_PERIOD   # All missiles padlock
+  VIEW_LockTerrainView: R_CTL+USB_NUMPAD_PERIOD     # Lock terrain view
+  VIEW_LockView : USB_NUMPAD_PERIOD           # Lock view (cycle paddock)
+  VIEW_ThreatMissilePadlock: R_ALT+USB_NUMPAD_PERIOD     # Threat missile padlock
+  VIEW_UnlockView: USB_NUMPAD_NUMLOCK          # Unlock view (stop padlock)
+
+  ## ***** VR KEYS ****************************************************************************************************
+
+  VR_ResetView: L_ALT+R_CTL+USB_NUMPAD_5   # Recenter VR
+  VR_Zoom: USB_TILDE                  # VR Zoom In
+
+  PSVR_ResetView: USB_SCROLLLOCK     # Trinus PSVR Reset View
