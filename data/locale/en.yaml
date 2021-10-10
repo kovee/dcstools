@@ -1,7 +1,10 @@
+## ***** CLI **********************************************************************************************************
 CLI_DESCRIPTION: DCS Launcher tool.
 CLI_EPILOG: This is a free tool. If you have paid for it, you have been robbed.
 CLI_OPTION_DEBUG_DESCRIPTION: Enables debug mode.
 CLI_OPTION_RUN_DESCRIPTION: Starts DCS according to the specified profile without displaying the GUI.
+
+## ***** MAIN WINDOW **************************************************************************************************
 MAIN_WINDOW_TITLE: DCS Launcher $version
 MAIN_WINDOW_EDIT_PROFILE_BUTTON: Edit Profile
 MAIN_WINDOW_PROFILE_MANAGER_BUTTON: Profile Manager
@@ -9,11 +12,35 @@ MAIN_WINDOW_LAUNCH_BUTTON: LAUNCH
 MAIN_WINDOW_DONATE_BUTTON: Donate
 MAIN_WINDOW_SETTINGS_BUTTON: Settings
 MAIN_WINDOW_EXIT_BUTTON: Exit
+MAIN_WINDOW_COPYRIGHT_LABEL: Copyright © 2021, Attila Kovacs. All rights reserved.
+MAIN_WINDOW_DISCLAIMER_LABEL: This is a free utility, use at your own risk.
+MAIN_WINDOW_ACKNOWLEDGEMENT_LABEL: DCS:World is the property of Eagle Dynamics.
+
+## ***** PROFILE EDITOR WINDOW ****************************************************************************************
 PROFILE_EDITOR_WINDOW_TITLE: Profile Editor
+PROFILE_EDITOR_GENERIC_TAB: Generic
+PROFILE_EDITOR_DCS_TAB: DCS
+PROFILE_EDITOR_VR_TAB: VR
+PROFILE_EDITOR_TOOLS_TAB: External Tools
+PROFILE_EDITOR_KEYBOARD_TAB: Keyboard
+PROFILE_EDITOR_JOYSTICK_TAB: Joystick
+PROFILE_EDITOR_THROTTLE_TAB: Throttle
+PROFILE_EDITOR_RUDDER_TAB: Rudder
+PROFILE_EDITOR_MFD_TAB: MFDs
+PROFILE_EDITOR_GENERIC_PROFILE_NAME: "Profile name:"
+PROFILE_EDITOR_GENERIC_PROFILE_DESCRIPTION: "Description:"
+PROFILE_EDITOR_GENERIC_CONTROLLER_MODE: "Controller mode:"
+PROFILE_EDITOR_GENERIC_CONTROLLER_MODE_DCS: "Controlled by DCS"
+PROFILE_EDITOR_GENERIC_CONTROLLER_MODE_TARGET: "Controlled by T.A.R.G.E.T."
+PROFILE_EDITOR_GENERIC_REALISTIC_HOTAS: "Enable realistic H.O.T.A.S. mode"
+PROFILE_EDITOR_DCS_PLANE_TYPE: "Plane:"
+
+## ***** PROFILE MANAGER WINDOW ***************************************************************************************
 PROFILE_MANAGER_WINDOW_TITLE: Profile Manager
+
+## ***** SETTINGS WINDOW **********************************************************************************************
 SETTINGS_WINDOW_TITLE: Settings
+
+## ***** DONATE WINDOW ************************************************************************************************
 DONATE_WINDOW_TITLE: Donate
-COPYRIGHT_LABEL: Copyright © 2021, Attila Kovacs. All rights reserved.
-DISCLAIMER_LABEL: This is a free utility, use at your own risk.
-ACKNOWLEDGEMENT_LABEL: DCS:World is the property of Eagle Dynamics.
-DONATION_LABEL: If you like this tool, please consider making a small donation.
+DONATE_WINDOW_DONATION_LABEL: If you like this tool, please consider making a small donation.

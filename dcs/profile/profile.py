@@ -47,9 +47,13 @@ class Profile:
     :param description: The description of the profile.
     :type description: str
 
+    :param realistic_hotas: Whether or not the HOTAS should be configured with
+        as close to the real-life plane as possible.
+    :type realistic_hotas: bool
+
     :param controller_mode: The controller mode to use. Either to use control
         assignments specified in T.A.R.G.E.T., or use the default assignment
-        method from DCS>
+        method from DCS.
     :type controller_mode: ControllerModes
 
     :param plane: The plane to fly with the profile.
@@ -88,6 +92,7 @@ class Profile:
 
     name: str
     description: str
+    realistic_hotas: bool
     plane: 'Plane'
     controller_mode: ControllerModes = ControllerModes.CONTROLLER_TARGET
     vr_enabled: bool = False

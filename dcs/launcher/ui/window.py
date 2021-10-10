@@ -102,7 +102,7 @@ class Window(tkinter.Frame):
         if centered:
             self.center_window(self.master)
 
-        self.on_create(args, kwargs)
+        self.on_create(*args, **kwargs)
 
     def center_window(self, window: tkinter.Frame = None) -> None:
 

@@ -90,6 +90,14 @@ class ProfileSerializer:
                          f'{path}.')
             return None
 
+        # Deserialize realistic HOTAS mode - default to No if not found
+        try:
+            realistic_hotas = True if content['realistichotas'] == 'Yes' else False
+        except KeyError:
+            logger.warning(f'Realistic HOTAS option not found in profile '
+                           f'{path}.')
+            realistic_hotas = False
+
         # Deserialize controller mode - default to DCS if not found
         try:
             controller_mode = content['controllermode']
@@ -205,6 +213,7 @@ class ProfileSerializer:
         profile = Profile(
             name=name,
             description=description,
+            realistic_hotas=realistic_hotas,
             controller_mode=controller_mode,
             plane=plane,
             vr_enabled=vr_enabled,

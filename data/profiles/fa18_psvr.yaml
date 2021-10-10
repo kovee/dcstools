@@ -25,6 +25,7 @@
 
 name: F/A-18C Hornet (PSVR)
 description: DCS Launcher profile for flying the F/A-18C Hornet in VR mode with the PSVR headset.
+realistichotas: Yes
 controllermode: target
 plane: fa18c
 vrenabled: Yes

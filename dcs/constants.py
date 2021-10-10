@@ -28,7 +28,7 @@
 MAJOR_VERSION = 0
 """The major version of the application."""
 
-MINOR_VERSION = 1
+MINOR_VERSION = 2
 """The minor version of the application."""
 
 PATCH_LEVEL = 0

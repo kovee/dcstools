@@ -136,19 +136,19 @@ class DCSLauncherMainWindow(Window):
         # Labels
         self._disclaimer_label = ttk.Label(
             self,
-            text=LOCALIZER.get(key='DISCLAIMER_LABEL'),
+            text=LOCALIZER.get(key='MAIN_WINDOW_DISCLAIMER_LABEL'),
             style='danger.TLabel')
         self._disclaimer_label.place(x=307, y=635, anchor='center')
 
         self._copyright_label = ttk.Label(
             self,
-            text=LOCALIZER.get(key='COPYRIGHT_LABEL'),
+            text=LOCALIZER.get(key='MAIN_WINDOW_COPYRIGHT_LABEL'),
             style='secondary.TLabel')
         self._copyright_label.place(x=307, y=655, anchor='center')
 
         self._acknowledgement_label = ttk.Label(
             self,
-            text=LOCALIZER.get(key='ACKNOWLEDGEMENT_LABEL'),
+            text=LOCALIZER.get(key='MAIN_WINDOW_ACKNOWLEDGEMENT_LABEL'),
             style='secondary.TLabel')
         self._acknowledgement_label.place(x=307, y=675, anchor='center')
 
@@ -190,9 +190,11 @@ class DCSLauncherMainWindow(Window):
 
         _ = ProfileEditorWindow(
             master=tkinter.Toplevel(self),
-            title=LOCALIZER.get('PROFILE_EDITOR_WINDOW_TITLE'),
+            title=f"{LOCALIZER.get('PROFILE_EDITOR_WINDOW_TITLE')}: "
+                  f"{self._profile_list.get()}",
             favicon=favicon_path,
-            centered=True)
+            centered=True,
+            profile_name=self._profile_list.get())
 
     def on_profile_manager(self) -> None:
 

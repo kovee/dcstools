@@ -40,7 +40,7 @@ def configure_logging() -> None:
     logging.basicConfig(filename='dcstools.log',
                         encoding='utf-8',
                         filemode='w',
-                        format='[%(asctime)s][%(levelname)s]: %(message)s',
+                        format='[%(asctime)s][%(levelname)s][%(filename)s-%(funcName)s(%(lineno)d)]: %(message)s',
                         level=logging.INFO)
 
 def process_command_line() -> argparse.Namespace:

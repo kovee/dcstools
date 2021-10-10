@@ -30,7 +30,7 @@ build-backend = "poetry.masonry.api"
 
 [tool.poetry]
 name = "dcstools"
-version = "0.1.0"
+version = "0.2.0"
 description = "DCS:World Tools"
 authors = ["Attila Kovacs <attila.kovacs@suiseientertainment.com>"]
 license = "MIT License"
@@ -69,6 +69,7 @@ packages = [
     aiohttp = "^3.7.4"
     ttkbootstrap = "^0.5.1"
     Pillow = "^8.3.2"
+    pywin32 = "^301"
 
     [tool.poetry.dev-dependencies]
     sphinx = "^4.2.0"

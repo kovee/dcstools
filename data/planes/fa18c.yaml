@@ -32,11 +32,14 @@ name: McDonnell Douglas F/A-18C Hornet
 # Plane release status
 status: RELEASED
 
-# Whether or not the plane is supported by the launcher
+# Whether the plane is supported by the launcher
 supported: Yes
 
 # Name of the plane in the target script
 targetname: DCS_PLANE_FA18C
+
+# The frame image of the plane that is displayed on the main screen.
+image: fa18c_frame.png
 
 # Default control mapping used for the plane
 defaultassignments:
@@ -55,25 +58,61 @@ defaultassignments:
     assignment: 0
     name: ALR-67 DIS TYPE Switch - CCW
 
-  FA18C_ALR67DisTypeSwitchCW: 0                 # ALR-67 DIS TYPE Switch - CW
-  FA18C_ALR67DisTypeSwitchF: 0                  # ALR-67 DIS TYPE Switch - F
-  FA18C_ALR67DisTypeSwitchI: 0                  # ALR-67 DIS TYPE Switch - I
-  FA18C_ALR67DisTypeSwitchN: 0                  # ALR-67 DIS TYPE Switch - N
-  FA18C_ALR67DisTypeSwitchU: 0                  # ALR-67 DIS TYPE Switch - U
+  FA18C_ALR67DisTypeSwitchCW:
+    assignment: 0
+    name: ALR-67 DIS TYPE Switch - CW
 
-  FA18C_ALR67DisplayPushbutton: 0               # ALR-67 DISPLAY Pushbutton
+  FA18C_ALR67DisTypeSwitchF:
+    assignment: 0
+    name: ALR-67 DIS TYPE Switch - F
 
-  FA18C_ALT67DmrCCWDecrease: 0                  # ALR-67 DMR Control Knob - CCW/Decrease
-  FA18C_ALT67DmrCWIncrease: 0                   # ALR-67 DMR Control Knob - CW/Increase
+  FA18C_ALR67DisTypeSwitchI:
+    assignment: 0
+    name: ALR-67 DIS TYPE Switch - I
 
-  FA18C_ALR67OffsetPushbutton: 0                # ALR-67 OFFSET Pushbutton
+  FA18C_ALR67DisTypeSwitchN:
+    assignment: 0
+    name: ALR-67 DIS TYPE Switch - N
 
-  FA18C_ALR67PowerPushbuttonOnOffSpecial: 0     # ALR-67 POWER Pushbutton (special) - ON/OFF
-  FA18C_ALR67PowerPushbuttonOff: 0              # ALR-67 POWER Pushbutton - OFF
-  FA18C_ALR67PowerPushbuttonOn: 0               # ALR-67 POWER Pushbutton - ON
-  FA18C_ALR67PowerPushbuttonOnOff: 0            # ALR-67 POWER Pushbutton - ON/OFF
+  FA18C_ALR67DisTypeSwitchU:
+    assignment: 0
+    name: ALR-67 DIS TYPE Switch - U
 
-  FA18C_ALR67SpecialPushbutton: 0               # ALR-67 SPECIAL Pushbutton
+  FA18C_ALR67DisplayPushbutton:
+    assignment: 0
+    name: ALR-67 DISPLAY Pushbutton
+
+  FA18C_ALT67DmrCCWDecrease:
+    assignment: 0
+    name: ALR-67 DMR Control Knob - CCW/Decrease
+
+  FA18C_ALT67DmrCWIncrease:
+    assignment: 0
+    name: ALR-67 DMR Control Knob - CW/Increase
+
+  FA18C_ALR67OffsetPushbutton:
+    assignment: 0
+    name: ALR-67 OFFSET Pushbutton
+
+  FA18C_ALR67PowerPushbuttonOnOffSpecial:
+    assignment: 0
+    name: ALR-67 POWER Pushbutton (special) - ON/OFF
+
+  FA18C_ALR67PowerPushbuttonOff:
+    assignment: 0
+    name: ALR-67 POWER Pushbutton - OFF
+
+  FA18C_ALR67PowerPushbuttonOn:
+    assignment: 0
+    name: ALR-67 POWER Pushbutton - ON
+
+  FA18C_ALR67PowerPushbuttonOnOff:
+    assignment: 0
+    name: ALR-67 POWER Pushbutton - ON/OFF
+
+  FA18C_ALR67SpecialPushbutton:
+    assignment: 0
+    name: ALR-67 SPECIAL Pushbutton
 
   ## ***** AMPCD ******************************************************************************************************
 

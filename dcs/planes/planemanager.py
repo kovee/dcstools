@@ -61,6 +61,16 @@ class PlaneManager:
 
         return self._planes.get(plane_type, None)
 
+    def get_plane_names(self) -> list[str]:
+
+        """Returns the list of names for all supported planes.
+
+        :return: The list of plane names.
+        :rtype: list[str]
+        """
+
+        return [plane[1].name for plane in self._planes.items()]
+
     def _load_planes(self) -> None:
 
         """Loads the plane data from the configuration."""

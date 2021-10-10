@@ -31,6 +31,7 @@ import logging
 
 if os.name == 'nt':
     import winreg
+    from win32api import GetFileVersionInfo, LOWORD, HIWORD
 
 from typing import Union
 
@@ -283,3 +284,34 @@ class AppFinder:
         logger.warning('Failed to identify the FreePIE installation '
                        'directory, it has to be set manually.')
         return None
+
+    @staticmethod
+    def get_version_number(path: str) -> str:
+
+        """Returns the version number of a given application executable.
+
+        :param path: Path to the executable.
+        :type path: str
+
+        :return: The version number of the executable.
+        :rtype: str
+        """
+
+        logger = logging.getLogger(DCSTOOLS_LOG_CHANNEL)
+        logger.debug(f'Getting application version for {path}...')
+
+        if not os.path.isfile(path):
+            logger.error(f'Application {path} does not exist.')
+            return '0.0.0.0'
+
+        try:
+            info = GetFileVersionInfo (filename, "\\")
+            ms = info['FileVersionMS']
+            ls = info['FileVersionLS']
+            version = f'{HIWORD (ms)}.{LOWORD (ms)}.{HIWORD (ls)}.{LOWORD (ls)}'
+            logger.debug(f'Application version for {path} is {version}.')
+            return version
+        except:
+            logger.error(f'Failed to identified application version for '
+                         f'{path}.')
+            return '0.0.0.0'
