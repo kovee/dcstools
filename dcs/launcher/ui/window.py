@@ -25,9 +25,14 @@
 
 """Contains the implementation of the Window class."""
 
-# Platform Imports
+# Runtime Imports
 import tkinter
+from tkinter import ttk
+from typing import Union
+
+# Dependency Imports
 from PIL import Image, ImageTk
+
 
 class Window(tkinter.Frame):
 
@@ -130,6 +135,30 @@ class Window(tkinter.Frame):
 
         window.geometry(f'{width}x{height}+{x_pos}+{y_pos}')
         window.deiconify()
+
+    @staticmethod
+    def get_tab_id_for_name(
+        notebook: ttk.Notebook,
+        tab_name: str) -> Union[str, None]:
+
+        """Retrieves the tab ID of a tab in the given notebook based on the
+        name of the tab.
+
+        :param notebook: The notebook to retrieve the tab ID from.
+        :type notebook: ttk.Notebook
+
+        :param tab_name: Name of the tab to retrieve.
+        :type tab_name: str
+
+        :return: The ID of the tab, or -1 if it was not found.
+        :rtype: int
+        """
+
+        for i in notebook.tabs():
+            if notebook.tab(i, 'text') == tab_name:
+                return i
+
+        return None
 
     def on_create(self, *args, **kwargs) -> None:
 

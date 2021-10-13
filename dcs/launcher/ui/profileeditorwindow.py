@@ -53,7 +53,7 @@ class ProfileEditorWindow(Window):
         logger.debug('Creating profile editor window...')
 
         # Create UI elements
-        self._tab_parent = ttk.Notebook(self.master)
+        self._tab_parent = ttk.Notebook(self.master, width=1025, height=675)
 
         self._generic_tab = ttk.Frame(self._tab_parent, style='TFrame')
         self._dcs_tab = ttk.Frame(self._tab_parent, style='TFrame')
@@ -70,8 +70,7 @@ class ProfileEditorWindow(Window):
         self._tab_parent.add(self._dcs_tab,
                              text=LOCALIZER.get('PROFILE_EDITOR_DCS_TAB'))
         self._tab_parent.add(self._vr_tab,
-                             text=LOCALIZER.get('PROFILE_EDITOR_VR_TAB'),
-                             state='disabled')
+                             text=LOCALIZER.get('PROFILE_EDITOR_VR_TAB'))
         self._tab_parent.add(self._tools_tab,
                              text=LOCALIZER.get('PROFILE_EDITOR_TOOLS_TAB'))
         self._tab_parent.add(self._keyboard_tab,
@@ -85,7 +84,8 @@ class ProfileEditorWindow(Window):
         self._tab_parent.add(self._mfd_tab,
                              text=LOCALIZER.get('PROFILE_EDITOR_MFD_TAB'))
 
-        self._tab_parent.pack(expand=True, fill='both')
+        self._tab_parent.grid(
+            row=0, column=0, padx=0, pady=0, columnspan=3, rowspan=3)
 
         self._build_generic_tab()
         self._build_dcs_tab()
@@ -96,6 +96,20 @@ class ProfileEditorWindow(Window):
         self._build_throttle_tab()
         self._build_rudder_tab()
         self._build_mfd_tab()
+
+        self._save_button = ttk.Button(
+            self.master,
+            text=LOCALIZER.get('PROFILE_EDITOR_SAVE'),
+            width=7,
+            style='info.TButton')
+        self._save_button.grid(row=4, column=0, padx=20, pady=10, sticky='nw')
+
+        self._reload_button = ttk.Button(
+            self.master,
+            text=LOCALIZER.get('PROFILE_EDITOR_RELOAD'),
+            width=7,
+            style='info.TButton')
+        self._reload_button.grid(row=4, column=0, padx=0, pady=10)
 
         profile_name = kwargs.get('profile_name', None)
         if profile_name is not None:
@@ -111,7 +125,7 @@ class ProfileEditorWindow(Window):
 
         logger.debug('Profile editor window created.')
 
-    def on_controller_mode_changed(self, eventObject: object) -> None:
+    def on_controller_mode_changed(self, eventObject: object = None) -> None:
 
         """Event handler triggered when the controller mode on the generic tab
         has changed."""
@@ -121,6 +135,17 @@ class ProfileEditorWindow(Window):
             self._generic_realistic_hotas_checkbox.config(state='disabled')
         else:
             self._generic_realistic_hotas_checkbox.config(state='normal')
+
+    def on_vr_mode_changed(self, eventObject: object = None) -> None:
+
+        """Event handler triggered when the VR mode checkbox has changed."""
+
+        if self._generic_vr_mode_enabled.get():
+            self._vr_headset_type_box.config(state='readonly')
+            self._vr_mod_enabled_checkbox.config(state='normal')
+        else:
+            self._vr_headset_type_box.config(state='disabled')
+            self._vr_mod_enabled_checkbox.config(state='disabled')
 
     def _build_generic_tab(self) -> None:
 
@@ -183,33 +208,159 @@ class ProfileEditorWindow(Window):
         self._generic_realistic_hotas_checkbox.grid(
             row=3, column=1, padx=20, pady=10, columnspan=2, sticky='nw')
 
+        self._generic_vr_mode_enabled = tkinter.BooleanVar()
+        self._generic_vr_mode_checkbox = ttk.Checkbutton(
+            self._generic_tab,
+            text=LOCALIZER.get('PROFILE_EDITOR_GENERIC_VR_ENABLED'),
+            style='info.TCheckbutton',
+            variable=self._generic_vr_mode_enabled,
+            command=self.on_vr_mode_changed)
+        self._generic_vr_mode_checkbox.grid(
+            row=4, column=0, padx=20, pady=10, columnspan=2, sticky='nw')
+
     def _build_dcs_tab(self) -> None:
 
         """Creates the UI elements of the DCS tab."""
 
         self._dcs_tab_scrollbar = tkinter.Scrollbar(self._dcs_tab)
         self._dcs_tab_scrollbar.grid(
-            row=0, column=0, rowspan=20, columnspan=20, sticky='e')
+            row=0, column=5, rowspan=20, columnspan=20, sticky='nse')
+
+        self._dcs_executable_path_label = ttk.Label(
+            self._dcs_tab,
+            text=LOCALIZER.get('PROFILE_EDITOR_DCS_EXECUTABLE_PATH'),
+            style='TLabel')
+        self._dcs_executable_path_label.grid(row=0, column=0, padx=20, pady=10)
+
+        self._dcs_executable_path = tkinter.StringVar()
+        self._dcs_executable_path_entry = ttk.Entry(
+            self._dcs_tab,
+            width=81,
+            textvariable=self._dcs_executable_path,
+            style='info.TEntry')
+        self._dcs_executable_path_entry.grid(row=0, column=1, padx=5, pady=10)
+
+        self._dcs_executable_browse_button = ttk.Button(
+            self._dcs_tab,
+            text=LOCALIZER.get('PROFILE_EDITOR_DCS_EXECUTABLE_BROWSE'),
+            width=7,
+            style='info.TButton')
+        self._dcs_executable_browse_button.grid(
+            row=0, column=2, padx=20, pady=10)
+
+        self._dcs_executable_version_label = ttk.Label(
+            self._dcs_tab,
+            text=LOCALIZER.get('PROFILE_EDITOR_DCS_VERSION'),
+            style='TLabel')
+        self._dcs_executable_version_label.grid(
+            row=1, column=0, padx=5, pady=10)
+
+        self._dcs_executable_version = tkinter.StringVar()
+        self._dcs_executable_version.set('0.0.0.0')
+        self._dcs_executable_version_value = ttk.Label(
+            self._dcs_tab,
+            textvariable=self._dcs_executable_version,
+            style='danger.TLabel')
+        self._dcs_executable_version_value.grid(
+            row=1, column=1, padx=5, pady=10, sticky='w')
+
+        self._dcs_working_path_label = ttk.Label(
+            self._dcs_tab,
+            text=LOCALIZER.get('PROFILE_EDITOR_DCS_WORKING_PATH'),
+            style='TLabel')
+        self._dcs_working_path_label.grid(row=2, column=0, padx=20, pady=10)
+
+        self._dcs_working_path = tkinter.StringVar()
+        self._dcs_working_path_entry = ttk.Entry(
+            self._dcs_tab,
+            width=81,
+            textvariable=self._dcs_working_path,
+            style='info.TEntry')
+        self._dcs_working_path_entry.grid(row=2, column=1, padx=5, pady=10)
+
+        self._dcs_working_browse_button = ttk.Button(
+            self._dcs_tab,
+            text=LOCALIZER.get('PROFILE_EDITOR_DCS_WORKING_BROWSE'),
+            width=7,
+            style='info.TButton')
+        self._dcs_working_browse_button.grid(
+            row=2, column=2, padx=20, pady=10)
 
         self._dcs_plane_label = ttk.Label(
             self._dcs_tab,
             text=LOCALIZER.get('PROFILE_EDITOR_DCS_PLANE_TYPE'),
             style='TLabel')
-        self._dcs_plane_label.grid(row=0, column=0, padx=20, pady=10)
+        self._dcs_plane_label.grid(row=3, column=0, padx=20, pady=10)
 
         self._dcs_plane_box = ttk.Combobox(
             self._dcs_tab,
-            values = PLANE_MANAGER.get_plane_names(),
+            values=PLANE_MANAGER.get_plane_names(),
             width=80,
             state='readonly',
             style='info.TCombobox')
-        self._dcs_plane_box.grid(row=0, column=1, padx=20, pady=10)
+        self._dcs_plane_box.grid(row=3, column=1, padx=20, pady=10)
 
     def _build_vr_tab(self) -> None:
 
         """Creates the UI elements of the VR tab."""
 
-        pass
+        self._vr_headset_type_label = ttk.Label(
+            self._vr_tab,
+            text=LOCALIZER.get('PROFILE_MANAGER_VR_HEADSET_TYPE'),
+            style='TLabel')
+        self._vr_headset_type_label.grid(row=0, column=0, padx=20, pady=10)
+
+        self._vr_headset_type_box = ttk.Combobox(
+            self._vr_tab,
+            values=self._get_headset_types(),
+            width=80,
+            state='disabled',
+            style='info.TCombobox')
+        self._vr_headset_type_box.grid(row=0, column=1, padx=20, pady=10)
+        self._vr_headset_type_box.current(0)
+
+        self._vr_mod_enabled = tkinter.BooleanVar()
+        self._vr_mod_enabled_checkbox = ttk.Checkbutton(
+            self._vr_tab,
+            text=LOCALIZER.get('PROFILE_EDITOR_VR_MOD_ENABLED'),
+            style='info.TCheckbutton',
+            state='disabled',
+            variable=self._vr_mod_enabled)
+        self._vr_mod_enabled_checkbox.grid(
+            row=1, column=0, padx=20, pady=10, columnspan=2, sticky='nw')
+
+    def _get_headset_types(self) -> list[str]:
+
+        """Returns the list of supported VR headset types.
+
+        The order of headsets in this list has to be kept in sync with the
+        order in the VRHeadsetTypes enum for the mapping to work correctly.
+        """
+
+        result = [
+            LOCALIZER.get('VR_HEADSET_TYPE_NONE'),
+            LOCALIZER.get('VR_HEADSET_TYPE_GENERIC'),
+            LOCALIZER.get('VR_HEADSET_TYPE_PSVR'),
+            LOCALIZER.get('VR_HEADSET_TYPE_RIFT'),
+            LOCALIZER.get('VR_HEADSET_TYPE_RIFT_S'),
+            LOCALIZER.get('VR_HEADSET_TYPE_QUEST'),
+            LOCALIZER.get('VR_HEADSET_TYPE_QUEST_2'),
+            LOCALIZER.get('VR_HEADSET_TYPE_INDEX'),
+            LOCALIZER.get('VR_HEADSET_TYPE_VIVE'),
+            LOCALIZER.get('VR_HEADSET_TYPE_VIVE_PRO'),
+            LOCALIZER.get('VR_HEADSET_TYPE_ODYSSEY'),
+            LOCALIZER.get('VR_HEADSET_TYPE_REVERB'),
+            LOCALIZER.get('VR_HEADSET_TYPE_REVERB_G2'),
+            LOCALIZER.get('VR_HEADSET_TYPE_PRIMAX_4K'),
+            LOCALIZER.get('VR_HEADSET_TYPE_PRIMAX_5K_SUPER'),
+            LOCALIZER.get('VR_HEADSET_TYPE_PRIMAX_5K_XR'),
+            LOCALIZER.get('VR_HEADSET_TYPE_PRIMAX_8K'),
+            LOCALIZER.get('VR_HEADSET_TYPE_PRIMAX_8K_PLUS'),
+            LOCALIZER.get('VR_HEADSET_TYPE_PRIMAX_8K_X'),
+        ]
+
+        return  result
+
 
     def _build_tools_tab(self) -> None:
 
@@ -273,6 +424,15 @@ class ProfileEditorWindow(Window):
 
         self.on_controller_mode_changed(None)
 
+        self._generic_vr_mode_enabled.set(self._profile.vr_enabled)
+        self.on_vr_mode_changed(None)
+
+        self._dcs_executable_path.set(self._profile.dcs_path)
+        self._dcs_working_path.set(self._profile.dcs_working_path)
+        self._dcs_plane_box.set(self._profile.plane.name)
+
+        self._vr_headset_type_box.current(int(self._profile.headset_type)-1)
+        self._vr_mod_enabled.set(self._profile.vr_mod_enabled)
 
         logger.debug('Profile data loaded.')
 

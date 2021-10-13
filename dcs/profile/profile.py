@@ -59,6 +59,12 @@ class Profile:
     :param plane: The plane to fly with the profile.
     :type plane: Plane
 
+    :param dcs_path: Path to the DCS install directory to use.
+    :type dcs_path: str
+
+    :param dcs_working_path: Path to the DCS working directory to use.
+    :type dcs_working_path: str
+
     :param vr_enabled: Whether or not playing in VR.
     :type vr_enabled: bool
 
@@ -94,6 +100,8 @@ class Profile:
     description: str
     realistic_hotas: bool
     plane: 'Plane'
+    dcs_path: str
+    dcs_working_path: str
     controller_mode: ControllerModes = ControllerModes.CONTROLLER_TARGET
     vr_enabled: bool = False
     headset_type: VRHeadsetTypes = VRHeadsetTypes.VR_HEADSET_NONE

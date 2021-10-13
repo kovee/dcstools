@@ -38,6 +38,7 @@ from dcs.constants import DCSTOOLS_LOG_CHANNEL
 from dcs.profile import Profile
 from dcs.profile.controllermodes import ControllerModes
 from dcs.planes import PLANE_MANAGER
+from dcs.tools.appfinder import AppFinder
 from dcs.profile.vrheadsettypes import VRHeadsetTypes, VR_HEADSET_MAP
 from dcs.profile.joysticktypes import JoystickTypes, JOYSTICK_MAP
 from dcs.profile.joystickgriptypes import JoystickGripTypes, JOYSTICK_GRIP_MAP
@@ -110,6 +111,30 @@ class ProfileSerializer:
             controller_mode = ControllerModes.CONTROLLER_TARGET
         else:
             controller_mode = ControllerModes.CONTROLLER_DCS
+
+        # Deserialize DCS path
+        try:
+            dcs_path = content['dcspath']
+        except KeyError:
+            logger.info(f'DCS path is not specified in profile {path}, '
+                        f'attempting to locate it on the host system.')
+            dcs_path = AppFinder.find_dcs_install_directory()
+            if dcs_path is None:
+                logger.error(f'Failed to locate the DCS install directory on '
+                             f'the host system, it has to be set manually.')
+                dcs_path = 'UNKNOWN'
+
+        # Deserialize DCS working path
+        try:
+            dcs_working_path = content['dcsworkingpath']
+        except KeyError:
+            logger.info(f'DCS working directory is not specified in profile '
+                        f'{path}, attempting to locate it on the host system.')
+            dcs_working_path = AppFinder.find_dcs_working_directory()
+            if dcs_working_path is None:
+                logger.error(f'Failed to locate the DCS working directory on '
+                             f'the host system, it has to be set manually.')
+                dcs_working_path = 'UNKNOWN'
 
         # Deserialize plane type
         try:
@@ -215,6 +240,8 @@ class ProfileSerializer:
             description=description,
             realistic_hotas=realistic_hotas,
             controller_mode=controller_mode,
+            dcs_path=dcs_path,
+            dcs_working_path=dcs_working_path,
             plane=plane,
             vr_enabled=vr_enabled,
             headset_type=headset_type,

@@ -44,10 +44,25 @@ define      RUDDER_TFLIGHT          0       // Represents the standard
 define      RUDDER_PENDULUM         1       // Represents the Thrustmaster
                                             // Pendulum Pedals
 
-define      VR_HEADSET_PSVR         0       // Represents the Playstation VR
-define      VR_HEADSET_VIVE         1       // Represents the HTC Vive VR
-define      VR_HEADSET_OCCULUS      2       // Represents the Occulus VR
-define      VR_HEADSET_GENERIC      3       // Represents a generic VR headset
+define      VR_HEADSET_NONE         0       // No headset
+define      VR_HEADSET_GENERIC      1       // Represents a generic VR headset
+define      VR_HEADSET_PSVR         2       // Represents the Playstation VR
+define      VR_HEADSET_RIFT         3       // Represents the Occulus Rift
+define      VR_HEADSET_RIFTS        4       // Represents the Occulus Rift S
+define      VR_HEADSET_QUEST        5       // Represents the Occulus Quest
+define      VR_HEADSET_QUEST2       6       // Represents the Occulus Quest 2
+define      VR_HEADSET_INDEX        7       // Represents the Valve Index
+define      VR_HEADSET_VIVE         8       // Represents the HTC Vive
+define      VR_HEADSET_VIVEPRO      9       // Represents the HTC Vive Pro
+define      VR_HEADSET_ODYSSEY      10      // Represents the Samsung Odyssey
+define      VR_HEADSET_REVERB       11      // Represents the HP Reverb
+define      VR_HEADSET_REVERBG2     12      // Represents the HP Reverb G2
+define      VR_HEADSET_PRIMAX4K     13      // Represents the Primax 4K
+define      VR_HEADSET_PRIMAX5KS    14      // Represents the Primax 5K Super
+define      VR_HEADSET_PRIMAX5KXR   15      // Represents the Primax 5K XR
+define      VR_HEADSET_PRIMAX8K     16      // Represents the Primax 8K
+define      VR_HEADSET_PRIMAX8KP    17      // Represents the Primax 8K Plus
+define      VR_HEADSET_PRIMAX8KX    18      // Represents the Primax 8K X
 
 define      LED_INTENSITY_1         85      // Intensity level 1 - lowest
 define      LED_INTENSITY_2         123     // Intensity level 2
@@ -398,7 +413,7 @@ int show_mapping(alias button, alias primary, alias primary_long, alias secondar
 
     if (VERBOSE_LOGGING == YES)
     {
-        printf("[DCS-Warthog] >>    >> %s <<\xa", &button);
+        printf("[DCS-TOOLS] >>    >> %s <<\xa", &button);
         printf("                        --->> PRIMARY:          %s\xa",
                &primary);
         printf("                        --->> PRIMARY LONG:     %s\xa",
@@ -418,7 +433,7 @@ int errormsg(alias errormessage)
     //  Args:
     //      errormessage:       The message to display.
 
-    printf("[DCS-Warthog] >>>> ERROR [%s] ERROR <<<<\xa", &errormessage);
+    printf("[DCS-TOOLS] >>>> ERROR [%s] ERROR <<<<\xa", &errormessage);
 }
 
 // ============================================================================

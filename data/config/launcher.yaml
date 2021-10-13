@@ -29,18 +29,3 @@ loglevel: INFO
 
 language: en
 
-dcs:
-  installpath: UNKNOWN
-  workingpath: UNKNOWN
-
-target:
-  installpath: UNKNOWN
-
-vr:
-  psvr:
-    installpath: UNKNOWN
-  psmove:
-    installpath: UNKNOWN
-    psmovetofreepiebridgepath: UNKNOWN
-    freepiepath: UNKNOWN
-

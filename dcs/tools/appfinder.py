@@ -96,7 +96,7 @@ class AppFinder:
             logger.info(
                 f'DCS install directory identified as {dcs_path}.')
             return dcs_path
-        except OSError:
+        except (OSError, NameError):
             pass
 
         # Looks like Steam is not installed, try alternative install location.
@@ -112,7 +112,7 @@ class AppFinder:
             logger.info(
                 f'DCS install directory identified as {value}.')
             return value
-        except OSError:
+        except (OSError, NameError):
             pass
 
         try:
@@ -124,7 +124,7 @@ class AppFinder:
             logger.info(
                 f'DCS install directory identified as {value}.')
             return value
-        except OSError:
+        except (OSError, NameError):
             pass
 
         try:
@@ -136,7 +136,7 @@ class AppFinder:
             logger.info(
                 f'DCS install directory identified as {value}.')
             return value
-        except OSError:
+        except (OSError, NameError):
             pass
 
         # Still not found the install path, just give up
