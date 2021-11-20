@@ -27,5 +27,8 @@
 # values for a Python logger.
 loglevel: INFO
 
-language: en
+# Path to the log file the application will use for logging
+logpath: ./dcstools.log
 
+# The language of the application
+language: en

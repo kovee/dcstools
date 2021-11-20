@@ -34,6 +34,12 @@ MINOR_VERSION = 2
 PATCH_LEVEL = 0
 """The patch level of the application."""
 
+DEFAULT_CONFIG_PATH = './data/config/launcher.yaml'
+"""Path to the configuration file of the application."""
+
+DEFAULT_LOG_PATH = './dcstools.log'
+"""Path to the log file of the application."""
+
 VERSION_STRING = f'v{MAJOR_VERSION}.{MINOR_VERSION}.{PATCH_LEVEL}'
 """The version string of the application."""
 

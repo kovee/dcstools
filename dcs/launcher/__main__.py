@@ -30,18 +30,10 @@ import logging
 import argparse
 
 # DCS Imports
-from dcs.constants import DCSTOOLS_LOG_CHANNEL
+from dcs.constants import DCSTOOLS_LOG_CHANNEL, DEFAULT_CONFIG_PATH
 from dcs.tools.localizer import LOCALIZER
 from dcs.launcher.ui.application import DCSLauncherGUIApplication
-
-def configure_logging() -> None:
-
-    """Initializes the logging configuration of the launcher."""
-    logging.basicConfig(filename='dcstools.log',
-                        encoding='utf-8',
-                        filemode='w',
-                        format='[%(asctime)s][%(levelname)s][%(filename)s-%(funcName)s(%(lineno)d)]: %(message)s',
-                        level=logging.INFO)
+from dcs.tools.configuration import CONFIGURATION
 
 def process_command_line() -> argparse.Namespace:
 
@@ -102,7 +94,17 @@ def main() -> int:
     :rtype: int
     """
 
-    configure_logging()
+    # Load the configuration
+    CONFIGURATION.initialize(config_path=DEFAULT_CONFIG_PATH)
+
+    logging.basicConfig(
+        filename=CONFIGURATION.get_log_path(),
+        encoding='utf-8',
+        filemode='w',
+        format='[%(asctime)s][%(levelname)s][%(filename)s-%(funcName)s(%(lineno)d)]: %(message)s',
+        level=CONFIGURATION.get_log_level())
+
+    LOCALIZER.switch_language(new_language=CONFIGURATION.get_language())
 
     try:
         return execute(process_command_line())

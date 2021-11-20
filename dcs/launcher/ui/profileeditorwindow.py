@@ -101,14 +101,16 @@ class ProfileEditorWindow(Window):
             self.master,
             text=LOCALIZER.get('PROFILE_EDITOR_SAVE'),
             width=7,
-            style='info.TButton')
+            style='info.TButton',
+            command=self.on_save)
         self._save_button.grid(row=4, column=0, padx=20, pady=10, sticky='nw')
 
         self._reload_button = ttk.Button(
             self.master,
             text=LOCALIZER.get('PROFILE_EDITOR_RELOAD'),
             width=7,
-            style='info.TButton')
+            style='info.TButton',
+            command=self.on_reload)
         self._reload_button.grid(row=4, column=0, padx=0, pady=10)
 
         profile_name = kwargs.get('profile_name', None)
@@ -124,6 +126,24 @@ class ProfileEditorWindow(Window):
         self._load_profile_data()
 
         logger.debug('Profile editor window created.')
+
+    def on_save(self, eventObject: object = None) -> None:
+
+        """Event handler triggered when the save button is pressed."""
+
+        logger = logging.getLogger(DCSTOOLS_LOG_CHANNEL)
+        logger.debug(f'Saving profile {self._profile.name}...')
+
+        logger.info(f'Profile {self._profile.name} has been saved.')
+
+    def on_reload(self, eventObject: object = None) -> None:
+
+        """Event handler triggered when the reload button is pressed."""
+
+        logger = logging.getLogger(DCSTOOLS_LOG_CHANNEL)
+        logger.debug(f'Reloading profile...')
+
+        logger.info(f'Profile {self._profile.name} has been reloaded.')
 
     def on_controller_mode_changed(self, eventObject: object = None) -> None:
 
@@ -360,7 +380,6 @@ class ProfileEditorWindow(Window):
         ]
 
         return  result
-
 
     def _build_tools_tab(self) -> None:
 
